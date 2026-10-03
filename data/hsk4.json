@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "updated": "2026-10-03",
   "level": 4,
   "words": [
@@ -490,7 +490,6 @@
     ["馒头","mántou","pan al vapor"],
     ["毛巾","máojīn","toalla"],
     ["毛衣","máoyī","suéter / jersey"],
-    ["帽子","màozi","sombrero / gorra"],
     ["美","měi","bonito / bello"],
     ["美好","měihǎo","hermoso / maravilloso"],
     ["美景","měijǐng","hermoso paisaje"],
@@ -548,7 +547,6 @@
     ["乒乓球","pīngpāngqiú","ping pong / tenis de mesa"],
     ["批评","pīpíng","criticar"],
     ["脾气","píqi","temperamento / genio"],
-    ["皮鞋","píxié","zapatos de cuero"],
     ["破","pò","roto / gastado"],
     ["普遍","pǔbiàn","universal / general"],
     ["葡萄","pútáo","uva"],
@@ -985,7 +983,6 @@
     ["范围","fànwéi","alcance / ámbito"],
     ["个人","gèrén","persona / individual"],
     ["工具","gōngjù","herramienta"],
-    ["关系","guānxi","relación"],
     ["过后","guòhòu","después"],
     ["还好","háihǎo","afortunadamente"],
     ["因而","yīn'ér","por lo tanto"],
