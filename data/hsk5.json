@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "updated": "2026-10-03",
   "level": 5,
   "words": [
@@ -13,7 +13,6 @@
     ["安慰","ānwèi","consolar / tranquilizar"],
     ["安装","ānzhuāng","instalar / montar"],
     ["熬夜","áoyè","trasnochar"],
-    ["白","bái","blanco / claro"],
     ["傍晚","bàngwǎn","atardecer / anochecer"],
     ["半夜","bànyè","media noche"],
     ["薄","báo","delgado / fino"],
@@ -470,13 +469,11 @@
     ["合","hé","cerrar / ajustar"],
     ["合法","héfǎ","legal / legítimo"],
     ["盒饭","héfàn","comida para llevar (en caja)"],
-    ["黑","hēi","negro"],
     ["合理","hélǐ","razonable / lógico"],
     ["河流","héliú","río"],
     ["合同","hétong","contrato"],
     ["合影","héyǐng","foto de grupo"],
     ["合作","hézuò","cooperar / colaborar"],
-    ["红","hóng","rojo"],
     ["厚度","hòudù","grosor"],
     ["后果","hòuguǒ","consecuencia"],
     ["猴子","hóuzi","mono"],

@@ -16,4 +16,4 @@ node_modules/
 session-ses_*.md
 Temp/
 # Libros HSK (PDF con derechos de autor, solo uso local)
-HSK1/
+HSK[0-9]*/
