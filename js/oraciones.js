@@ -142,10 +142,7 @@ function initOraciones(data) {
 
   function nextSentence() {
     if (!queue.length) {
-      // 'book': solo las oraciones basadas en las lecciones del libro HSK 1
-      queue = shuffled(
-        buildable.filter(s => levelFilter === 'all' || (levelFilter === 'book' ? s.lesson : s.level === Number(levelFilter)))
-      );
+      queue = shuffled(buildable.filter(s => levelFilter === 'all' || s.level === Number(levelFilter)));
     }
     const s = queue.pop();
     if (!s) return;
@@ -187,12 +184,19 @@ function initOraciones(data) {
   let role = 'read'; // 'read' | 'A' | 'B'
   let step = 0;
 
+  // un grupo por nivel HSK; dentro de cada uno van primero las lecciones del libro
+  const groups = {};
   dialogues.forEach((d, i) => {
+    if (!groups[d.level]) {
+      groups[d.level] = document.createElement('optgroup');
+      groups[d.level].label = `HSK ${d.level}`;
+    }
     const opt = document.createElement('option');
     opt.value = i;
-    opt.textContent = d.lesson ? d.title : `HSK${d.level} · ${d.title}`;
-    el('dlgSelect').appendChild(opt);
+    opt.textContent = d.title;
+    groups[d.level].appendChild(opt);
   });
+  Object.keys(groups).sort().forEach(lv => el('dlgSelect').appendChild(groups[lv]));
 
   function lineEl(line, mine) {
     const div = document.createElement('div');
