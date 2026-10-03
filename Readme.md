@@ -23,7 +23,7 @@ Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo
 
 - **Vocabulario:** 3.599 palabras de HSK 1 a 5, con pinyin y traducción al español.
 - **Caracteres para escritura:** el buscador cubre todos los caracteres que aparecen en ese vocabulario, también los que solo existen dentro de palabras compuestas.
-- **Oraciones y diálogos:** 254 oraciones y 59 diálogos de HSK 1 a 3.
+- **Oraciones y diálogos:** 203 oraciones y 49 diálogos de HSK 1 a 3, todos asociados a una lección.
 - **Orden por lecciones:** el vocabulario y los diálogos de HSK 1, 2 y 3 siguen el orden de lecciones de los libros *HSK Standard Course* 1, 2 y 3. Los libros no forman parte de este repositorio; las oraciones y diálogos son texto propio escrito con el vocabulario y la gramática de cada lección.
 
 ## Limitaciones conocidas
@@ -90,7 +90,8 @@ entrenador-mandarin/
 │   └── diagnostico.js      Diagnóstico inicial (pestaña oculta)
 └── data/
     ├── hsk1.json … hsk5.json   Vocabulario: 245 / 261 / 528 / 989 / 1.576 palabras
-    ├── oraciones.json          Oraciones y diálogos
+    ├── oraciones.json          Oraciones y diálogos (todos con su lección)
+    ├── oraciones_archivo.json  Oraciones antiguas sin lección; la app no lo carga
     ├── sibilantes.json         14 grupos de sonidos
     ├── aspiracion.json         5 pares
     ├── correccion.json         89 palabras con sus confusiones típicas

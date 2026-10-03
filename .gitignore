@@ -1,6 +1,7 @@
 # Ignore local documentation files - not meant for public repo
 bitacora.md
 README.md
+estructura.md
 
 # Ignore IDE and OS files
 .vscode/
