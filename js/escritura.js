@@ -65,6 +65,100 @@ function nextDueLabel(e) {
   return days === 1 ? 'mañana' : `en ${days} días`;
 }
 
+// --- Índice de caracteres para el buscador ---------------------------------
+// El vocabulario trae palabras; muchos caracteres básicos solo aparecen dentro
+// de palabras compuestas (们 en 我们, 校 en 学校). Aquí se separa cada palabra en
+// caracteres y su pinyin en sílabas para poder buscarlos uno por uno.
+const CJK = /[一-鿿]/;
+const PIN_INITIALS = ['zh', 'ch', 'sh', 'b', 'p', 'm', 'f', 'd', 't', 'n', 'l', 'g', 'k', 'h', 'j', 'q', 'x', 'r', 'z', 'c', 's', 'y', 'w'];
+const PIN_FINALS = ['iang', 'iong', 'uang', 'ang', 'eng', 'ong', 'iao', 'ian', 'ing', 'uai', 'uan', 'ai', 'ei', 'ao', 'ou', 'an', 'en', 'er', 'ia', 'ie', 'iu', 'in', 'ua', 'uo', 'ui', 'un', 'ue', 'a', 'o', 'e', 'i', 'u'];
+
+// pinyin sin tonos ni signos, para comparar con lo que se escribe en un teclado normal
+function plainPinyin(s) {
+  return String(s || '').toLowerCase().normalize('NFD').replace(/[^a-z]/g, '');
+}
+
+// Divide un pinyin pegado ("xuéxiào") en exactamente n sílabas (["xué","xiào"]).
+// Devuelve null si no se puede. Ante varias divisiones posibles prefiere la que no
+// deja sílabas internas empezando por vocal (regla del apóstrofo en pinyin).
+function splitPinyin(pin, n) {
+  const orig = [...String(pin || '').normalize('NFC')];
+  const letters = [];
+  const breaks = new Set(); // posiciones donde un apóstrofo o espacio obliga a cortar
+  orig.forEach((ch, i) => {
+    const p = plainPinyin(ch);
+    if (p.length === 1) letters.push({ p, i });
+    else breaks.add(letters.length);
+  });
+  const s = letters.map(l => l.p).join('');
+  let best = null;
+  function walk(pos, cuts, penalty) {
+    if (best && penalty >= best.penalty) return;
+    if (cuts.length === n) {
+      if (pos === s.length) best = { cuts: [...cuts], penalty };
+      return;
+    }
+    if (pos >= s.length) return;
+    const rest = s.slice(pos);
+    const init = PIN_INITIALS.find(x => rest.startsWith(x)) || '';
+    const afterInit = rest.slice(init.length);
+    for (const fin of PIN_FINALS) {
+      if (!afterInit.startsWith(fin)) continue;
+      const end = pos + init.length + fin.length;
+      let crosses = false;
+      for (let b = pos + 1; b < end; b++) if (breaks.has(b)) crosses = true;
+      if (crosses) continue;
+      cuts.push(end);
+      walk(end, cuts, penalty + (!init && pos > 0 && !breaks.has(pos) ? 1 : 0));
+      cuts.pop();
+    }
+    // erhua: una "r" suelta al final es la sílaba de 儿 (último recurso)
+    if (rest === 'r' && cuts.length === n - 1) {
+      cuts.push(pos + 1);
+      walk(pos + 1, cuts, penalty + 2);
+      cuts.pop();
+    }
+  }
+  walk(0, [], 0);
+  if (!best) return null;
+  let start = 0;
+  return best.cuts.map(end => {
+    const syl = letters.slice(start, end).map(l => orig[l.i]).join('');
+    start = end;
+    return syl;
+  });
+}
+
+// Un registro por carácter: primero las palabras de un solo carácter (sin
+// repetidos, nivel más bajo) y luego los que solo existen dentro de compuestas.
+function buildCharIndex(vocab) {
+  const index = new Map();
+  vocab
+    .filter(w => w.han.length === 1)
+    .forEach(w => {
+      const prev = index.get(w.han);
+      if (!prev || w.level < prev.level) index.set(w.han, w);
+    });
+  vocab
+    .filter(w => w.han.length > 1)
+    .sort((a, b) => a.level - b.level || a.han.length - b.han.length)
+    .forEach(w => {
+      const chars = [...w.han];
+      const syls = chars.every(c => CJK.test(c)) ? splitPinyin(w.pin, chars.length) : null;
+      chars.forEach((c, i) => {
+        if (!CJK.test(c) || index.has(c)) return;
+        index.set(c, {
+          han: c,
+          pin: syls ? syls[i] : '',
+          es: `en ${w.han} (${w.pin}): ${w.es}`,
+          level: w.level,
+          fromWord: true
+        });
+      });
+    });
+  return [...index.values()];
+}
+
 function initEscritura(vocab) {
   let levelFilter = 'all';
   let pool = [];
@@ -286,28 +380,40 @@ function initEscritura(vocab) {
     renderWord(fake);
   }
 
-  initHanziSearch(singleCharWords(), loadSpecificWord, loadFreeHanzi);
+  initHanziSearch(buildCharIndex(vocab), loadSpecificWord, loadFreeHanzi);
 
   refreshStats();
   pickNext();
 }
 
-function initHanziSearch(singles, onPick, onFree) {
+function initHanziSearch(chars, onPick, onFree) {
   const input = document.getElementById('hanziSearch');
   const container = document.getElementById('hanziSearchResults');
+  const MAX_RESULTS = 12;
+  const entries = chars.map(w => ({ w, pin: plainPinyin(w.pin), es: w.es.toLowerCase() }));
+
+  // menor = mejor coincidencia; null = no coincide
+  function rank(e, raw, q, qPin) {
+    if (raw.includes(e.w.han)) return 0;
+    if (qPin && e.pin === qPin) return 1;
+    if (qPin && e.pin.startsWith(qPin)) return 2;
+    if (!e.w.fromWord && e.es.includes(q)) return 3;
+    if (e.w.fromWord && q.length >= 3 && e.es.includes(q)) return 4;
+    return null;
+  }
 
   function render(query) {
     container.innerHTML = '';
-    const q = query.trim().toLowerCase();
+    const raw = query.trim();
+    const q = raw.toLowerCase();
     if (!q) return;
-    const matches = singles
-      .filter(
-        w =>
-          w.han.includes(query.trim()) ||
-          w.pin.toLowerCase().includes(q) ||
-          w.es.toLowerCase().includes(q)
-      )
-      .slice(0, 8);
+    const qPin = plainPinyin(raw);
+    const matches = entries
+      .map(e => ({ e, r: rank(e, raw, q, qPin) }))
+      .filter(x => x.r !== null)
+      .sort((a, b) => a.r - b.r || a.e.w.level - b.e.w.level || !!a.e.w.fromWord - !!b.e.w.fromWord)
+      .slice(0, MAX_RESULTS)
+      .map(x => x.e.w);
     matches.forEach(w => {
       const row = document.createElement('div');
       row.className = 'hz-result';
@@ -319,12 +425,11 @@ function initHanziSearch(singles, onPick, onFree) {
       });
       container.appendChild(row);
     });
-    const raw = query.trim();
-    const isSingleCJK = raw.length === 1 && /[\u4e00-\u9fff]/.test(raw);
+    const isSingleCJK = raw.length === 1 && CJK.test(raw);
     if (isSingleCJK && !matches.some(m => m.han === raw)) {
       const row = document.createElement('div');
       row.className = 'hz-result freeform';
-      row.textContent = `Cargar "${raw}" directamente (fuera de HSK1-3)`;
+      row.textContent = `Cargar "${raw}" directamente (fuera de HSK 1-5)`;
       row.addEventListener('click', () => {
         onFree(raw);
         container.innerHTML = '';
