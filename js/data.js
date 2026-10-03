@@ -54,8 +54,11 @@ async function loadKnowledgeBase() {
     correccion: correccion.words,
     oraciones: { dialogues: oraciones.dialogues, sentences: oraciones.sentences },
     meta: {
-      updated: hsk1.updated,
-      total: vocab.length
+      // fecha más reciente entre todos los archivos de datos
+      updated: results.map(r => r.updated || '').sort().pop(),
+      // palabras distintas: los JSON traen algunas repetidas entre niveles
+      total: new Set(vocab.map(w => `${w.han}|${w.pin}`)).size,
+      sentences: oraciones.sentences.length + oraciones.dialogues.reduce((n, d) => n + d.lines.length, 0)
     }
   };
 }

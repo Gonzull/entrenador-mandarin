@@ -32,7 +32,7 @@ function registerServiceWorker() {
 function showKBInfo(meta) {
   const el = document.getElementById('kbMeta');
   if (el) {
-    el.textContent = `Base de conocimientos: ${meta.total} palabras HSK · actualizada ${meta.updated}`;
+    el.textContent = `Base de conocimientos: ${meta.total.toLocaleString('es')} palabras HSK · ${meta.sentences} oraciones · actualizada ${meta.updated}`;
   }
 }
 
