@@ -124,7 +124,10 @@ function createBuilder(root, sentence, { showPinyin, onSolved }) {
 function initOraciones(data) {
   const el = id => document.getElementById(id);
   const prefs = { pinyin: true, trans: true, ...store.get(PREF_KEY, {}) };
-  const dialogues = data.dialogues.map(d => ({ ...d, lines: d.lines.map(l => parseSentence({ ...l, level: d.level })) }));
+  const dialogues = data.dialogues.map(d => ({
+    ...d,
+    lines: d.lines.map(l => parseSentence({ ...l, level: d.level, lesson: d.lesson }))
+  }));
   // para armar sirven las oraciones sueltas y también cada línea de diálogo
   const buildable = [...data.sentences.map(parseSentence), ...dialogues.flatMap(d => d.lines)].filter(
     s => s.words.length >= 2
@@ -139,12 +142,15 @@ function initOraciones(data) {
 
   function nextSentence() {
     if (!queue.length) {
-      queue = shuffled(buildable.filter(s => levelFilter === 'all' || s.level === Number(levelFilter)));
+      // 'book': solo las oraciones basadas en las lecciones del libro HSK 1
+      queue = shuffled(
+        buildable.filter(s => levelFilter === 'all' || (levelFilter === 'book' ? s.lesson : s.level === Number(levelFilter)))
+      );
     }
     const s = queue.pop();
     if (!s) return;
     el('oracPrompt').textContent = s.es;
-    el('oracMeta').textContent = `HSK${s.level} · ${s.words.length} fichas`;
+    el('oracMeta').textContent = `HSK${s.level}${s.lesson ? ` · lección ${s.lesson}` : ''} · ${s.words.length} fichas`;
     el('oracSolution').innerHTML = '';
     el('oracNext').style.display = 'none';
     createBuilder(el('oracBuilder'), s, {
@@ -184,7 +190,7 @@ function initOraciones(data) {
   dialogues.forEach((d, i) => {
     const opt = document.createElement('option');
     opt.value = i;
-    opt.textContent = `HSK${d.level} · ${d.title}`;
+    opt.textContent = d.lesson ? d.title : `HSK${d.level} · ${d.title}`;
     el('dlgSelect').appendChild(opt);
   });
 

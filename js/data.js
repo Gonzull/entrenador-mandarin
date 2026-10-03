@@ -39,11 +39,11 @@ async function loadKnowledgeBase() {
   const [hsk1, hsk2, hsk3, hsk4, hsk5, diagnostico, sibilantes, aspiracion, correccion, oraciones] = results;
 
   const vocab = [
-    ...hsk1.words.map(([han, pin, es]) => ({ level: 1, pin, han, es })),
-    ...hsk2.words.map(([han, pin, es]) => ({ level: 2, pin, han, es })),
-    ...hsk3.words.map(([han, pin, es]) => ({ level: 3, pin, han, es })),
-    ...hsk4.words.map(([han, pin, es]) => ({ level: 4, pin, han, es })),
-    ...hsk5.words.map(([han, pin, es]) => ({ level: 5, pin, han, es }))
+    ...hsk1.words.map(([han, pin, es, lesson]) => ({ level: 1, pin, han, es, lesson })),
+    ...hsk2.words.map(([han, pin, es, lesson]) => ({ level: 2, pin, han, es, lesson })),
+    ...hsk3.words.map(([han, pin, es, lesson]) => ({ level: 3, pin, han, es, lesson })),
+    ...hsk4.words.map(([han, pin, es, lesson]) => ({ level: 4, pin, han, es, lesson })),
+    ...hsk5.words.map(([han, pin, es, lesson]) => ({ level: 5, pin, han, es, lesson }))
   ].map(w => ({ ...w, tone: computeTone(w.pin) }));
 
   return {

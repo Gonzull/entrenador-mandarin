@@ -1,8 +1,74 @@
 {
-  "version": 1,
+  "version": 2,
   "updated": "2026-10-03",
-  "nota": "zh y pin van separados por espacios, una ficha por palabra, en el mismo orden. end es la puntuación final. who en los diálogos es A o B.",
+  "nota": "zh y pin van separados por espacios, una ficha por palabra, en el mismo orden. end es la puntuación final. who en los diálogos es A o B. lesson (opcional) es la lección de HSK Standard Course 1 cuyo vocabulario y gramática usa; el texto es propio, no copiado del libro.",
   "dialogues": [
+    {
+      "id": "libro-l1-2",
+      "title": "Lecciones 1-2 · Saludos y cortesía",
+      "level": 1,
+      "lesson": 2,
+      "lines": [
+        { "who": "A", "zh": "你们 好", "pin": "nǐmen hǎo", "end": "！", "es": "¡Hola a todos!" },
+        { "who": "B", "zh": "您 好", "pin": "nín hǎo", "end": "！", "es": "¡Hola! (con respeto)" },
+        { "who": "A", "zh": "对不起", "pin": "duìbuqǐ", "end": "！", "es": "¡Perdón!" },
+        { "who": "B", "zh": "没关系", "pin": "méiguānxi", "end": "！", "es": "No importa." },
+        { "who": "A", "zh": "谢谢 你们", "pin": "xièxie nǐmen", "end": "！", "es": "¡Gracias a ustedes!" },
+        { "who": "B", "zh": "不 客气", "pin": "bú kèqi", "end": "！", "es": "¡De nada!" },
+        { "who": "A", "zh": "再见", "pin": "zàijiàn", "end": "！", "es": "¡Adiós!" },
+        { "who": "B", "zh": "再见", "pin": "zàijiàn", "end": "！", "es": "¡Adiós!" }
+      ]
+    },
+    {
+      "id": "libro-l3",
+      "title": "Lección 3 · ¿Quién eres?",
+      "level": 1,
+      "lesson": 3,
+      "lines": [
+        { "who": "A", "zh": "你 叫 什么 名字", "pin": "nǐ jiào shénme míngzi", "end": "？", "es": "¿Cómo te llamas?" },
+        { "who": "B", "zh": "我 叫 安娜", "pin": "wǒ jiào Ānnà", "end": "。", "es": "Me llamo Ana." },
+        { "who": "A", "zh": "你 是 学生 吗", "pin": "nǐ shì xuésheng ma", "end": "？", "es": "¿Eres estudiante?" },
+        { "who": "B", "zh": "我 不 是 学生", "pin": "wǒ bú shì xuésheng", "end": "。", "es": "No soy estudiante." },
+        { "who": "B", "zh": "我 是 老师", "pin": "wǒ shì lǎoshī", "end": "。", "es": "Soy profesora." },
+        { "who": "A", "zh": "你 是 美国 人 吗", "pin": "nǐ shì Měiguó rén ma", "end": "？", "es": "¿Eres estadounidense?" },
+        { "who": "B", "zh": "我 不 是 美国 人", "pin": "wǒ bú shì Měiguó rén", "end": "。", "es": "No soy estadounidense." },
+        { "who": "A", "zh": "我 是 中国 人", "pin": "wǒ shì Zhōngguó rén", "end": "。", "es": "Yo soy chino." }
+      ]
+    },
+    {
+      "id": "libro-l4",
+      "title": "Lección 4 · Mis amigos",
+      "level": 1,
+      "lesson": 4,
+      "lines": [
+        { "who": "A", "zh": "他 是 谁", "pin": "tā shì shéi", "end": "？", "es": "¿Quién es él?" },
+        { "who": "B", "zh": "他 是 我 的 同学", "pin": "tā shì wǒ de tóngxué", "end": "。", "es": "Él es mi compañero de clase." },
+        { "who": "A", "zh": "他 是 哪 国 人", "pin": "tā shì nǎ guó rén", "end": "？", "es": "¿De qué país es él?" },
+        { "who": "B", "zh": "他 是 美国 人", "pin": "tā shì Měiguó rén", "end": "。", "es": "Él es estadounidense." },
+        { "who": "A", "zh": "她 呢", "pin": "tā ne", "end": "？", "es": "¿Y ella?" },
+        { "who": "B", "zh": "她 是 我 的 汉语 老师", "pin": "tā shì wǒ de Hànyǔ lǎoshī", "end": "。", "es": "Ella es mi profesora de chino." },
+        { "who": "A", "zh": "你 的 朋友 叫 什么 名字", "pin": "nǐ de péngyou jiào shénme míngzi", "end": "？", "es": "¿Cómo se llama tu amigo?" },
+        { "who": "B", "zh": "我 的 朋友 叫 马丁", "pin": "wǒ de péngyou jiào Mǎdīng", "end": "。", "es": "Mi amigo se llama Martín." }
+      ]
+    },
+    {
+      "id": "libro-l5",
+      "title": "Lección 5 · La familia y la edad",
+      "level": 1,
+      "lesson": 5,
+      "lines": [
+        { "who": "A", "zh": "你 朋友 家 有 几 口 人", "pin": "nǐ péngyou jiā yǒu jǐ kǒu rén", "end": "？", "es": "¿Cuántas personas hay en la familia de tu amigo?" },
+        { "who": "B", "zh": "他 家 有 五 口 人", "pin": "tā jiā yǒu wǔ kǒu rén", "end": "。", "es": "En su familia hay cinco personas." },
+        { "who": "A", "zh": "他 有 女儿 吗", "pin": "tā yǒu nǚ'ér ma", "end": "？", "es": "¿Él tiene hija?" },
+        { "who": "B", "zh": "他 有 女儿", "pin": "tā yǒu nǚ'ér", "end": "。", "es": "Él tiene una hija." },
+        { "who": "A", "zh": "他 女儿 几 岁 了", "pin": "tā nǚ'ér jǐ suì le", "end": "？", "es": "¿Cuántos años tiene su hija?" },
+        { "who": "B", "zh": "他 女儿 今年 六 岁 了", "pin": "tā nǚ'ér jīnnián liù suì le", "end": "。", "es": "Su hija tiene seis años este año." },
+        { "who": "A", "zh": "你 的 老师 多 大 了", "pin": "nǐ de lǎoshī duō dà le", "end": "？", "es": "¿Qué edad tiene tu profesor?" },
+        { "who": "B", "zh": "我 的 老师 今年 四十 岁", "pin": "wǒ de lǎoshī jīnnián sìshí suì", "end": "。", "es": "Mi profesor tiene cuarenta años este año." },
+        { "who": "A", "zh": "你 今年 多 大", "pin": "nǐ jīnnián duō dà", "end": "？", "es": "¿Qué edad tienes este año?" },
+        { "who": "B", "zh": "我 今年 二十八 岁", "pin": "wǒ jīnnián èrshíbā suì", "end": "。", "es": "Este año tengo veintiocho años." }
+      ]
+    },
     {
       "id": "presentarse",
       "title": "Presentarse",
@@ -140,6 +206,24 @@
     }
   ],
   "sentences": [
+    { "level": 1, "lesson": 3, "zh": "你 是 老师 吗", "pin": "nǐ shì lǎoshī ma", "end": "？", "es": "¿Eres profesor?" },
+    { "level": 1, "lesson": 3, "zh": "我 叫 王明", "pin": "wǒ jiào WángMíng", "end": "。", "es": "Me llamo Wang Ming." },
+    { "level": 1, "lesson": 3, "zh": "你们 是 学生 吗", "pin": "nǐmen shì xuésheng ma", "end": "？", "es": "¿Ustedes son estudiantes?" },
+    { "level": 1, "lesson": 3, "zh": "我 不 是 中国 人", "pin": "wǒ bú shì Zhōngguó rén", "end": "。", "es": "No soy chino." },
+    { "level": 1, "lesson": 4, "zh": "谁 是 你 的 老师", "pin": "shéi shì nǐ de lǎoshī", "end": "？", "es": "¿Quién es tu profesor?" },
+    { "level": 1, "lesson": 4, "zh": "她 不 是 我 的 同学", "pin": "tā bú shì wǒ de tóngxué", "end": "。", "es": "Ella no es mi compañera de clase." },
+    { "level": 1, "lesson": 4, "zh": "你 的 汉语 老师 是 哪 国 人", "pin": "nǐ de Hànyǔ lǎoshī shì nǎ guó rén", "end": "？", "es": "¿De qué país es tu profesor de chino?" },
+    { "level": 1, "lesson": 4, "zh": "他 是 我 的 朋友", "pin": "tā shì wǒ de péngyou", "end": "。", "es": "Él es mi amigo." },
+    { "level": 1, "lesson": 4, "zh": "你 朋友 呢", "pin": "nǐ péngyou ne", "end": "？", "es": "¿Y tu amigo?" },
+    { "level": 1, "lesson": 4, "zh": "我 的 同学 是 美国 人", "pin": "wǒ de tóngxué shì Měiguó rén", "end": "。", "es": "Mi compañero de clase es estadounidense." },
+    { "level": 1, "lesson": 5, "zh": "我 家 有 六 口 人", "pin": "wǒ jiā yǒu liù kǒu rén", "end": "。", "es": "En mi familia hay seis personas." },
+    { "level": 1, "lesson": 5, "zh": "我 有 中国 朋友", "pin": "wǒ yǒu Zhōngguó péngyou", "end": "。", "es": "Tengo amigos chinos." },
+    { "level": 1, "lesson": 5, "zh": "你 女儿 多 大 了", "pin": "nǐ nǚ'ér duō dà le", "end": "？", "es": "¿Qué edad tiene tu hija?" },
+    { "level": 1, "lesson": 5, "zh": "我 女儿 今年 九 岁", "pin": "wǒ nǚ'ér jīnnián jiǔ suì", "end": "。", "es": "Mi hija tiene nueve años este año." },
+    { "level": 1, "lesson": 5, "zh": "她 今年 三十 岁 了", "pin": "tā jīnnián sānshí suì le", "end": "。", "es": "Ella ya tiene treinta años este año." },
+    { "level": 1, "lesson": 5, "zh": "你 的 同学 多 大", "pin": "nǐ de tóngxué duō dà", "end": "？", "es": "¿Qué edad tiene tu compañero de clase?" },
+    { "level": 1, "lesson": 5, "zh": "我 朋友 的 女儿 是 学生", "pin": "wǒ péngyou de nǚ'ér shì xuésheng", "end": "。", "es": "La hija de mi amigo es estudiante." },
+    { "level": 1, "lesson": 5, "zh": "你 家 有 老师 吗", "pin": "nǐ jiā yǒu lǎoshī ma", "end": "？", "es": "¿Hay algún profesor en tu familia?" },
     { "level": 1, "zh": "我 是 学生", "pin": "wǒ shì xuésheng", "end": "。", "es": "Soy estudiante." },
     { "level": 1, "zh": "他 不 是 老师", "pin": "tā bú shì lǎoshī", "end": "。", "es": "Él no es profesor." },
     { "level": 1, "zh": "她 是 我 的 朋友", "pin": "tā shì wǒ de péngyou", "end": "。", "es": "Ella es mi amiga." },
