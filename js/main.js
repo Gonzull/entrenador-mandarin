@@ -6,6 +6,7 @@ import { initAspiracion } from './aspiracion.js';
 import { initGrabadora } from './grabadora.js';
 import { initCorreccion } from './correccion.js';
 import { initEscritura } from './escritura.js';
+import { initOraciones } from './oraciones.js';
 import { initProgreso } from './progreso.js';
 
 function initTabs() {
@@ -48,6 +49,7 @@ async function boot() {
     initGrabadora(kb.vocab, kb.sibilantes);
     initCorreccion(kb.correccion);
     initEscritura(kb.vocab);
+    initOraciones(kb.oraciones);
   } catch (err) {
     console.error(err);
     document.getElementById('loadError').style.display = 'flex';

@@ -7,7 +7,8 @@ const DATA_FILES = [
   'diagnostico',
   'sibilantes',
   'aspiracion',
-  'correccion'
+  'correccion',
+  'oraciones'
 ];
 
 const TONE_MAP = {
@@ -35,7 +36,7 @@ async function fetchJSON(name) {
 
 async function loadKnowledgeBase() {
   const results = await Promise.all(DATA_FILES.map(fetchJSON));
-  const [hsk1, hsk2, hsk3, hsk4, hsk5, diagnostico, sibilantes, aspiracion, correccion] = results;
+  const [hsk1, hsk2, hsk3, hsk4, hsk5, diagnostico, sibilantes, aspiracion, correccion, oraciones] = results;
 
   const vocab = [
     ...hsk1.words.map(([han, pin, es]) => ({ level: 1, pin, han, es })),
@@ -51,6 +52,7 @@ async function loadKnowledgeBase() {
     sibilantes: sibilantes.groups,
     aspiracion: aspiracion.pairs,
     correccion: correccion.words,
+    oraciones: { dialogues: oraciones.dialogues, sentences: oraciones.sentences },
     meta: {
       updated: hsk1.updated,
       total: vocab.length

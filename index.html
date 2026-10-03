@@ -49,7 +49,8 @@
   <button data-tab="grab">④ Grabadora</button>
   <button data-tab="corr">⑤ Corrección</button>
   <button data-tab="hanzi">⑥ Escritura</button>
-  <button data-tab="prog">⑦ Progreso</button>
+  <button data-tab="orac">⑦ Oraciones</button>
+  <button data-tab="prog">⑧ Progreso</button>
 </nav>
 
 <main class="wrap">
@@ -204,6 +205,48 @@
         <button class="rec-btn" id="hanziNext">Siguiente &#8594;</button>
       </div>
       <div class="rec-note" id="hanziStatus">Toca "Ver animación" para ver el orden correcto, luego practica.</div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-orac">
+    <h2>Oraciones y diálogos</h2>
+    <p class="panel-desc">Arma oraciones ordenando las fichas, o practica un diálogo completando las líneas de tu personaje. Nivel HSK 1 y 2.</p>
+    <div class="levelfilter" id="oracMode">
+      <button class="lvlbtn active" data-mode="build">Armar oraciones</button>
+      <button class="lvlbtn" data-mode="dialog">Diálogos</button>
+    </div>
+    <div class="orac-opts">
+      <label><input type="checkbox" id="oracPinyin"> Mostrar pinyin</label>
+      <label><input type="checkbox" id="oracTrans"> Mostrar traducción en diálogos</label>
+    </div>
+
+    <div id="oracBuild">
+      <div class="levelfilter" id="oracLevel">
+        <button class="lvlbtn active" data-level="all">Todos</button>
+        <button class="lvlbtn" data-level="1">HSK 1</button>
+        <button class="lvlbtn" data-level="2">HSK 2</button>
+      </div>
+      <div class="card">
+        <div class="scoreline"><span>Racha: <b id="oracStreak">0</b></span><span>Aciertos: <b id="oracScore">0</b>/<b id="oracTotal">0</b></span></div>
+        <div class="quiz-hint" id="oracMeta" style="text-align:center;margin-bottom:6px;"></div>
+        <div class="orac-prompt" id="oracPrompt">…</div>
+        <div id="oracBuilder"></div>
+        <div id="oracSolution"></div>
+        <div class="ob-actions"><button class="rec-btn" id="oracNext" style="display:none;">Siguiente &#8594;</button></div>
+      </div>
+    </div>
+
+    <div id="oracDialog" style="display:none;">
+      <div class="card">
+        <select class="rec-select" id="dlgSelect"></select>
+        <div class="levelfilter" id="dlgRole">
+          <button class="lvlbtn active" data-role="read">Leer</button>
+          <button class="lvlbtn" data-role="A">Soy A</button>
+          <button class="lvlbtn" data-role="B">Soy B</button>
+        </div>
+        <div id="dlgLines"></div>
+        <div id="dlgTurn"></div>
+      </div>
     </div>
   </section>
 
