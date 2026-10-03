@@ -2,6 +2,7 @@
   --bg: #17130F;
   --surface: #221C16;
   --surface-2: #2C241C;
+  --bg-soft: #2C241C;
   --text: #F1E9DC;
   --text-dim: #B0A28C;
   --seal: #B4432E;
@@ -9,6 +10,7 @@
   --jade: #5C8C77;
   --jade-soft: #5C8C7733;
   --gold: #CBA35C;
+  --gold-soft: #CBA35C33;
   --border: #3A3025;
   --radius: 14px;
 }
@@ -373,6 +375,21 @@ h2 {
   color: var(--text);
   margin-bottom: 18px;
 }
+
+.tongue-wrap { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; margin: 22px auto 10px; max-width: 420px; }
+.tongue-dia { width: 160px; height: 160px; flex-shrink: 0; }
+.tongue-dia.small { width: 120px; height: 120px; }
+.tongue-legend { font-size: 11px; color: var(--text-dim); text-align: left; line-height: 1.5; max-width: 170px; }
+.tongue-label { display: block; color: var(--text); font-weight: 600; margin-bottom: 4px; }
+@media (max-width: 600px) {
+  .tongue-dia { width: 120px; height: 120px; }
+  .tongue-dia.small { width: 90px; height: 90px; }
+}
+
+.voice-tune { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; margin-top: 18px; font-size: 12px; color: var(--text-dim); }
+.voice-tune label { display: flex; align-items: center; gap: 8px; }
+.voice-tune input[type=range] { width: 120px; accent-color: var(--gold); }
+.voice-tune b { color: var(--gold); font-family: 'JetBrains Mono', monospace; min-width: 32px; }
 
 .rec-select {
   width: 100%;

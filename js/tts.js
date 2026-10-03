@@ -43,6 +43,9 @@ function speak(text, opts={}){
     u.rate = 0.70;
     u.pitch = 0.95;
   }
+  // Ajuste fino opcional (p. ej. controles del panel de tonos)
+  if (opts.rate) u.rate = opts.rate;
+  if (opts.pitch) u.pitch = opts.pitch;
   u.volume = 1.0;
   speechSynthesis.speak(u);
 }

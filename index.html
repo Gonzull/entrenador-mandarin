@@ -66,7 +66,7 @@
 
   <section class="panel" id="panel-tonos">
     <h2>Ejercicio de tonos</h2>
-    <p class="panel-desc">Escucha el carácter y elige el tono correcto. Vocabulario oficial de HSK1, HSK2 y HSK3 — filtra por nivel si quieres quedarte solo en lo que ya conoces.</p>
+    <p class="panel-desc">Escucha el carácter y elige el tono correcto. Vocabulario oficial de HSK 1 a 5 (solo caracteres sueltos) — filtra por nivel si quieres quedarte solo en lo que ya conoces.</p>
     <div class="toneguide" id="toneGuide"></div>
     <div class="levelfilter" id="toneLevelFilter">
       <button class="lvlbtn active" data-level="all">Todos</button>
@@ -84,6 +84,10 @@
         <button class="bigplay" id="tonePlay">&#9654;</button>
         <div class="choices" id="toneChoices"></div>
         <div class="feedback" id="toneFeedback"></div>
+        <div class="voice-tune">
+          <label>Velocidad <input type="range" id="toneRate" min="0.4" max="0.8" step="0.05"> <b id="toneRateVal"></b></label>
+          <label>Altura de voz <input type="range" id="tonePitch" min="0.6" max="1.2" step="0.05"> <b id="tonePitchVal"></b></label>
+        </div>
       </div>
     </div>
   </section>
@@ -123,9 +127,9 @@
     </div>
     <div class="card">
       <select class="rec-select" id="recWordSelect"></select>
-      <div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:36px auto 10px;max-width:420px;">
-        <div id="recTongueDiagram" style="width:120px;height:120px;flex-shrink:0;"></div>
-        <div id="recTongueLegend" style="font-size:10px;color:var(--text-dim);text-align:left;line-height:1.4;max-width:160px;"><span style="color:#CBA35C">━</span> Paladar<br><span style="display:inline-block;width:10px;height:8px;background:#F1E9DC;border:1px solid #5C8C77;vertical-align:middle"></span> Dientes<br><span style="display:inline-block;width:10px;height:8px;background:#B4432E;vertical-align:middle"></span> Lengua<br><span style="color:#CBA35C">///</span> Aire</div>
+      <div class="tongue-wrap">
+        <div id="recTongueDiagram" class="tongue-dia small"></div>
+        <div id="recTongueLegend" class="tongue-legend"></div>
       </div>
       <div class="quiz-stage" style="padding-top:6px;">
         <div class="quiz-han" id="recHan">…</div>

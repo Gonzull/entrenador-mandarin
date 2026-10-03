@@ -13,5 +13,5 @@ README.md
 *.tmp
 node_modules/
 /icons/*.png
-session-ses_fc94.md
+session-ses_*.md
 Temp/

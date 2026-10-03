@@ -1,5 +1,5 @@
 import { speak } from './tts.js';
-import { tongueDiagramSVG } from './tongueDiagrams.js';
+import { tongueDiagramSVG, tongueLegendHTML } from './tongueDiagrams.js';
 
 function initGrabadora(vocab, sibGroups) {
   const words = [...vocab, ...sibGroups.flat().map(w => ({ ...w, level: 'sib' }))];
@@ -27,8 +27,9 @@ function initGrabadora(vocab, sibGroups) {
     const w = filteredWords[select.value];
     const dia = document.getElementById('recTongueDiagram');
     if (dia && w) {
-      const isMobile = window.matchMedia('(max-width: 600px)').matches;
-      dia.innerHTML = tongueDiagramSVG(getSound(w.pin), isMobile ? 90 : 120, isMobile ? 90 : 120);
+      const sound = getSound(w.pin);
+      dia.innerHTML = tongueDiagramSVG(sound);
+      document.getElementById('recTongueLegend').innerHTML = tongueLegendHTML(sound);
     }
   }
 
@@ -80,10 +81,6 @@ function initGrabadora(vocab, sibGroups) {
     levelFilter = b.dataset.level;
     renderSelect();
   });
-  // responsive diagram al cambiar tamaño
-  window.matchMedia('(max-width: 600px)').addEventListener
-    ? window.matchMedia('(max-width: 600px)').addEventListener('change', updateDiagram)
-    : window.matchMedia('(max-width: 600px)').addListener(updateDiagram);
   renderSelect();
   document.getElementById('recPlayNative').addEventListener('click', () => {
     const w = filteredWords[select.value];

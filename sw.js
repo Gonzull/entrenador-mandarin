@@ -1,4 +1,4 @@
-const CACHE_NAME = 'entrenador-chino-v2';
+const CACHE_NAME = 'entrenador-chino-v3';
 
 const APP_SHELL = [
   './',

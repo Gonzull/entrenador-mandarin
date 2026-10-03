@@ -66,6 +66,7 @@ function initEscritura(vocab) {
   let currentWord = null;
   let isLooping = false;
   let loopTimeout = null;
+  let loopGen = 0; // cambia en cada inicio/parada: descarta callbacks de animaciones anteriores
 
   const el = id => document.getElementById(id);
 
@@ -142,16 +143,22 @@ function initEscritura(vocab) {
 
   function stopLoop() {
     isLooping = false;
+    loopGen++;
     if (loopTimeout) { clearTimeout(loopTimeout); loopTimeout = null; }
     const btn = el('hanziShow');
     if (btn) btn.textContent = '▶ Ver animación';
   }
 
-  function loopAnimation() {
-    if (!isLooping || !writerInstance) return;
+  function loopAnimation(gen) {
+    if (!isLooping || gen !== loopGen || !writerInstance) return;
     writerInstance.animateCharacter({
-      onComplete: () => {
-        if (isLooping) loopTimeout = setTimeout(loopAnimation, 800);
+      onComplete: res => {
+        // HanziWriter también llama onComplete al cancelar una animación; si eso
+        // reprogramara el loop, cada reinicio cortaría al siguiente a los 800ms
+        // y el carácter se quedaría repitiendo solo los primeros trazos
+        if (!isLooping || gen !== loopGen || (res && res.canceled)) return;
+        clearTimeout(loopTimeout);
+        loopTimeout = setTimeout(() => loopAnimation(gen), 800);
       }
     });
   }
@@ -216,7 +223,7 @@ function initEscritura(vocab) {
       isLooping = true;
       el('hanziShow').textContent = '■ Detener';
       setStatus('Reproduciendo en loop - pulsa Detener para pausar');
-      loopAnimation();
+      loopAnimation(++loopGen);
     } else {
       stopLoop();
       try { writerInstance.showCharacter(); } catch {}

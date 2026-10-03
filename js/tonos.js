@@ -1,4 +1,8 @@
 import { speak } from './tts.js';
+import { store } from './storage.js';
+
+const VOICE_KEY = 'tone_voice_v1';
+const VOICE_DEFAULT = { rate: 0.55, pitch: 0.8 };
 
 const TONE_PATHS = {
   1: 'M4,7 L36,7',
@@ -33,6 +37,24 @@ function initTonos(vocab) {
 
   const el = id => document.getElementById(id);
 
+  // velocidad y altura de la voz, ajustables y recordadas entre sesiones
+  const voice = { ...VOICE_DEFAULT, ...store.get(VOICE_KEY, {}) };
+  const say = () => current && speak(current.han, { learning: true, rate: voice.rate, pitch: voice.pitch });
+  [['toneRate', 'rate'], ['tonePitch', 'pitch']].forEach(([id, key]) => {
+    const input = el(id);
+    if (!input) return;
+    input.value = voice[key];
+    el(id + 'Val').textContent = voice[key].toFixed(2);
+    input.addEventListener('input', () => {
+      voice[key] = Number(input.value);
+      el(id + 'Val').textContent = voice[key].toFixed(2);
+    });
+    input.addEventListener('change', () => {
+      store.set(VOICE_KEY, voice);
+      say();
+    });
+  });
+
   function wordPool() {
     return vocab.filter(
       w =>
@@ -58,7 +80,7 @@ function initTonos(vocab) {
       b.addEventListener('click', () => answer(t, b));
       wrap.appendChild(b);
     });
-    speak(current.han, { learning: true });
+    say();
   }
 
   function answer(t, btn) {
@@ -92,7 +114,7 @@ function initTonos(vocab) {
     newRound();
   });
 
-  el('tonePlay').addEventListener('click', () => speak(current.han, { learning: true }));
+  el('tonePlay').addEventListener('click', say);
   newRound();
 }
 
