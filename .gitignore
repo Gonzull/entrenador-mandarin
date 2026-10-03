@@ -15,3 +15,5 @@ node_modules/
 /icons/*.png
 session-ses_*.md
 Temp/
+# Libros HSK (PDF con derechos de autor, solo uso local)
+HSK1/
