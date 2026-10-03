@@ -9,7 +9,8 @@ function initSibilantes(groups) {
 
   const el = id => document.getElementById(id);
 
-  function newRound() {
+  // silent: prepara la ronda sin reproducir audio (carga inicial de la página)
+  function newRound(silent) {
     currentSet = groups[Math.floor(Math.random() * groups.length)];
     currentAnswer = currentSet[Math.floor(Math.random() * 3)];
     el('sibFeedback').textContent = '';
@@ -23,7 +24,7 @@ function initSibilantes(groups) {
       b.addEventListener('click', () => answer(opt, b));
       wrap.appendChild(b);
     });
-    speak(currentAnswer.han);
+    if (silent !== true) speak(currentAnswer.han);
   }
 
   function answer(opt, btn) {
@@ -47,7 +48,7 @@ function initSibilantes(groups) {
   }
 
   el('sibPlay').addEventListener('click', () => speak(currentAnswer.han));
-  newRound();
+  newRound(true);
 
   return { groups };
 }

@@ -64,7 +64,8 @@ function initTonos(vocab) {
     );
   }
 
-  function newRound() {
+  // silent: prepara la ronda sin reproducir audio (carga inicial de la página)
+  function newRound(silent) {
     const pool = wordPool();
     if (!pool.length) return;
     current = pool[Math.floor(Math.random() * pool.length)];
@@ -80,7 +81,7 @@ function initTonos(vocab) {
       b.addEventListener('click', () => answer(t, b));
       wrap.appendChild(b);
     });
-    say();
+    if (silent !== true) say();
   }
 
   function answer(t, btn) {
@@ -115,7 +116,7 @@ function initTonos(vocab) {
   });
 
   el('tonePlay').addEventListener('click', say);
-  newRound();
+  newRound(true);
 }
 
 export { initTonos };

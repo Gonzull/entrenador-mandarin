@@ -41,14 +41,15 @@
 </header>
 
 <nav class="tabs" id="tabs">
-  <button data-tab="diag" class="active">① Diagnóstico</button>
-  <button data-tab="tonos">② Tonos</button>
-  <button data-tab="sib">③ Sibilantes</button>
-  <button data-tab="asp">④ Aspiración</button>
-  <button data-tab="grab">⑤ Grabadora</button>
-  <button data-tab="corr">⑥ Corrección</button>
-  <button data-tab="hanzi">⑦ Escritura</button>
-  <button data-tab="prog">⑧ Progreso</button>
+  <!-- Diagnóstico oculto por ahora. Para reactivarlo: quitar el style, devolverle class="active" (y quitárselo a Tonos, aquí y en su <section>) y renumerar ①-⑧ -->
+  <button data-tab="diag" style="display:none">Diagnóstico</button>
+  <button data-tab="tonos" class="active">① Tonos</button>
+  <button data-tab="sib">② Sibilantes</button>
+  <button data-tab="asp">③ Aspiración</button>
+  <button data-tab="grab">④ Grabadora</button>
+  <button data-tab="corr">⑤ Corrección</button>
+  <button data-tab="hanzi">⑥ Escritura</button>
+  <button data-tab="prog">⑦ Progreso</button>
 </nav>
 
 <main class="wrap">
@@ -58,13 +59,13 @@
     <div>No se pudo cargar la base de conocimientos (<code>data/*.json</code>). Si abriste el archivo con doble clic, sirve la carpeta con un servidor local (<code>npx serve</code> o la extensión Live Server de VS Code), o visita la versión publicada en GitHub Pages.</div>
   </div>
 
-  <section class="panel active" id="panel-diag">
+  <section class="panel" id="panel-diag">
     <h2>Diagnóstico inicial</h2>
     <p class="panel-desc">Escucha cada frase, luego repítela en voz alta y grábate con el celular. Marca las casillas si notas el problema descrito — eso te dice por dónde empezar.</p>
     <div class="card" id="diagList"></div>
   </section>
 
-  <section class="panel" id="panel-tonos">
+  <section class="panel active" id="panel-tonos">
     <h2>Ejercicio de tonos</h2>
     <p class="panel-desc">Escucha el carácter y elige el tono correcto. Vocabulario oficial de HSK 1 a 5 (solo caracteres sueltos) — filtra por nivel si quieres quedarte solo en lo que ya conoces.</p>
     <div class="toneguide" id="toneGuide"></div>
