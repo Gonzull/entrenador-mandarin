@@ -386,6 +386,11 @@ h2 {
   .tongue-dia.small { width: 90px; height: 90px; }
 }
 
+/* cuadrículas guía de caligrafía: 田字格 (cruz) y 米字格 (cruz + diagonales) */
+#hanziTarget.grid-tian, #hanziTarget.grid-mi { background-size: 100% 100%; background-repeat: no-repeat; }
+#hanziTarget.grid-tian { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M50 0V100M0 50H100' fill='none' stroke='%237A6650' stroke-width='0.6' stroke-dasharray='2.5 2.5'/%3E%3C/svg%3E"); }
+#hanziTarget.grid-mi { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M50 0V100M0 50H100M0 0L100 100M100 0L0 100' fill='none' stroke='%237A6650' stroke-width='0.6' stroke-dasharray='2.5 2.5'/%3E%3C/svg%3E"); }
+
 .voice-tune { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; margin-top: 18px; font-size: 12px; color: var(--text-dim); }
 .voice-tune label { display: flex; align-items: center; gap: 8px; }
 .voice-tune input[type=range] { width: 120px; accent-color: var(--gold); }

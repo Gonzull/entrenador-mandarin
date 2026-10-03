@@ -3,6 +3,13 @@ import { store } from './storage.js';
 const SRS_KEY = 'hanzi_srs_v1';
 const BOX_INTERVAL_DAYS = [0, 1, 3, 7, 14, 30];
 const DAY_MS = 86400000;
+const GRID_KEY = 'hanzi_grid_v1';
+// cuadrículas guía: 米字格 (cruz + diagonales), 田字格 (solo cruz), sin guía
+const GRIDS = [
+  { id: 'mi', label: 'Cuadrícula: 米' },
+  { id: 'tian', label: 'Cuadrícula: 田' },
+  { id: 'none', label: 'Cuadrícula: no' }
+];
 
 function loadSrs() {
   return store.get(SRS_KEY, {});
@@ -251,6 +258,20 @@ function initEscritura(vocab) {
   });
 
   el('hanziNext').addEventListener('click', pickNext);
+
+  let gridIdx = Math.max(0, GRIDS.findIndex(g => g.id === store.get(GRID_KEY, 'mi')));
+  function applyGrid() {
+    const g = GRIDS[gridIdx];
+    el('hanziTarget').classList.toggle('grid-mi', g.id === 'mi');
+    el('hanziTarget').classList.toggle('grid-tian', g.id === 'tian');
+    el('hanziGrid').textContent = g.label;
+  }
+  el('hanziGrid').addEventListener('click', () => {
+    gridIdx = (gridIdx + 1) % GRIDS.length;
+    store.set(GRID_KEY, GRIDS[gridIdx].id);
+    applyGrid();
+  });
+  applyGrid();
 
   function loadSpecificWord(w) {
     levelFilter = 'all';
