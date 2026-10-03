@@ -1,138 +1,109 @@
-# Leeme.md - Instrucciones de Instalación y Uso
+# Entrenador de Mandarín
 
-## 📱 Instalación en Android (PWA)
+Aplicación web para hispanohablantes que estudian chino mandarín. Reúne en un solo lugar la práctica de pronunciación, tonos, escritura de caracteres y armado de oraciones, con vocabulario de HSK 1 a 5.
 
-### Navegadores recomendados:
-- **Chrome** (versión más reciente) - Funciona perfecto, todos los features incluidos grabadora y reconocimiento de voz
-- **Edge** - También compatible, basado en el mismo motor que Chrome
-- **Firefox** - Funciona la mayor parte de la app, pero el reconocimiento de voz puede tener limitaciones
+Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo en el dispositivo.
 
-### Pasos para instalar:
+**Sitio publicado:** https://gonzull.github.io/entrenador-mandarin/
 
-1. **Abrir en celular:**
-   - Conectarse a la red (Wi-Fi recomendado, los datos móviles también funcionan)
-   - Navegar a la URL: `http://localhost:8080` (si tienen servidor local) O
-   - Si está en GitHub Pages: `https://Gonzull.github.io/entrenador-mandarin/`
+## Qué incluye
 
-2. **Instalar como app:**
-   - En Chrome Android: Tocar el menú ⋮ (tres puntos) en la esquina superior derecha
-   - Seleccionar **"Instalar app"** (o **"Añadir a pantalla principal"**)
-   - Confirmar la instalación en el diálogo que aparece
-   - La app aparecerá en el cajón de aplicaciones como cualquier otra aplicación
+| Pestaña | Para qué sirve |
+|---|---|
+| **Tonos** | Escuchas un carácter y eliges su tono (1 a 4). Filtro por nivel HSK y controles para ajustar la velocidad y la altura de la voz. |
+| **Sibilantes** | Distinguir de oído los tres grupos que más se confunden: zh/ch/sh/r, z/c/s y j/q/x. |
+| **Aspiración** | Pares de sonidos con y sin soplo de aire (b/p, d/t, g/k…), para comparar. |
+| **Grabadora** | Escuchas la palabra, te grabas y comparas ambos audios. Muestra un diagrama de la posición de la lengua para los sonidos sibilantes. |
+| **Corrección** | Dices una palabra en voz alta y el reconocimiento de voz indica si sonó como otro sonido del grupo zh/ch/sh/z/c/s/j/q/x/r. |
+| **Escritura** | Orden de trazos animado y práctica de escritura con corrección trazo a trazo, cuadrícula guía (米字格 / 田字格), buscador de caracteres y repaso espaciado. |
+| **Oraciones** | Armar oraciones ordenando fichas de palabras, y diálogos por lección donde completas las líneas de tu personaje. |
+| **Progreso** | Racha de días, sesiones y caracteres practicados y dominados. |
 
-### Funcionamiento offline:
-- Después de la primera carga (necesita internet para descargar los datos de HanziWriter y voces), la app funciona **offline completo**
-- El Service Worker cachea todos los recursos necesarios
-- Progreso, estadísticas y escritura se guardan en `localStorage` del navegador
-- Ideal para usar en el metro, avión o sin conexión estable
+## Contenido
 
-### Permisos necesarios:
-- Al primera vez, Chrome pedirá permiso para usar el **micrófono** (necesario para la grabadora y modo corrección de voz)
-- Permitir este acceso para poder grabar y comparar audios
+- **Vocabulario:** 3.599 palabras de HSK 1 a 5, con pinyin y traducción al español.
+- **Caracteres para escritura:** el buscador cubre todos los caracteres que aparecen en ese vocabulario, también los que solo existen dentro de palabras compuestas.
+- **Oraciones y diálogos:** 254 oraciones y 59 diálogos de HSK 1 a 3.
+- **Orden por lecciones:** el vocabulario y los diálogos de HSK 1, 2 y 3 siguen el orden de lecciones de los libros *HSK Standard Course* 1, 2 y 3. Los libros no forman parte de este repositorio; las oraciones y diálogos son texto propio escrito con el vocabulario y la gramática de cada lección.
 
----
+## Limitaciones conocidas
 
-## 💻 Uso en PC (Computadora)
+- **Las oraciones, los diálogos y las traducciones fueron redactados con ayuda de IA** y no han sido revisados por un hablante nativo. Pueden contener errores.
+- **HSK 4 y 5** tienen solo vocabulario; todavía no hay oraciones ni orden por lecciones.
+- **La voz es la síntesis del dispositivo**, no una grabación de un hablante nativo. La calidad depende de las voces chinas instaladas en el sistema.
+- **Corrección por voz:** en computador usa el reconocimiento del navegador y funciona mejor en Chrome o Edge, con conexión a internet. En celular descarga una vez un modelo de unos 40 MB; su precisión es variable.
+- **Diagramas de lengua:** solo para los diez sonidos sibilantes. Son esquemas orientativos.
+- **Íconos de la app:** todavía no están incluidos, por lo que la instalación como app en Android puede no ofrecerse o mostrar un ícono genérico.
 
-### Requerimientos:
-- **Python** instalado (versión 3.8 o superior) O **Node.js** con `http-server`
-- **Navegador actual**: Chrome, Edge o Firefox
-- **Puerto disponible** (8080 por defecto, o 8081 si el 8080 está ocupado)
+## Uso en el celular
 
-### Cómo hacerlo funcionar en PC:
+1. Abre https://gonzull.github.io/entrenador-mandarin/ en Chrome.
+2. La primera vez que uses la Grabadora o Corrección, el navegador pedirá permiso para el micrófono.
+3. Opcional: menú ⋮ → "Añadir a pantalla principal" para tener un acceso directo.
 
-#### Opción A: Servidor Python (más sencillo)
-1. Abrir la terminal (PowerShell o CMD) en la carpeta del proyecto
-2. Ejecutar: `python -m http.server 8080`
-3. Abrir en navegador: `http://localhost:8080`
-4. La app cargará con todos los quizzes, escritura, grabadora, etc.
+### Sin conexión
 
-#### Opción B: Node.js http-server
-1. Tener Node.js instalado
-2. Ejecutar: `npx http-server` (o `npm start` si tienen un package.json)
-3. La app estará disponible en `http://localhost:8080` (o el puerto que indique)
+Tras la primera visita con internet, la app queda guardada en el navegador y abre sin conexión. Cuando hay internet, descarga por detrás la versión más reciente, que se ve al abrir la app la vez siguiente.
 
-### ⚠️ Problemas comunes en PC:
+Algunas cosas siguen necesitando internet la primera vez que se usan:
 
-**"Error 404" o los quizzes no cargan:**
-- **Causa:** Abrir el `index.html` con doble clic (archivo `file://`)
-- **Solución:** **Siempre usar un servidor local** (los pasos de arriba). Los navegadores bloquean `fetch()` y `Service Worker` cuando se abre el archivo directo.
+- **Trazos de cada carácter** (Escritura): se descargan al ver el carácter por primera vez y luego quedan guardados.
+- **Reconocimiento de voz** (Corrección): en computador siempre requiere conexión; en celular solo para la descarga inicial del modelo.
 
-"La grabadora no funciona":
-- **Causa:** No se concedió permiso de micrófono
-- **Solución:** Cuando aparezca el cartel de "¿Permitir acceso al micrófono?", hacer clic en "Permitir". Si ya denegó, hay que ir a la configuración del navegador y activarlo para el dominio localhost.
+## Uso en computador (para desarrollo)
 
-"Los tonos/no reconocen mi voz":
-- **Causa:** El reconocimiento de voz funciona mejor en **Chrome** y en entornos silenciosos
-- **Solución:** Hablar despacio, cerca del micrófono, sin ruido de fondo. La app está diseñada para hispanohablantes y el modelo reconoce acentos comunes.
+La app son archivos estáticos, pero debe abrirse desde un servidor local: los navegadores bloquean la carga de módulos y datos al abrir `index.html` con doble clic.
 
----
+`index.html` declara `<base href="/entrenador-mandarin/">`, así que el servidor debe exponer el proyecto bajo esa ruta. Lo más simple es levantarlo en la carpeta **que contiene** al proyecto:
 
-## 📂 Estructura del proyecto (solo para desarrolladores)
+```powershell
+git clone https://github.com/Gonzull/entrenador-mandarin.git
+python -m http.server 8080
+```
 
-El proyecto tiene esta organización interna:
+Y abrir `http://localhost:8080/entrenador-mandarin/`.
+
+También sirve `npx http-server -p 8080` en lugar de Python. El micrófono solo funciona en `localhost` o en sitios HTTPS.
+
+## Estructura del proyecto
 
 ```
 entrenador-mandarin/
-├── index.html          # Punto de entrada principal (<base href="/entrenador-mandarin/">)
-├── manifest.webmanifest # Configuración PWA
-├── sw.js               # Service worker para offline (cache-first + stale-while-revalidate)
-├── css/styles.css      # Estilos visuales profesionales
-├── js/                 # Módulos JavaScript (11 archivos)
-│   ├── main.js         # Bootstrap y orquestación general
-│   ├── storage.js      # helper de localStorage (fallback memoria)
-│   ├── tts.js          # Síntesis de voz: default 0.70, calm 0.60, learning 0.5, fast 1.1
-│   ├── data.js         # Carga data/*.json, computeTone con array [han,pin,es]
-│   ├── diagnostico.js  # Panel diagnóstico inicial
-│   ├── tonos.js        # Ejercicios de tonos (filtros HSK 1-5)
-│   ├── sibilantes.js   # Panel sibilantes zh/ch/sh
-│   ├── aspiracion.js   # Pares de aspiración
-│   ├── grabadora.js    # Grabadora comparativa (grupos HSK 1-5 + sib)
-│   ├── correccion.js   # Reconocimiento voz: nativo PC + fallback móvil IA Whisper tiny 40MB
-│   ├── escritura.js    # Escritura hanzi con SRS + loop animación isLooping 800ms
-│   └── progreso.js     # Estadísticas de racha y caracteres dominados
-├── data/               # Base de conocimientos (4.269 palabras HSK 90% estándar)
-│   ├── hsk1.json       # HSK 1: 395 palabras
-│   ├── hsk2.json       # HSK 2: 261 palabras
-│   ├── hsk3.json       # HSK 3: 568 palabras
-│   ├── hsk4.json       # HSK 4: 1.040 palabras
-│   ├── hsk5.json       # HSK 5: 1.645 palabras (total 4.269)
-│   ├── diagnostico.json # 5 items
-│   ├── sibilantes.json  # 14 grupos
-│   ├── aspiracion.json  # 5 pares
-│   └── correccion.json  # 89 palabras (zh/ch/sh/x/j/q/c + confusiones)
-├── icons/              # Íconos PWA (192/512/maskable)
-│   ├── icon-192.png
-│   ├── icon-512.png
-│   └── maskable-512.png
-
+├── index.html              Interfaz y paneles
+├── manifest.webmanifest    Configuración de la app instalable
+├── sw.js                   Service Worker (uso sin conexión)
+├── css/styles.css          Estilos
+├── js/
+│   ├── main.js             Arranque, pestañas, registro del Service Worker
+│   ├── data.js             Carga de data/*.json
+│   ├── storage.js          Guardado en el navegador (localStorage)
+│   ├── tts.js              Síntesis de voz y velocidades
+│   ├── tongueDiagrams.js   Diagramas de posición de la lengua
+│   ├── tonos.js            Pestaña Tonos
+│   ├── sibilantes.js       Pestaña Sibilantes
+│   ├── aspiracion.js       Pestaña Aspiración
+│   ├── grabadora.js        Pestaña Grabadora
+│   ├── correccion.js       Pestaña Corrección
+│   ├── escritura.js        Pestaña Escritura
+│   ├── oraciones.js        Pestaña Oraciones
+│   ├── progreso.js         Pestaña Progreso
+│   └── diagnostico.js      Diagnóstico inicial (pestaña oculta)
+└── data/
+    ├── hsk1.json … hsk5.json   Vocabulario: 245 / 261 / 528 / 989 / 1.576 palabras
+    ├── oraciones.json          Oraciones y diálogos
+    ├── sibilantes.json         14 grupos de sonidos
+    ├── aspiracion.json         5 pares
+    ├── correccion.json         89 palabras con sus confusiones típicas
+    └── diagnostico.json        5 frases de diagnóstico
 ```
 
----
+### Formato de los datos
 
+- **Vocabulario:** cada palabra es `["汉字", "pinyin", "español"]`. Un cuarto elemento opcional indica la lección del libro del mismo nivel: `["你", "nǐ", "tú", 1]`.
+- **Oraciones:** `zh` y `pin` van separados por espacios, una ficha por palabra y en el mismo orden; `end` es la puntuación final; `es` la traducción.
 
+Para ampliar el contenido basta editar estos JSON y actualizar su campo `"updated"`.
 
-## 📋 Resumen rápido de comandos
+## Tecnología
 
-**Para empezar en PC (genérico, clonar y modificar en tu proyecto):**
-```powershell
-git clone https://github.com/TU_USUARIO/entrenador-mandarin.git
-cd entrenador-mandarin
-python -m http.server 8080
-# Luego: abrir http://localhost:8080 en Chrome
-# Importante: levantar el servidor DENTRO de la carpeta del proyecto (no desde el padre) para evitar 404 js/main.js
-```
-
-**Para instalar en Android:**
-1. Abrir `http://localhost:8080` o `https://Gonzull.github.io/entrenador-mandarin/` en Chrome Android
-2. Menú ⋮ → "Instalar app" (o "Añadir a pantalla principal")
-3. Listo - funciona offline después de primera carga. Corrección en móvil usa IA Whisper tiny (descarga ~40MB una sola vez) si el reconocimiento nativo falla
-
-
-
----
-
-**¿Para quién es esto?**
-- **Usuarios Android:** Pueden instalarla desde Chrome y usarla offline
-- **Usuarios PC:** Necesitan un servidor local (Python o Node.js) para que todo funcione
-- **Desarrolladores:** Pueden extender el proyecto añadiendo más datos HSK, features, etc.
+HTML, CSS y JavaScript sin compilación ni dependencias de instalación. Usa [HanziWriter](https://hanziwriter.org/) para los trazos y, en celular, [transformers.js](https://huggingface.co/docs/transformers.js) con Whisper para el reconocimiento de voz; ambos se cargan desde CDN.
