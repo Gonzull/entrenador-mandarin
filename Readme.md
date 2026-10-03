@@ -21,15 +21,15 @@ Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo
 
 ## Contenido
 
-- **Vocabulario:** 3.599 palabras de HSK 1 a 5, con pinyin y traducción al español.
+- **Vocabulario:** 3.626 palabras de HSK 1 a 5, con pinyin y traducción al español.
 - **Caracteres para escritura:** el buscador cubre todos los caracteres que aparecen en ese vocabulario, también los que solo existen dentro de palabras compuestas.
-- **Oraciones y diálogos:** 203 oraciones y 49 diálogos de HSK 1 a 3, todos asociados a una lección.
-- **Orden por lecciones:** el vocabulario y los diálogos de HSK 1, 2 y 3 siguen el orden de lecciones de los libros *HSK Standard Course* 1, 2 y 3. Los libros no forman parte de este repositorio; las oraciones y diálogos son texto propio escrito con el vocabulario y la gramática de cada lección.
+- **Oraciones y diálogos:** 267 oraciones y 69 diálogos de HSK 1 a 4, todos asociados a una lección.
+- **Orden por lecciones:** el vocabulario y los diálogos de HSK 1 a 4 siguen el orden de lecciones de los libros *HSK Standard Course* 1, 2, 3 y 4 (tomos A y B). Los libros no forman parte de este repositorio; las oraciones y diálogos son texto propio escrito con el vocabulario y la gramática de cada lección.
 
 ## Limitaciones conocidas
 
 - **Las oraciones, los diálogos y las traducciones fueron redactados con ayuda de IA** y no han sido revisados por un hablante nativo. Pueden contener errores.
-- **HSK 4 y 5** tienen solo vocabulario; todavía no hay oraciones ni orden por lecciones.
+- **HSK 5** tiene solo vocabulario; todavía no hay oraciones ni orden por lecciones.
 - **La voz es la síntesis del dispositivo**, no una grabación de un hablante nativo. La calidad depende de las voces chinas instaladas en el sistema.
 - **Corrección por voz:** en computador usa el reconocimiento del navegador y funciona mejor en Chrome o Edge, con conexión a internet. En celular descarga una vez un modelo de unos 40 MB; su precisión es variable.
 - **Diagramas de lengua:** solo para los diez sonidos sibilantes. Son esquemas orientativos.
@@ -89,7 +89,7 @@ entrenador-mandarin/
 │   ├── progreso.js         Pestaña Progreso
 │   └── diagnostico.js      Diagnóstico inicial (pestaña oculta)
 └── data/
-    ├── hsk1.json … hsk5.json   Vocabulario: 245 / 261 / 528 / 989 / 1.576 palabras
+    ├── hsk1.json … hsk5.json   Vocabulario: 243 / 251 / 483 / 1.087 / 1.562 palabras
     ├── oraciones.json          Oraciones y diálogos (todos con su lección)
     ├── oraciones_archivo.json  Oraciones antiguas sin lección; la app no lo carga
     ├── sibilantes.json         14 grupos de sonidos

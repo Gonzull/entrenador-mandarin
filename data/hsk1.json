@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "updated": "2026-10-03",
   "level": 1,
   "words": [
@@ -153,7 +153,6 @@
     ["高兴","gāoxìng","feliz",15],
     ["漂亮","piàoliang","bonito",14],
     ["白天","báitiān","día"],
-    ["包子","bāozi","baozi / empanadilla"],
     ["边","biān","lado"],
     ["病","bìng","enfermedad"],
     ["不要","bùyào","no quiero"],
@@ -178,7 +177,6 @@
     ["后","hòu","detrás / después",14],
     ["火车","huǒchē","tren"],
     ["见","jiàn","ver"],
-    ["饺子","jiǎozi","jiaozi / empanadilla"],
     ["家人","jiārén","familia"],
     ["今年","jīnnián","este año",5],
     ["开车","kāichē","conducir"],
