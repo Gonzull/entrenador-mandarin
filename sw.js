@@ -37,7 +37,8 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches
       .open(CACHE_NAME)
-      .then(cache => cache.addAll(APP_SHELL))
+      // uno por uno: con addAll, un solo archivo faltante (404) impide instalar el SW
+      .then(cache => Promise.all(APP_SHELL.map(url => cache.add(url).catch(() => {}))))
       .then(() => self.skipWaiting())
   );
 });
@@ -51,11 +52,10 @@ self.addEventListener('activate', event => {
   );
 });
 
-function isAppData(url) {
-  return url.origin === self.location.origin && url.pathname.includes('/data/');
-}
-
-function staleWhileRevalidate(request) {
+// Responde con la copia guardada al instante y la actualiza por detrás,
+// así un push nuevo se ve en la siguiente apertura sin subir CACHE_NAME
+function staleWhileRevalidate(event) {
+  const { request } = event;
   return caches.open(CACHE_NAME).then(async cache => {
     const cached = await cache.match(request);
     const network = fetch(request, { cache: 'no-cache' })
@@ -66,6 +66,7 @@ function staleWhileRevalidate(request) {
         return response;
       })
       .catch(() => cached);
+    if (cached) event.waitUntil(network);
     return cached || network;
   });
 }
@@ -88,13 +89,12 @@ self.addEventListener('fetch', event => {
   if (request.method !== 'GET') return;
   const url = new URL(request.url);
 
-  if (isAppData(url)) {
-    event.respondWith(staleWhileRevalidate(request));
+  if (url.origin === self.location.origin) {
+    event.respondWith(staleWhileRevalidate(event));
     return;
   }
 
   if (
-    url.origin === self.location.origin ||
     url.hostname === 'cdn.jsdelivr.net' ||
     url.hostname === 'fonts.googleapis.com' ||
     url.hostname === 'fonts.gstatic.com'

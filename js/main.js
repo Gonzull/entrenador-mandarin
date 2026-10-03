@@ -23,7 +23,8 @@ function registerServiceWorker() {
   if (!('serviceWorker' in navigator)) return;
   if (location.protocol !== 'https:' && location.hostname !== 'localhost') return;
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(() => {});
+    // ruta relativa al <base href>: en GitHub Pages el SW vive en /entrenador-mandarin/sw.js
+    navigator.serviceWorker.register('sw.js').catch(() => {});
   });
 }
 
