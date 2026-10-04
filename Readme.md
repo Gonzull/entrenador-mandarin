@@ -10,9 +10,9 @@ Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo
 
 | Pestaña | Para qué sirve |
 |---|---|
-| **Tonos** | Escuchas un carácter y eliges su tono (1 a 4). Filtro por nivel HSK y controles para ajustar la velocidad y la altura de la voz. |
-| **Sibilantes** | Distinguir de oído los tres grupos que más se confunden: zh/ch/sh/r, z/c/s y j/q/x. |
-| **Aspiración** | Pares de sonidos con y sin soplo de aire (b/p, d/t, g/k…), para comparar. |
+| **Tonos** | Escuchas un carácter y eliges su tono (1 a 4). Usa unos 1.460 caracteres del vocabulario, con filtro por nivel HSK y controles para ajustar la velocidad y la altura de la voz. |
+| **Sibilantes** | Distinguir de oído los tres grupos que más se confunden: zh/ch/sh, z/c/s y j/q/x. Los tríos se arman con caracteres del vocabulario que solo se diferencian en la inicial. |
+| **Aspiración** | Pares de caracteres del vocabulario que solo se diferencian en el soplo de aire (b/p, d/t, g/k, j/q, zh/ch, z/c), para escuchar y comparar. |
 | **Grabadora** | Escuchas la palabra, te grabas y comparas ambos audios. Muestra un diagrama de la posición de la lengua para los sonidos sibilantes. |
 | **Corrección** | Dices una palabra en voz alta y el reconocimiento de voz indica si sonó como otro sonido del grupo zh/ch/sh/z/c/s/j/q/x/r. |
 | **Escritura** | Orden de trazos animado y práctica de escritura con corrección trazo a trazo, cuadrícula guía (米字格 / 田字格), buscador de caracteres y repaso espaciado. |
@@ -76,6 +76,7 @@ entrenador-mandarin/
 ├── js/
 │   ├── main.js             Arranque, pestañas, registro del Service Worker
 │   ├── data.js             Carga de data/*.json
+│   ├── chars.js            Índice de caracteres del vocabulario (sílaba, tono, lecturas)
 │   ├── storage.js          Guardado en el navegador (localStorage)
 │   ├── tts.js              Síntesis de voz y velocidades
 │   ├── tongueDiagrams.js   Diagramas de posición de la lengua

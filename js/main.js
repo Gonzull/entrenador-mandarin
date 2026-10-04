@@ -8,6 +8,7 @@ import { initCorreccion } from './correccion.js';
 import { initEscritura } from './escritura.js';
 import { initOraciones } from './oraciones.js';
 import { initProgreso } from './progreso.js';
+import { buildCharIndex } from './chars.js';
 
 function initTabs() {
   document.getElementById('tabs').addEventListener('click', e => {
@@ -43,9 +44,11 @@ async function boot() {
     showKBInfo(kb.meta);
     document.getElementById('loadError').style.display = 'none';
     initDiagnostico(kb.diagnostico);
-    initTonos(kb.vocab);
-    initSibilantes(kb.sibilantes);
-    initAspiracion(kb.aspiracion);
+    // un registro por carácter del vocabulario, compartido por los ejercicios de oído
+    const chars = buildCharIndex(kb.vocab);
+    initTonos(chars);
+    initSibilantes(kb.sibilantes, chars);
+    initAspiracion(kb.aspiracion, chars);
     initGrabadora(kb.vocab, kb.sibilantes);
     initCorreccion(kb.correccion);
     initEscritura(kb.vocab);

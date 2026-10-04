@@ -1,5 +1,6 @@
 import { speak } from './tts.js';
 import { store } from './storage.js';
+import { parseSyllable } from './chars.js';
 
 const VOICE_KEY = 'tone_voice_v1';
 const VOICE_DEFAULT = { rate: 0.55, pitch: 0.8 };
@@ -28,7 +29,13 @@ function renderToneGuide() {
   });
 }
 
-function initTonos(vocab) {
+// chars: índice de caracteres del vocabulario (js/chars.js), incluidos los que
+// solo aparecen dentro de palabras compuestas
+function initTonos(chars) {
+  // con tono 1-4 y una sola lectura, para que la voz no diga otra pronunciación
+  const toned = chars
+    .map(c => ({ ...c, tone: parseSyllable(c.pin).tone }))
+    .filter(c => c.tone && !c.poly);
   let levelFilter = 'all';
   let score = 0,
     total = 0,
@@ -56,12 +63,7 @@ function initTonos(vocab) {
   });
 
   function wordPool() {
-    return vocab.filter(
-      w =>
-        w.han.length === 1 &&
-        w.tone !== 5 &&
-        (levelFilter === 'all' || w.level === Number(levelFilter))
-    );
+    return toned.filter(w => levelFilter === 'all' || w.level === Number(levelFilter));
   }
 
   // silent: prepara la ronda sin reproducir audio (carga inicial de la página)

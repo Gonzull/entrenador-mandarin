@@ -1,4 +1,5 @@
 import { store } from './storage.js';
+import { CJK, plainPinyin, buildCharIndex } from './chars.js';
 
 const SRS_KEY = 'hanzi_srs_v1';
 const BOX_INTERVAL_DAYS = [0, 1, 3, 7, 14, 30];
@@ -63,100 +64,6 @@ function nextDueLabel(e) {
   if (e.due <= Date.now()) return 'repasar hoy';
   const days = Math.ceil((e.due - Date.now()) / DAY_MS);
   return days === 1 ? 'mañana' : `en ${days} días`;
-}
-
-// --- Índice de caracteres para el buscador ---------------------------------
-// El vocabulario trae palabras; muchos caracteres básicos solo aparecen dentro
-// de palabras compuestas (们 en 我们, 校 en 学校). Aquí se separa cada palabra en
-// caracteres y su pinyin en sílabas para poder buscarlos uno por uno.
-const CJK = /[一-鿿]/;
-const PIN_INITIALS = ['zh', 'ch', 'sh', 'b', 'p', 'm', 'f', 'd', 't', 'n', 'l', 'g', 'k', 'h', 'j', 'q', 'x', 'r', 'z', 'c', 's', 'y', 'w'];
-const PIN_FINALS = ['iang', 'iong', 'uang', 'ang', 'eng', 'ong', 'iao', 'ian', 'ing', 'uai', 'uan', 'ai', 'ei', 'ao', 'ou', 'an', 'en', 'er', 'ia', 'ie', 'iu', 'in', 'ua', 'uo', 'ui', 'un', 'ue', 'a', 'o', 'e', 'i', 'u'];
-
-// pinyin sin tonos ni signos, para comparar con lo que se escribe en un teclado normal
-function plainPinyin(s) {
-  return String(s || '').toLowerCase().normalize('NFD').replace(/[^a-z]/g, '');
-}
-
-// Divide un pinyin pegado ("xuéxiào") en exactamente n sílabas (["xué","xiào"]).
-// Devuelve null si no se puede. Ante varias divisiones posibles prefiere la que no
-// deja sílabas internas empezando por vocal (regla del apóstrofo en pinyin).
-function splitPinyin(pin, n) {
-  const orig = [...String(pin || '').normalize('NFC')];
-  const letters = [];
-  const breaks = new Set(); // posiciones donde un apóstrofo o espacio obliga a cortar
-  orig.forEach((ch, i) => {
-    const p = plainPinyin(ch);
-    if (p.length === 1) letters.push({ p, i });
-    else breaks.add(letters.length);
-  });
-  const s = letters.map(l => l.p).join('');
-  let best = null;
-  function walk(pos, cuts, penalty) {
-    if (best && penalty >= best.penalty) return;
-    if (cuts.length === n) {
-      if (pos === s.length) best = { cuts: [...cuts], penalty };
-      return;
-    }
-    if (pos >= s.length) return;
-    const rest = s.slice(pos);
-    const init = PIN_INITIALS.find(x => rest.startsWith(x)) || '';
-    const afterInit = rest.slice(init.length);
-    for (const fin of PIN_FINALS) {
-      if (!afterInit.startsWith(fin)) continue;
-      const end = pos + init.length + fin.length;
-      let crosses = false;
-      for (let b = pos + 1; b < end; b++) if (breaks.has(b)) crosses = true;
-      if (crosses) continue;
-      cuts.push(end);
-      walk(end, cuts, penalty + (!init && pos > 0 && !breaks.has(pos) ? 1 : 0));
-      cuts.pop();
-    }
-    // erhua: una "r" suelta al final es la sílaba de 儿 (último recurso)
-    if (rest === 'r' && cuts.length === n - 1) {
-      cuts.push(pos + 1);
-      walk(pos + 1, cuts, penalty + 2);
-      cuts.pop();
-    }
-  }
-  walk(0, [], 0);
-  if (!best) return null;
-  let start = 0;
-  return best.cuts.map(end => {
-    const syl = letters.slice(start, end).map(l => orig[l.i]).join('');
-    start = end;
-    return syl;
-  });
-}
-
-// Un registro por carácter: primero las palabras de un solo carácter (sin
-// repetidos, nivel más bajo) y luego los que solo existen dentro de compuestas.
-function buildCharIndex(vocab) {
-  const index = new Map();
-  vocab
-    .filter(w => w.han.length === 1)
-    .forEach(w => {
-      const prev = index.get(w.han);
-      if (!prev || w.level < prev.level) index.set(w.han, w);
-    });
-  vocab
-    .filter(w => w.han.length > 1)
-    .sort((a, b) => a.level - b.level || a.han.length - b.han.length)
-    .forEach(w => {
-      const chars = [...w.han];
-      const syls = chars.every(c => CJK.test(c)) ? splitPinyin(w.pin, chars.length) : null;
-      chars.forEach((c, i) => {
-        if (!CJK.test(c) || index.has(c)) return;
-        index.set(c, {
-          han: c,
-          pin: syls ? syls[i] : '',
-          es: `en ${w.han} (${w.pin}): ${w.es}`,
-          level: w.level,
-          fromWord: true
-        });
-      });
-    });
-  return [...index.values()];
 }
 
 function initEscritura(vocab) {
