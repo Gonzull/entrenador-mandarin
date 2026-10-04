@@ -1,4 +1,4 @@
-const CACHE_NAME = 'entrenador-chino-v3';
+const CACHE_NAME = 'entrenador-chino-v4';
 
 const APP_SHELL = [
   './',
@@ -55,23 +55,18 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Responde con la copia guardada al instante y la actualiza por detrás,
-// así un push nuevo se ve en la siguiente apertura sin subir CACHE_NAME
-function staleWhileRevalidate(event) {
-  const { request } = event;
-  return caches.open(CACHE_NAME).then(async cache => {
-    const cached = await cache.match(request);
-    const network = fetch(request, { cache: 'no-cache' })
+// Con conexión siempre se sirve la versión más reciente (y se guarda una copia);
+// sin conexión se responde con la copia guardada. Así, tras un push, todos los
+// archivos de la app llegan de la misma versión y no se mezclan nuevos con viejos.
+function networkFirst(request) {
+  return caches.open(CACHE_NAME).then(cache =>
+    fetch(request, { cache: 'no-cache' })
       .then(response => {
-        if (response && (response.ok || response.type === 'opaque')) {
-          cache.put(request, response.clone());
-        }
+        if (response && response.ok) cache.put(request, response.clone());
         return response;
       })
-      .catch(() => cached);
-    if (cached) event.waitUntil(network);
-    return cached || network;
-  });
+      .catch(() => cache.match(request))
+  );
 }
 
 function cacheFirst(request) {
@@ -93,7 +88,7 @@ self.addEventListener('fetch', event => {
   const url = new URL(request.url);
 
   if (url.origin === self.location.origin) {
-    event.respondWith(staleWhileRevalidate(event));
+    event.respondWith(networkFirst(request));
     return;
   }
 

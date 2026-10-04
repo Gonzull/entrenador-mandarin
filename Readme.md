@@ -43,7 +43,7 @@ Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo
 
 ### Sin conexión
 
-Tras la primera visita con internet, la app queda guardada en el navegador y abre sin conexión. Cuando hay internet, descarga por detrás la versión más reciente, que se ve al abrir la app la vez siguiente.
+Tras la primera visita con internet, la app queda guardada en el navegador y abre sin conexión. Cuando hay internet, siempre carga la versión más reciente.
 
 Algunas cosas siguen necesitando internet la primera vez que se usan:
 
