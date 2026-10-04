@@ -9,6 +9,9 @@ const BOX_INTERVAL_DAYS = [0, 1, 3, 7, 14, 30];
 const DAY_MS = 86400000;
 // juego: preguntas por partida y puntos
 const ROUND = 10;
+// con una racha de GROW_STREAK aciertos la siguiente partida crece: 10, 15, 20, 30… hasta ROUND_MAX
+const ROUND_MAX = 100;
+const GROW_STREAK = 10;
 const POINTS_OK = 10;
 const POINTS_STREAK = 5; // extra desde el tercer acierto seguido
 const POINTS_FAIL = 5;
@@ -176,6 +179,8 @@ function initFlashcards(vocab) {
   let qi = 0;
   let score = 0;
   let streak = 0;
+  let bestStreak = 0;
+  let roundSize = ROUND;
   let hits = 0;
   let missed = [];
   let question = null;
@@ -233,6 +238,7 @@ function initFlashcards(vocab) {
     if (ok) {
       hits++;
       streak++;
+      bestStreak = Math.max(bestStreak, streak);
       delta = POINTS_OK + (streak >= 3 ? POINTS_STREAK : 0);
       score += delta;
     } else {
@@ -268,6 +274,14 @@ function initFlashcards(vocab) {
     el('fgEndScore').textContent = score;
     el('fgEndLine').textContent =
       `${hits} de ${queue.length} aciertos` + (isRecord ? ' · ¡nuevo récord!' : ` · récord: ${record0}`);
+    const grows = bestStreak >= GROW_STREAK && roundSize < ROUND_MAX;
+    if (grows) roundSize = Math.min(ROUND_MAX, roundSize + (roundSize < 20 ? 5 : 10));
+    el('fgEndNext').textContent = grows
+      ? `¡Racha de ${bestStreak}! La próxima partida sube a ${roundSize} preguntas.`
+      : roundSize < ROUND_MAX
+        ? `Con una racha de ${GROW_STREAK} aciertos seguidos, la próxima partida crece.`
+        : '';
+    el('fgAgain').textContent = `Jugar otra vez (${roundSize} preguntas)`;
     const list = el('fgMissed');
     list.innerHTML = '';
     if (missed.length) {
@@ -300,10 +314,11 @@ function initFlashcards(vocab) {
       el('fgEmpty').textContent = emptyMessage();
       return;
     }
-    queue = shuffled(p).slice(0, ROUND);
+    queue = shuffled(p).slice(0, roundSize);
     qi = 0;
     score = 0;
     streak = 0;
+    bestStreak = 0;
     hits = 0;
     missed = [];
     el('fgPlay').style.display = '';
