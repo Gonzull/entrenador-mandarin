@@ -134,9 +134,9 @@ function initCorreccion(words, vocab, chars) {
     let chunks = [];
     function getWhisper() {
       if (!whisper) {
-        el('corrStatus').textContent = 'Descargando modelo IA 40MB (primera vez, una sola vez)…';
+        el('corrStatus').textContent = 'Descargando modelo IA 77MB (primera vez, una sola vez)…';
         whisper = import('https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2/dist/transformers.min.js')
-          .then(({ pipeline }) => pipeline('automatic-speech-recognition', 'Xenova/whisper-tiny'))
+          .then(({ pipeline }) => pipeline('automatic-speech-recognition', 'Xenova/whisper-base'))
           .catch(e => {
             whisper = null;
             el('corrStatus').textContent = 'Error cargando IA: ' + e.message;
