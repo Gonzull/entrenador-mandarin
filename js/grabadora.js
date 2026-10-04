@@ -1,5 +1,6 @@
 import { speak } from './tts.js';
 import { tongueDiagramSVG, tongueLegendHTML } from './tongueDiagrams.js';
+import { CJK, plainPinyin } from './chars.js';
 
 function initGrabadora(vocab, sibGroups) {
   const words = [...vocab, ...sibGroups.flat().map(w => ({ ...w, level: 'sib' }))];
@@ -71,6 +72,7 @@ function initGrabadora(vocab, sibGroups) {
     const w = filteredWords[select.value];
     if (w) {
       document.getElementById('recHan').textContent = w.han;
+      document.getElementById('recPinEs').textContent = `${w.pin} — ${w.es}`;
       updateDiagram();
     }
   }
@@ -84,6 +86,89 @@ function initGrabadora(vocab, sibGroups) {
     renderSelect();
   });
   renderSelect();
+
+  // ---------- Buscador: por hanzi, pinyin (sin tonos) o significado ----------
+  const searchInput = document.getElementById('recSearch');
+  const searchResults = document.getElementById('recSearchResults');
+  const MAX_RESULTS = 12;
+  const plainEs = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const entries = words.map(w => {
+    const es = plainEs(w.es);
+    return { w, pin: plainPinyin(w.pin), es, esWords: es.split(/[^a-zñ]+/) };
+  });
+
+  // menor = mejor coincidencia; null = no coincide
+  function rank(e, raw, q, qPin) {
+    if (CJK.test(raw)) {
+      if (e.w.han === raw) return 0;
+      if (e.w.han.startsWith(raw)) return 1;
+      return e.w.han.includes(raw) ? 2 : null;
+    }
+    if (qPin && e.pin === qPin) return 3;
+    if (e.esWords.includes(q)) return 4;
+    if (qPin.length >= 2 && e.pin.startsWith(qPin)) return 5;
+    if (q.length >= 3 && e.es.includes(q)) return 6;
+    return null;
+  }
+
+  function pickWord(w) {
+    levelFilter = 'all';
+    document.querySelectorAll('#recLevelFilter .lvlbtn').forEach(x => x.classList.toggle('active', x.dataset.level === 'all'));
+    renderSelect();
+    select.value = words.indexOf(w);
+    updateHan();
+    searchResults.innerHTML = '';
+    searchInput.value = '';
+    speak(w.han);
+  }
+
+  function renderSearch(query) {
+    searchResults.innerHTML = '';
+    const raw = query.trim();
+    if (!raw) return;
+    const q = plainEs(raw);
+    const qPin = plainPinyin(raw);
+    const seen = new Set(); // las palabras de sibilantes repiten algunas del vocabulario
+    const matches = entries
+      .map(e => ({ e, r: rank(e, raw, q, qPin) }))
+      .filter(x => x.r !== null)
+      .sort((a, b) => a.r - b.r || (Number(a.e.w.level) || 9) - (Number(b.e.w.level) || 9) || a.e.w.han.length - b.e.w.han.length)
+      .map(x => x.e.w)
+      .filter(w => {
+        const k = `${w.han}|${w.pin}`;
+        if (seen.has(k)) return false;
+        seen.add(k);
+        return true;
+      })
+      .slice(0, MAX_RESULTS);
+    matches.forEach(w => {
+      const row = document.createElement('div');
+      row.className = 'hz-result';
+      const han = document.createElement('span');
+      han.className = 'han';
+      han.textContent = w.han;
+      const meta = document.createElement('span');
+      meta.className = 'meta';
+      const pin = document.createElement('b');
+      pin.textContent = w.pin;
+      meta.append(pin, ` — ${w.es}`);
+      const tag = document.createElement('span');
+      tag.className = 'lvltag';
+      tag.textContent = w.level === 'sib' ? 'Sibilantes' : `HSK${w.level}`;
+      row.append(han, meta, tag);
+      row.addEventListener('click', () => pickWord(w));
+      searchResults.appendChild(row);
+    });
+    if (!matches.length) {
+      const empty = document.createElement('div');
+      empty.className = 'hz-result freeform';
+      empty.textContent = 'Sin resultados. Escribe en caracteres chinos, pinyin o español.';
+      searchResults.appendChild(empty);
+    }
+  }
+
+  searchInput.addEventListener('input', e => renderSearch(e.target.value));
+
   document.getElementById('recPlayNative').addEventListener('click', () => {
     const w = filteredWords[select.value];
     if (w) speak(w.han);

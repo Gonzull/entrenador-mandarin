@@ -134,6 +134,8 @@
       <button class="lvlbtn" data-level="sib">Sibilantes</button>
     </div>
     <div class="card">
+      <input type="text" id="recSearch" class="rec-select" placeholder="Buscar palabra: 你好 / nihao / hola" autocomplete="off" aria-label="Buscar palabra por hanzi, pinyin o significado">
+      <div id="recSearchResults"></div>
       <select class="rec-select" id="recWordSelect"></select>
       <div class="tongue-wrap">
         <div id="recTongueDiagram" class="tongue-dia small"></div>
@@ -141,6 +143,7 @@
       </div>
       <div class="quiz-stage" style="padding-top:6px;">
         <div class="quiz-han" id="recHan">…</div>
+        <div class="quiz-hint" id="recPinEs"></div>
         <button class="bigplay" id="recPlayNative">&#9654; Nativo</button>
         <div class="rec-controls">
           <button class="rec-btn record" id="recToggle">&#9679; Grabar</button>
@@ -396,16 +399,20 @@
     <div class="stat-grid">
       <div class="stat"><b id="statStreak">0</b><span>días de racha</span></div>
       <div class="stat"><b id="statSessions">0</b><span>sesiones registradas</span></div>
-      <div class="stat"><b id="statChars">0</b><span>caracteres practicados</span></div>
+      <div class="stat"><b id="statChars">0</b><span>caracteres escritos (Escritura)</span></div>
       <div class="stat"><b id="statMastered">0</b><span>caracteres dominados</span></div>
+      <div class="stat"><b id="statWords">0</b><span>palabras vistas (Flashcards)</span></div>
+      <div class="stat"><b id="statWordsMastered">0</b><span>palabras dominadas</span></div>
+      <div class="stat"><b id="statDue">0</b><span>repasos pendientes hoy</span></div>
+      <div class="stat"><b id="statRecord">0</b><span>récord en el juego de Flashcards</span></div>
     </div>
     <button class="logbtn" id="logSession">Registrar sesión de hoy</button>
     <div class="card" style="margin-top:18px;">
       <h2 style="font-size:16px;margin-bottom:14px;">Horario semanal sugerido</h2>
       <div class="schedule-row"><b>Lun / Mié / Vie</b><span>30 min — Tonos + Sibilantes + Escritura (repaso)</span></div>
-      <div class="schedule-row"><b>Mar / Jue</b><span>25 min — Shadowing con audio propio</span></div>
-      <div class="schedule-row"><b>Sábado</b><span>30-40 min — Conversación / role-play</span></div>
-      <div class="schedule-row"><b>Domingo</b><span>20 min — Grabadora + repaso general</span></div>
+      <div class="schedule-row"><b>Mar / Jue</b><span>25 min — Flashcards (repaso) + Oraciones; shadowing con audio propio</span></div>
+      <div class="schedule-row"><b>Sábado</b><span>30-40 min — Diálogos en voz alta / role-play + Corrección</span></div>
+      <div class="schedule-row"><b>Domingo</b><span>20 min — Grabadora + Chengyu + repaso general</span></div>
     </div>
   </section>
 

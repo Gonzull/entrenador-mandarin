@@ -295,7 +295,7 @@ h2 {
   min-height: 17px;
 }
 
-#hanziSearchResults {
+#hanziSearchResults, #recSearchResults {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
@@ -303,6 +303,8 @@ h2 {
   max-height: 240px;
   overflow-y: auto;
 }
+/* en grabadora la lista va entre el buscador y el selector de palabras */
+#recSearchResults:not(:empty) { margin: -8px 0 18px; }
 .hz-result {
   display: flex;
   align-items: center;
@@ -523,10 +525,11 @@ audio { width: 100%; margin-top: 10px; }
 .stat { background: var(--surface-2); border-radius: 10px; padding: 16px; text-align: center; }
 .stat b { display: block; font-family: 'Fraunces', serif; font-size: 30px; color: var(--gold); }
 .stat span { font-size: 12px; color: var(--text-dim); }
-.schedule-row { display: flex; justify-content: space-between; font-size: 13.5px; padding: 9px 0; border-bottom: 1px solid var(--border); }
+.schedule-row { display: flex; justify-content: space-between; gap: 14px; font-size: 13.5px; padding: 9px 0; border-bottom: 1px solid var(--border); }
 .schedule-row:last-child { border-bottom: none; }
-.schedule-row b { color: var(--text); }
-.schedule-row span { color: var(--text-dim); }
+.schedule-row b { color: var(--text); flex: none; }
+.schedule-row span { color: var(--text-dim); text-align: right; }
+button.logbtn:disabled { opacity: .55; cursor: default; }
 button.logbtn {
   width: 100%;
   padding: 14px;

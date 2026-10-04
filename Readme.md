@@ -13,13 +13,13 @@ Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo
 | **Tonos** | Escuchas un carácter y eliges su tono (1 a 4). Usa unos 2.340 caracteres del vocabulario, con filtro por nivel HSK y por lección del libro, y controles para ajustar la velocidad y la altura de la voz. |
 | **Sibilantes** | Distinguir de oído los tres grupos que más se confunden: zh/ch/sh, z/c/s y j/q/x. Los tríos se arman con caracteres del vocabulario que solo se diferencian en la inicial. |
 | **Aspiración** | Pares de caracteres del vocabulario que solo se diferencian en el soplo de aire (b/p, d/t, g/k, j/q, zh/ch, z/c), para escuchar y comparar. |
-| **Grabadora** | Escuchas la palabra, te grabas y comparas ambos audios. Muestra un diagrama de la posición de la lengua para los sonidos sibilantes. |
+| **Grabadora** | Escuchas la palabra, te grabas y comparas ambos audios. Tiene un buscador por hanzi, pinyin o significado para encontrar una palabra y oír cómo se lee. Muestra un diagrama de la posición de la lengua para los sonidos sibilantes. |
 | **Corrección** | Dices una palabra en voz alta; lo reconocido se compara por pinyin (inicial, final y tono) y se indica qué sonido se oyó distinto. Selección de 89 palabras o el vocabulario HSK 1-6 con los sonidos zh/ch/sh/r/z/c/s/j/q/x. |
 | **Escritura** | Orden de trazos animado y práctica de escritura con corrección trazo a trazo, cuadrícula guía (米字格 / 田字格), filtro por nivel y lección, buscador de caracteres y repaso espaciado. |
 | **Oraciones** | Armar oraciones ordenando fichas de palabras, y diálogos por lección donde completas las líneas de tu personaje. |
 | **Chengyu** | Fichas de expresiones de cuatro caracteres (成语): sentido literal, significado real, uso, origen cuando se conoce y un ejemplo. Incluye un quiz de significados y filtro por lección. |
 | **Flashcards** | Tarjetas de vocabulario que se voltean (chino, chino con pinyin o español al frente) con repaso espaciado, y un juego de cuatro opciones con puntos, racha y récord. Filtro por nivel y lección. |
-| **Progreso** | Racha de días, sesiones y caracteres practicados y dominados. |
+| **Progreso** | Racha de días, sesiones, caracteres y palabras practicados y dominados, repasos pendientes y récord del juego. |
 
 ## Contenido
 
