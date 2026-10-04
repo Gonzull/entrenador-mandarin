@@ -1,7 +1,7 @@
 {
-  "version": 8,
-  "updated": "2026-10-03",
-  "nota": "zh y pin van separados por espacios, una ficha por palabra, en el mismo orden. end es la puntuación final. who en los diálogos es A o B. lesson es la lección del libro HSK Standard Course de ese nivel (level 1 = libro 1, level 2 = libro 2, level 3 = libro 3, level 4 = libros 4A y 4B, level 5 = libros 5A y 5B) cuyo vocabulario y gramática usa; el texto es propio, no copiado del libro. Todo el contenido lleva lesson: lo que no seguía un libro está guardado en oraciones_archivo.json, que la app no carga.",
+  "version": 9,
+  "updated": "2026-10-04",
+  "nota": "zh y pin van separados por espacios, una ficha por palabra, en el mismo orden. end es la puntuación final. who en los diálogos es A o B. lesson es la lección del libro HSK Standard Course de ese nivel (level 1 = libro 1, level 2 = libro 2, level 3 = libro 3, level 4 = libros 4A y 4B, level 5 = libros 5A y 5B, level 6 = libros 6A y 6B) cuyo vocabulario y gramática usa; el texto es propio, no copiado del libro. Todo el contenido lleva lesson: lo que no seguía un libro está guardado en oraciones_archivo.json, que la app no carga.",
   "dialogues": [
     {
       "id": "libro-l1-2",
@@ -1532,6 +1532,486 @@
         { "who": "A", "zh": "你 养 的 花 真 鲜艳", "pin": "nǐ yǎng de huā zhēn xiānyàn", "end": "。", "es": "Las flores que cultivas tienen colores muy vivos." },
         { "who": "B", "zh": "我 每天 都 给 它们 浇 水", "pin": "wǒ měitiān dōu gěi tāmen jiāo shuǐ", "end": "。", "es": "Las riego todos los días." }
       ]
+    },
+    {
+      "id": "libro6-l1",
+      "title": "Lección 1 · Vecinos en armonía",
+      "level": 6,
+      "lesson": 1,
+      "lines": [
+        { "who": "A", "zh": "你 和 邻居 的 关系 怎么样", "pin": "nǐ hé línjū de guānxì zěnmeyàng", "end": "？", "es": "¿Cómo es tu relación con los vecinos?" },
+        { "who": "B", "zh": "我们 相处 得 很 融洽", "pin": "wǒmen xiāngchǔ de hěn róngqià", "end": "。", "es": "Nos llevamos muy bien." },
+        { "who": "A", "zh": "你们 从来 不 打架 吗", "pin": "nǐmen cónglái bù dǎjià ma", "end": "？", "es": "¿Nunca se pelean?" },
+        { "who": "B", "zh": "大伙儿 都 很 宽容", "pin": "dàhuǒr dōu hěn kuānróng", "end": "。", "es": "Todos somos muy tolerantes." }
+      ]
+    },
+    {
+      "id": "libro6-l2",
+      "title": "Lección 2 · Echar de menos la casa",
+      "level": 6,
+      "lesson": 2,
+      "lines": [
+        { "who": "A", "zh": "你 近来 怎么 无精打采 的", "pin": "nǐ jìnlái zěnme wújīngdǎcǎi de", "end": "？", "es": "¿Por qué andas tan desanimado últimamente?" },
+        { "who": "B", "zh": "我 一 个 人 在 国外 很 孤独", "pin": "wǒ yí ge rén zài guówài hěn gūdú", "end": "。", "es": "Estoy solo en el extranjero y me siento muy solitario." },
+        { "who": "A", "zh": "你 妈妈 一定 很 心疼 你", "pin": "nǐ māma yídìng hěn xīnténg nǐ", "end": "。", "es": "Seguro que a tu mamá le da mucha pena." },
+        { "who": "B", "zh": "我 恨不得 明天 就 回 家 团圆", "pin": "wǒ hènbude míngtiān jiù huí jiā tuányuán", "end": "。", "es": "Ojalá pudiera volver mañana mismo a reunirme con mi familia." }
+      ]
+    },
+    {
+      "id": "libro6-l3",
+      "title": "Lección 3 · El nuevo ayudante",
+      "level": 6,
+      "lesson": 3,
+      "lines": [
+        { "who": "A", "zh": "你 觉得 新 来 的 助手 怎么样", "pin": "nǐ juéde xīn lái de zhùshǒu zěnmeyàng", "end": "？", "es": "¿Qué te parece el ayudante nuevo?" },
+        { "who": "B", "zh": "他 很 朴实 从来 不 炫耀 自己", "pin": "tā hěn pǔshí cónglái bú xuànyào zìjǐ", "end": "。", "es": "Es muy sencillo, nunca presume de sí mismo." },
+        { "who": "A", "zh": "主管 对 他 的 期望 很 高", "pin": "zhǔguǎn duì tā de qīwàng hěn gāo", "end": "。", "es": "El encargado tiene grandes expectativas puestas en él." },
+        { "who": "B", "zh": "我 相信 他 不 会 辜负 大家", "pin": "wǒ xiāngxìn tā bú huì gūfù dàjiā", "end": "。", "es": "Confío en que no va a defraudar a nadie." }
+      ]
+    },
+    {
+      "id": "libro6-l4",
+      "title": "Lección 4 · Una decisión precipitada",
+      "level": 6,
+      "lesson": 4,
+      "lines": [
+        { "who": "A", "zh": "你 为什么 这么 愤怒", "pin": "nǐ wèishénme zhème fènnù", "end": "？", "es": "¿Por qué estás tan furioso?" },
+        { "who": "B", "zh": "他 不顾 我 的 反对 草率 地 决定 了", "pin": "tā búgù wǒ de fǎnduì cǎoshuài de juédìng le", "end": "。", "es": "Decidió a la ligera, sin tener en cuenta mi oposición." },
+        { "who": "A", "zh": "你 能 饶恕 他 吗", "pin": "nǐ néng ráoshù tā ma", "end": "？", "es": "¿Puedes perdonarlo?" },
+        { "who": "B", "zh": "倘若 他 道歉 我 就 不 生气 了", "pin": "tǎngruò tā dàoqiàn wǒ jiù bù shēngqì le", "end": "。", "es": "Si se disculpa, se me pasa el enojo." }
+      ]
+    },
+    {
+      "id": "libro6-l5",
+      "title": "Lección 5 · El cliente y el proyecto",
+      "level": 6,
+      "lesson": 5,
+      "lines": [
+        { "who": "A", "zh": "客户 对 这 个 计划 反感 吗", "pin": "kèhù duì zhè ge jìhuà fǎngǎn ma", "end": "？", "es": "¿Al cliente le disgusta este plan?" },
+        { "who": "B", "zh": "他 只 是 提 了 一 个 意见 而已", "pin": "tā zhǐ shì tí le yí ge yìjiàn éryǐ", "end": "。", "es": "Solo dio una opinión, nada más." },
+        { "who": "A", "zh": "我们 什么 时候 能 达成 一致", "pin": "wǒmen shénme shíhou néng dáchéng yízhì", "end": "？", "es": "¿Cuándo podremos llegar a un acuerdo?" },
+        { "who": "B", "zh": "我们 要 权衡 一下 再 决定", "pin": "wǒmen yào quánhéng yíxià zài juédìng", "end": "。", "es": "Tenemos que sopesarlo antes de decidir." }
+      ]
+    },
+    {
+      "id": "libro6-l6",
+      "title": "Lección 6 · El primer trabajo",
+      "level": 6,
+      "lesson": 6,
+      "lines": [
+        { "who": "A", "zh": "你 当初 为什么 选择 这 个 职位", "pin": "nǐ dāngchū wèishénme xuǎnzé zhè ge zhíwèi", "end": "？", "es": "¿Por qué elegiste este puesto al principio?" },
+        { "who": "B", "zh": "我 想 施展 自己 的 才干", "pin": "wǒ xiǎng shīzhǎn zìjǐ de cáigàn", "end": "。", "es": "Quería desplegar mis capacidades." },
+        { "who": "A", "zh": "你 的 搭档 怎么样", "pin": "nǐ de dādàng zěnmeyàng", "end": "？", "es": "¿Qué tal tu compañero de trabajo?" },
+        { "who": "B", "zh": "他 工作 兢兢业业 从不 敷衍", "pin": "tā gōngzuò jīngjīngyèyè cóngbù fūyǎn", "end": "。", "es": "Trabaja a conciencia y nunca hace las cosas por cumplir." }
+      ]
+    },
+    {
+      "id": "libro6-l7",
+      "title": "Lección 7 · Tiempos de crisis",
+      "level": 6,
+      "lesson": 7,
+      "lines": [
+        { "who": "A", "zh": "公司 为什么 要 裁员", "pin": "gōngsī wèishénme yào cáiyuán", "end": "？", "es": "¿Por qué la empresa va a despedir gente?" },
+        { "who": "B", "zh": "公司 连续 两 年 亏损 了", "pin": "gōngsī liánxù liǎng nián kuīsǔn le", "end": "。", "es": "La empresa lleva dos años seguidos con pérdidas." },
+        { "who": "A", "zh": "现在 就业 的 压力 日益 增加", "pin": "xiànzài jiùyè de yālì rìyì zēngjiā", "end": "。", "es": "La presión por encontrar empleo aumenta día a día." },
+        { "who": "B", "zh": "危机 也 意味着 机遇", "pin": "wēijī yě yìwèizhe jīyù", "end": "。", "es": "Una crisis también significa una oportunidad." }
+      ]
+    },
+    {
+      "id": "libro6-l8",
+      "title": "Lección 8 · Puntos de vista",
+      "level": 6,
+      "lesson": 8,
+      "lines": [
+        { "who": "A", "zh": "大家 对 这 个 学说 有 什么 见解", "pin": "dàjiā duì zhè ge xuéshuō yǒu shénme jiànjiě", "end": "？", "es": "¿Qué opinan todos sobre esta teoría?" },
+        { "who": "B", "zh": "大家 各抒己见 讨论 得 很 热烈", "pin": "dàjiā gèshūjǐjiàn tǎolùn de hěn rèliè", "end": "。", "es": "Cada uno dio su opinión y se discutió con entusiasmo." },
+        { "who": "A", "zh": "你 能 陈述 一下 你 的 看法 吗", "pin": "nǐ néng chénshù yíxià nǐ de kànfǎ ma", "end": "？", "es": "¿Puedes exponer tu punto de vista?" },
+        { "who": "B", "zh": "我 确信 这 个 推测 是 对 的", "pin": "wǒ quèxìn zhè ge tuīcè shì duì de", "end": "。", "es": "Estoy seguro de que esta conjetura es correcta." }
+      ]
+    },
+    {
+      "id": "libro6-l9",
+      "title": "Lección 9 · Un caso policial",
+      "level": 6,
+      "lesson": 9,
+      "lines": [
+        { "who": "A", "zh": "警察 是 怎么 知道 这 个 案件 的", "pin": "jǐngchá shì zěnme zhīdào zhè ge ànjiàn de", "end": "？", "es": "¿Cómo se enteró la policía de este caso?" },
+        { "who": "B", "zh": "有 人 发现 以后 马上 报警 了", "pin": "yǒu rén fāxiàn yǐhòu mǎshàng bàojǐng le", "end": "。", "es": "Alguien lo descubrió y llamó de inmediato a la policía." },
+        { "who": "A", "zh": "这 个 消息 让 人 很 震惊", "pin": "zhè ge xiāoxi ràng rén hěn zhènjīng", "end": "。", "es": "La noticia dejó a la gente conmocionada." },
+        { "who": "B", "zh": "侦探 已经 着手 调查 了", "pin": "zhēntàn yǐjīng zhuóshǒu diàochá le", "end": "。", "es": "El detective ya empezó a investigar." }
+      ]
+    },
+    {
+      "id": "libro6-l10",
+      "title": "Lección 10 · Cocina con tradición",
+      "level": 6,
+      "lesson": 10,
+      "lines": [
+        { "who": "A", "zh": "这 道 菜 的 调料 是 什么", "pin": "zhè dào cài de tiáoliào shì shénme", "end": "？", "es": "¿Qué condimentos lleva este plato?" },
+        { "who": "B", "zh": "这 是 我 爷爷 传 下来 的 烹饪 方法", "pin": "zhè shì wǒ yéye chuán xiàlai de pēngrèn fāngfǎ", "end": "。", "es": "Es el método de cocina que nos dejó mi abuelo." },
+        { "who": "A", "zh": "味道 很 正宗", "pin": "wèidào hěn zhèngzōng", "end": "。", "es": "El sabor es muy auténtico." },
+        { "who": "B", "zh": "我们 在 继承 传统 的 同时 也 在 创新", "pin": "wǒmen zài jìchéng chuántǒng de tóngshí yě zài chuàngxīn", "end": "。", "es": "A la vez que heredamos la tradición, también innovamos." }
+      ]
+    },
+    {
+      "id": "libro6-l11",
+      "title": "Lección 11 · El perro guía",
+      "level": 6,
+      "lesson": 11,
+      "lines": [
+        { "who": "A", "zh": "这 只 狗 的 嗅觉 很 灵敏", "pin": "zhè zhī gǒu de xiùjué hěn língmǐn", "end": "。", "es": "Este perro tiene un olfato muy sensible." },
+        { "who": "B", "zh": "它 的 动作 也 很 敏捷", "pin": "tā de dòngzuò yě hěn mǐnjié", "end": "。", "es": "Sus movimientos también son muy ágiles." },
+        { "who": "A", "zh": "饲养 它 麻烦 吗", "pin": "sìyǎng tā máfan ma", "end": "？", "es": "¿Es complicado criarlo?" },
+        { "who": "B", "zh": "它 不 懒惰 也 很 亲热", "pin": "tā bù lǎnduò yě hěn qīnrè", "end": "。", "es": "No es perezoso y además es muy cariñoso." }
+      ]
+    },
+    {
+      "id": "libro6-l12",
+      "title": "Lección 12 · En el hospital",
+      "level": 6,
+      "lesson": 12,
+      "lines": [
+        { "who": "A", "zh": "患者 有 什么 症状", "pin": "huànzhě yǒu shénme zhèngzhuàng", "end": "？", "es": "¿Qué síntomas tiene el paciente?" },
+        { "who": "B", "zh": "他 的 神经 有 一些 障碍", "pin": "tā de shénjīng yǒu yìxiē zhàng'ài", "end": "。", "es": "Tiene algunos trastornos nerviosos." },
+        { "who": "A", "zh": "这 种 疾病 会 遗留 给 后代 吗", "pin": "zhè zhǒng jíbìng huì yíliú gěi hòudài ma", "end": "？", "es": "¿Esta enfermedad se transmite a los descendientes?" },
+        { "who": "B", "zh": "我们 务必 警惕", "pin": "wǒmen wùbì jǐngtì", "end": "。", "es": "Debemos estar alerta sin falta." }
+      ]
+    },
+    {
+      "id": "libro6-l13",
+      "title": "Lección 13 · De viaje por la costa",
+      "level": 6,
+      "lesson": 13,
+      "lines": [
+        { "who": "A", "zh": "你 一向 喜欢 去 偏僻 的 地方 旅行 吗", "pin": "nǐ yíxiàng xǐhuan qù piānpì de dìfang lǚxíng ma", "end": "？", "es": "¿Siempre te ha gustado viajar a lugares apartados?" },
+        { "who": "B", "zh": "我 想 了解 那里 的 风土人情", "pin": "wǒ xiǎng liǎojiě nàlǐ de fēngtǔrénqíng", "end": "。", "es": "Quiero conocer las costumbres del lugar." },
+        { "who": "A", "zh": "你 携带 帐篷 了 吗", "pin": "nǐ xiédài zhàngpeng le ma", "end": "？", "es": "¿Llevas carpa?" },
+        { "who": "B", "zh": "我 还 带 了 指南针 和 地图", "pin": "wǒ hái dài le zhǐnánzhēn hé dìtú", "end": "。", "es": "También llevo brújula y mapa." }
+      ]
+    },
+    {
+      "id": "libro6-l14",
+      "title": "Lección 14 · Expedición al Polo Norte",
+      "level": 6,
+      "lesson": 14,
+      "lines": [
+        { "who": "A", "zh": "他们 为什么 要 去 北极 考察", "pin": "tāmen wèishénme yào qù běijí kǎochá", "end": "？", "es": "¿Por qué van a hacer una expedición al Polo Norte?" },
+        { "who": "B", "zh": "他们 想 记载 那里 的 严寒 气候", "pin": "tāmen xiǎng jìzǎi nàlǐ de yánhán qìhòu", "end": "。", "es": "Quieren registrar el clima de frío extremo de allá." },
+        { "who": "A", "zh": "他们 遭遇 过 风暴 吗", "pin": "tāmen zāoyù guo fēngbào ma", "end": "？", "es": "¿Se han topado con tormentas?" },
+        { "who": "B", "zh": "他们 很 疲惫 但是 很 执着", "pin": "tāmen hěn píbèi dànshì hěn zhízhuó", "end": "。", "es": "Están agotados, pero son muy perseverantes." }
+      ]
+    },
+    {
+      "id": "libro6-l15",
+      "title": "Lección 15 · Un paisaje impresionante",
+      "level": 6,
+      "lesson": 15,
+      "lines": [
+        { "who": "A", "zh": "这里 的 瀑布 真 壮丽", "pin": "zhèlǐ de pùbù zhēn zhuànglì", "end": "。", "es": "La cascada de aquí es realmente majestuosa." },
+        { "who": "B", "zh": "我 第一 次 目睹 这样 的 峡谷", "pin": "wǒ dìyī cì mùdǔ zhèyàng de xiágǔ", "end": "。", "es": "Es la primera vez que veo con mis propios ojos un cañón así." },
+        { "who": "A", "zh": "这里 的 海拔 有 多 高", "pin": "zhèlǐ de hǎibá yǒu duō gāo", "end": "？", "es": "¿Qué altitud hay aquí?" },
+        { "who": "B", "zh": "这里 拥有 很 多 珍稀 的 动物", "pin": "zhèlǐ yōngyǒu hěn duō zhēnxī de dòngwù", "end": "。", "es": "Aquí hay muchos animales raros y valiosos." }
+      ]
+    },
+    {
+      "id": "libro6-l16",
+      "title": "Lección 16 · El libro más vendido",
+      "level": 6,
+      "lesson": 16,
+      "lines": [
+        { "who": "A", "zh": "这 本 童话 为什么 这么 畅销", "pin": "zhè běn tónghuà wèishénme zhème chàngxiāo", "end": "？", "es": "¿Por qué se vende tanto este libro de cuentos?" },
+        { "who": "B", "zh": "它 是 一 本 名副其实 的 好 书", "pin": "tā shì yì běn míngfùqíshí de hǎo shū", "end": "。", "es": "Es un buen libro que hace honor a su fama." },
+        { "who": "A", "zh": "作者 是 这 个 领域 的 权威 吗", "pin": "zuòzhě shì zhè ge lǐngyù de quánwēi ma", "end": "？", "es": "¿El autor es una autoridad en este campo?" },
+        { "who": "B", "zh": "他 一直 致力 于 教育 事业", "pin": "tā yìzhí zhìlì yú jiàoyù shìyè", "end": "。", "es": "Siempre se ha dedicado a la educación." }
+      ]
+    },
+    {
+      "id": "libro6-l17",
+      "title": "Lección 17 · La competencia de tiro",
+      "level": 6,
+      "lesson": 17,
+      "lines": [
+        { "who": "A", "zh": "你 这 次 比赛 的 名次 怎么样", "pin": "nǐ zhè cì bǐsài de míngcì zěnmeyàng", "end": "？", "es": "¿En qué puesto quedaste en esta competencia?" },
+        { "who": "B", "zh": "我 瞄准 的 时候 手 一直 在 颤抖", "pin": "wǒ miáozhǔn de shíhou shǒu yìzhí zài chàndǒu", "end": "。", "es": "Cuando apuntaba, la mano no dejaba de temblarme." },
+        { "who": "A", "zh": "你 的 视力 没 问题 吧", "pin": "nǐ de shìlì méi wèntí ba", "end": "？", "es": "¿Tu vista está bien, no?" },
+        { "who": "B", "zh": "我 太 焦急 了 所以 动作 很 笨拙", "pin": "wǒ tài jiāojí le suǒyǐ dòngzuò hěn bènzhuō", "end": "。", "es": "Estaba demasiado ansioso, por eso me moví con torpeza." }
+      ]
+    },
+    {
+      "id": "libro6-l18",
+      "title": "Lección 18 · El jardín",
+      "level": 6,
+      "lesson": 18,
+      "lines": [
+        { "who": "A", "zh": "院子 里 的 树 长 得 真 茂盛", "pin": "yuànzi li de shù zhǎng de zhēn màoshèng", "end": "。", "es": "Los árboles del patio están creciendo muy frondosos." },
+        { "who": "B", "zh": "这里 的 土壤 很 肥沃", "pin": "zhèlǐ de tǔrǎng hěn féiwò", "end": "。", "es": "La tierra de aquí es muy fértil." },
+        { "who": "A", "zh": "那 株 花 的 花瓣 真 神奇", "pin": "nà zhū huā de huābàn zhēn shénqí", "end": "。", "es": "Los pétalos de aquella flor son realmente asombrosos." },
+        { "who": "B", "zh": "雨 水 滋润 以后 更 有 生机 了", "pin": "yǔ shuǐ zīrùn yǐhòu gèng yǒu shēngjī le", "end": "。", "es": "Después de que la lluvia lo humedece, tiene aún más vida." }
+      ]
+    },
+    {
+      "id": "libro6-l19",
+      "title": "Lección 19 · Explorar el fondo del mar",
+      "level": 6,
+      "lesson": 19,
+      "lines": [
+        { "who": "A", "zh": "你 为什么 喜欢 潜水", "pin": "nǐ wèishénme xǐhuan qiánshuǐ", "end": "？", "es": "¿Por qué te gusta bucear?" },
+        { "who": "B", "zh": "我 想 探索 海洋 的 奇妙", "pin": "wǒ xiǎng tànsuǒ hǎiyáng de qímiào", "end": "。", "es": "Quiero explorar las maravillas del océano." },
+        { "who": "A", "zh": "你 捡 到 贝壳 了 吗", "pin": "nǐ jiǎn dào bèiké le ma", "end": "？", "es": "¿Recogiste conchas?" },
+        { "who": "B", "zh": "那里 的 景色 让 我 很 诧异", "pin": "nàlǐ de jǐngsè ràng wǒ hěn chàyì", "end": "。", "es": "El paisaje de allá me dejó muy sorprendido." }
+      ]
+    },
+    {
+      "id": "libro6-l20",
+      "title": "Lección 20 · El abuelo y su bastón",
+      "level": 6,
+      "lesson": 20,
+      "lines": [
+        { "who": "A", "zh": "你 祖父 的 膝盖 怎么 了", "pin": "nǐ zǔfù de xīgài zěnme le", "end": "？", "es": "¿Qué le pasó en la rodilla a tu abuelo?" },
+        { "who": "B", "zh": "他 的 膝盖 发炎 了 走 路 要 拄 拐杖", "pin": "tā de xīgài fāyán le zǒu lù yào zhǔ guǎizhàng", "end": "。", "es": "Se le inflamó la rodilla y para caminar tiene que apoyarse en un bastón." },
+        { "who": "A", "zh": "他 还 那么 勤俭 吗", "pin": "tā hái nàme qínjiǎn ma", "end": "？", "es": "¿Sigue siendo tan trabajador y ahorrativo?" },
+        { "who": "B", "zh": "他 宁肯 自己 吃苦 也 不 麻烦 别人", "pin": "tā nìngkěn zìjǐ chīkǔ yě bù máfan biérén", "end": "。", "es": "Prefiere pasar penurias él antes que molestar a otros." }
+      ]
+    },
+    {
+      "id": "libro6-l21",
+      "title": "Lección 21 · Compras en línea",
+      "level": 6,
+      "lesson": 21,
+      "lines": [
+        { "who": "A", "zh": "这 个 款式 的 羽绒服 新颖 吗", "pin": "zhè ge kuǎnshì de yǔróngfú xīnyǐng ma", "end": "？", "es": "¿Es novedoso este modelo de chaqueta de plumas?" },
+        { "who": "B", "zh": "它 的 性能 很 好 需求 也 很 大", "pin": "tā de xìngnéng hěn hǎo xūqiú yě hěn dà", "end": "。", "es": "Rinde muy bien y además tiene mucha demanda." },
+        { "who": "A", "zh": "我 怎么 登录 这 个 网站", "pin": "wǒ zěnme dēnglù zhè ge wǎngzhàn", "end": "？", "es": "¿Cómo inicio sesión en este sitio?" },
+        { "who": "B", "zh": "屏幕 上 有 指令", "pin": "píngmù shang yǒu zhǐlìng", "end": "。", "es": "En la pantalla están las instrucciones." }
+      ]
+    },
+    {
+      "id": "libro6-l22",
+      "title": "Lección 22 · Petróleo y contaminación",
+      "level": 6,
+      "lesson": 22,
+      "lines": [
+        { "who": "A", "zh": "石油 的 价格 为什么 这么 昂贵", "pin": "shíyóu de jiàgé wèishénme zhème ángguì", "end": "？", "es": "¿Por qué es tan caro el petróleo?" },
+        { "who": "B", "zh": "我们 要 为 污染 付出 代价", "pin": "wǒmen yào wèi wūrǎn fùchū dàijià", "end": "。", "es": "Tenemos que pagar un precio por la contaminación." },
+        { "who": "A", "zh": "政府 应该 怎么 遏制 排放", "pin": "zhèngfǔ yīnggāi zěnme èzhì páifàng", "end": "？", "es": "¿Cómo debería el gobierno frenar las emisiones?" },
+        { "who": "B", "zh": "要 确保 每 个 工厂 都 规范", "pin": "yào quèbǎo měi ge gōngchǎng dōu guīfàn", "end": "。", "es": "Hay que asegurar que cada fábrica cumpla las normas." }
+      ]
+    },
+    {
+      "id": "libro6-l23",
+      "title": "Lección 23 · Medicina y prevención",
+      "level": 6,
+      "lesson": 23,
+      "lines": [
+        { "who": "A", "zh": "这 种 病 的 防治 前景 怎么样", "pin": "zhè zhǒng bìng de fángzhì qiánjǐng zěnmeyàng", "end": "？", "es": "¿Qué perspectivas hay de prevenir y tratar esta enfermedad?" },
+        { "who": "B", "zh": "先进 的 技术 可以 消除 隐患", "pin": "xiānjìn de jìshù kěyǐ xiāochú yǐnhuàn", "end": "。", "es": "La tecnología avanzada puede eliminar los peligros latentes." },
+        { "who": "A", "zh": "这 跟 遗传 有 关系 吗", "pin": "zhè gēn yíchuán yǒu guānxì ma", "end": "？", "es": "¿Tiene relación con la herencia genética?" },
+        { "who": "B", "zh": "基因 的 作用 是 公认 的", "pin": "jīyīn de zuòyòng shì gōngrèn de", "end": "。", "es": "El papel de los genes está reconocido por todos." }
+      ]
+    },
+    {
+      "id": "libro6-l24",
+      "title": "Lección 24 · Un partido polémico",
+      "level": 6,
+      "lesson": 24,
+      "lines": [
+        { "who": "A", "zh": "裁判 为什么 警告 他", "pin": "cáipàn wèishénme jǐnggào tā", "end": "？", "es": "¿Por qué el árbitro lo amonestó?" },
+        { "who": "B", "zh": "他 是 成心 的", "pin": "tā shì chéngxīn de", "end": "。", "es": "Lo hizo a propósito." },
+        { "who": "A", "zh": "这 个 决定 有 争议 吗", "pin": "zhè ge juédìng yǒu zhēngyì ma", "end": "？", "es": "¿Esta decisión es polémica?" },
+        { "who": "B", "zh": "他 觉得 很 冤枉", "pin": "tā juéde hěn yuānwang", "end": "。", "es": "Él siente que es una injusticia." }
+      ]
+    },
+    {
+      "id": "libro6-l25",
+      "title": "Lección 25 · Un encargo urgente",
+      "level": 6,
+      "lesson": 25,
+      "lines": [
+        { "who": "A", "zh": "经理 吩咐 你 做 什么", "pin": "jīnglǐ fēnfù nǐ zuò shénme", "end": "？", "es": "¿Qué te encargó el gerente?" },
+        { "who": "B", "zh": "他 委托 我 去 探望 客户", "pin": "tā wěituō wǒ qù tànwàng kèhù", "end": "。", "es": "Me encomendó ir a visitar al cliente." },
+        { "who": "A", "zh": "期限 是 什么 时候", "pin": "qīxiàn shì shénme shíhou", "end": "？", "es": "¿Cuándo vence el plazo?" },
+        { "who": "B", "zh": "时间 很 紧迫 我 即将 启程", "pin": "shíjiān hěn jǐnpò wǒ jíjiāng qǐchéng", "end": "。", "es": "El tiempo apremia, estoy por partir." }
+      ]
+    },
+    {
+      "id": "libro6-l26",
+      "title": "Lección 26 · Una noche de verano",
+      "level": 6,
+      "lesson": 26,
+      "lines": [
+        { "who": "A", "zh": "今天 真 炎热", "pin": "jīntiān zhēn yánrè", "end": "。", "es": "Hoy hace un calor sofocante." },
+        { "who": "B", "zh": "我们 去 田野 里 走 走 吧", "pin": "wǒmen qù tiányě li zǒu zǒu ba", "end": "。", "es": "Vamos a dar una vuelta por el campo." },
+        { "who": "A", "zh": "你 对 天文 着迷 吗", "pin": "nǐ duì tiānwén zháomí ma", "end": "？", "es": "¿Te fascina la astronomía?" },
+        { "who": "B", "zh": "星星 的 光芒 很 耀眼", "pin": "xīngxing de guāngmáng hěn yàoyǎn", "end": "。", "es": "El brillo de las estrellas es deslumbrante." }
+      ]
+    },
+    {
+      "id": "libro6-l27",
+      "title": "Lección 27 · La ceremonia",
+      "level": 6,
+      "lesson": 27,
+      "lines": [
+        { "who": "A", "zh": "仪式 隆重 吗", "pin": "yíshì lóngzhòng ma", "end": "？", "es": "¿La ceremonia fue solemne?" },
+        { "who": "B", "zh": "我 很 荣幸 能 参加", "pin": "wǒ hěn róngxìng néng cānjiā", "end": "。", "es": "Es un honor para mí haber podido asistir." },
+        { "who": "A", "zh": "你 向 他 请教 问题 了 吗", "pin": "nǐ xiàng tā qǐngjiào wèntí le ma", "end": "？", "es": "¿Le pediste consejo?" },
+        { "who": "B", "zh": "他 很 慷慨 回答 得 很 从容", "pin": "tā hěn kāngkǎi huídá de hěn cóngróng", "end": "。", "es": "Fue muy generoso y respondió con mucha calma." }
+      ]
+    },
+    {
+      "id": "libro6-l28",
+      "title": "Lección 28 · El concierto",
+      "level": 6,
+      "lesson": 28,
+      "lines": [
+        { "who": "A", "zh": "昨天 的 演奏 怎么样", "pin": "zuótiān de yǎnzòu zěnmeyàng", "end": "？", "es": "¿Qué tal la interpretación de ayer?" },
+        { "who": "B", "zh": "旋律 很 美妙 节奏 也 很 好", "pin": "xuánlǜ hěn měimiào jiézòu yě hěn hǎo", "end": "。", "es": "La melodía era maravillosa y el ritmo también muy bueno." },
+        { "who": "A", "zh": "观众 的 反应 呢", "pin": "guānzhòng de fǎnyìng ne", "end": "？", "es": "¿Y la reacción del público?" },
+        { "who": "B", "zh": "大家 都 赞叹 他 精通 音乐", "pin": "dàjiā dōu zàntàn tā jīngtōng yīnyuè", "end": "。", "es": "Todos elogiaron lo bien que domina la música." }
+      ]
+    },
+    {
+      "id": "libro6-l29",
+      "title": "Lección 29 · Una reunión seria",
+      "level": 6,
+      "lesson": 29,
+      "lines": [
+        { "who": "A", "zh": "诸位 对 这 个 意向 有 什么 看法", "pin": "zhūwèi duì zhè ge yìxiàng yǒu shénme kànfǎ", "end": "？", "es": "¿Qué opinan ustedes de esta propuesta?" },
+        { "who": "B", "zh": "我们 应该 周密 地 斟酌 一下", "pin": "wǒmen yīnggāi zhōumì de zhēnzhuó yíxià", "end": "。", "es": "Deberíamos sopesarla con minuciosidad." },
+        { "who": "A", "zh": "他 的 话 是 不 是 虚假 的", "pin": "tā de huà shì bu shì xūjiǎ de", "end": "？", "es": "¿Lo que dijo es falso?" },
+        { "who": "B", "zh": "实质 上 他 违背 了 承诺", "pin": "shízhì shang tā wéibèi le chéngnuò", "end": "。", "es": "En esencia, incumplió su promesa." }
+      ]
+    },
+    {
+      "id": "libro6-l30",
+      "title": "Lección 30 · Cuidar la salud",
+      "level": 6,
+      "lesson": 30,
+      "lines": [
+        { "who": "A", "zh": "你 的 气色 不 太 好", "pin": "nǐ de qìsè bú tài hǎo", "end": "。", "es": "No tienes muy buen semblante." },
+        { "who": "B", "zh": "我 最近 记性 很 差 总是 丢三落四", "pin": "wǒ zuìjìn jìxing hěn chà zǒngshì diūsānlàsì", "end": "。", "es": "Últimamente tengo muy mala memoria, siempre se me olvida algo." },
+        { "who": "A", "zh": "你 应该 纠正 不 好 的 习惯", "pin": "nǐ yīnggāi jiūzhèng bù hǎo de xíguàn", "end": "。", "es": "Deberías corregir tus malos hábitos." },
+        { "who": "B", "zh": "总而言之 我 不 能 再 糟蹋 身体 了", "pin": "zǒng'éryánzhī wǒ bù néng zài zāotà shēntǐ le", "end": "。", "es": "En resumen, no puedo seguir maltratando mi cuerpo." }
+      ]
+    },
+    {
+      "id": "libro6-l31",
+      "title": "Lección 31 · El maestro y el aprendiz",
+      "level": 6,
+      "lesson": 31,
+      "lines": [
+        { "who": "A", "zh": "你 的 徒弟 学 得 怎么样", "pin": "nǐ de túdì xué de zěnmeyàng", "end": "？", "es": "¿Cómo va aprendiendo tu aprendiz?" },
+        { "who": "B", "zh": "他 很 有 潜力 就 是 急于求成", "pin": "tā hěn yǒu qiánlì jiù shì jíyúqiúchéng", "end": "。", "es": "Tiene mucho potencial, solo que quiere resultados demasiado rápido." },
+        { "who": "A", "zh": "学习 应该 循序渐进", "pin": "xuéxí yīnggāi xúnxùjiànjìn", "end": "。", "es": "El aprendizaje debe ir paso a paso." },
+        { "who": "B", "zh": "他 很 坚定 不 会 半途而废", "pin": "tā hěn jiāndìng bú huì bàntú'érfèi", "end": "。", "es": "Es muy firme, no lo va a dejar a medias." }
+      ]
+    },
+    {
+      "id": "libro6-l32",
+      "title": "Lección 32 · Ser un buen ejemplo",
+      "level": 6,
+      "lesson": 32,
+      "lines": [
+        { "who": "A", "zh": "谁 是 你 的 榜样", "pin": "shéi shì nǐ de bǎngyàng", "end": "？", "es": "¿Quién es tu ejemplo a seguir?" },
+        { "who": "B", "zh": "我 父亲 他 很 有 魄力", "pin": "wǒ fùqīn tā hěn yǒu pòlì", "end": "。", "es": "Mi padre; tiene mucho empuje." },
+        { "who": "A", "zh": "别人 讥笑 你 的 时候 怎么 办", "pin": "biérén jīxiào nǐ de shíhou zěnme bàn", "end": "？", "es": "¿Qué haces cuando otros se burlan de ti?" },
+        { "who": "B", "zh": "我 不 理睬 他们 保持 理智", "pin": "wǒ bù lǐcǎi tāmen bǎochí lǐzhì", "end": "。", "es": "No les hago caso y mantengo la sensatez." }
+      ]
+    },
+    {
+      "id": "libro6-l33",
+      "title": "Lección 33 · Fiestas en el pueblo",
+      "level": 6,
+      "lesson": 33,
+      "lines": [
+        { "who": "A", "zh": "你们 正月 怎么 过", "pin": "nǐmen zhēngyuè zěnme guò", "end": "？", "es": "¿Cómo pasan el primer mes lunar?" },
+        { "who": "B", "zh": "我们 给 亲戚 拜年 还 贴 对联", "pin": "wǒmen gěi qīnqi bàinián hái tiē duìlián", "end": "。", "es": "Vamos a saludar a los parientes por el Año Nuevo y pegamos versos pareados." },
+        { "who": "A", "zh": "元宵节 的 现场 热闹 吗", "pin": "Yuánxiāojié de xiànchǎng rènao ma", "end": "？", "es": "¿Hay mucha animación en la Fiesta de los Faroles?" },
+        { "who": "B", "zh": "全家 人 享受 天伦之乐", "pin": "quánjiā rén xiǎngshòu tiānlúnzhīlè", "end": "。", "es": "Toda la familia disfruta de la dicha de estar junta." }
+      ]
+    },
+    {
+      "id": "libro6-l34",
+      "title": "Lección 34 · El coleccionista",
+      "level": 6,
+      "lesson": 34,
+      "lines": [
+        { "who": "A", "zh": "你 收藏 的 陶瓷 是 哪 个 朝代 的", "pin": "nǐ shōucáng de táocí shì nǎ ge cháodài de", "end": "？", "es": "¿De qué dinastía es la cerámica que coleccionas?" },
+        { "who": "B", "zh": "专家 鉴定 以后 说 是 文物", "pin": "zhuānjiā jiàndìng yǐhòu shuō shì wénwù", "end": "。", "es": "Tras la tasación, los expertos dijeron que es una reliquia cultural." },
+        { "who": "A", "zh": "上面 的 图案 真 朴素", "pin": "shàngmiàn de tú'àn zhēn pǔsù", "end": "。", "es": "El diseño que tiene es muy sencillo." },
+        { "who": "B", "zh": "我 乐意 无偿 赠送 给 国家", "pin": "wǒ lèyì wúcháng zèngsòng gěi guójiā", "end": "。", "es": "Con gusto lo dono gratuitamente al país." }
+      ]
+    },
+    {
+      "id": "libro6-l35",
+      "title": "Lección 35 · Volver al pueblo natal",
+      "level": 6,
+      "lesson": 35,
+      "lines": [
+        { "who": "A", "zh": "你 的 故乡 今年 丰收 了 吗", "pin": "nǐ de gùxiāng jīnnián fēngshōu le ma", "end": "？", "es": "¿Hubo buena cosecha este año en tu tierra natal?" },
+        { "who": "B", "zh": "连年 丰收 大家 干劲 十足", "pin": "liánnián fēngshōu dàjiā gànjìn shízú", "end": "。", "es": "Año tras año hay buena cosecha y todos andan con muchísimo empuje." },
+        { "who": "A", "zh": "过 年 放 烟花爆竹 吗", "pin": "guò nián fàng yānhuābàozhú ma", "end": "？", "es": "¿En Año Nuevo tiran fuegos artificiales y petardos?" },
+        { "who": "B", "zh": "祝 你 一帆风顺", "pin": "zhù nǐ yìfānfēngshùn", "end": "。", "es": "Te deseo que todo te vaya viento en popa." }
+      ]
+    },
+    {
+      "id": "libro6-l36",
+      "title": "Lección 36 · Un foro de ideas",
+      "level": 6,
+      "lesson": 36,
+      "lines": [
+        { "who": "A", "zh": "论坛 上 大家 有 分歧 吗", "pin": "lùntán shang dàjiā yǒu fēnqí ma", "end": "？", "es": "¿En el foro hubo discrepancias?" },
+        { "who": "B", "zh": "会议 的 气氛 很 开明", "pin": "huìyì de qìfēn hěn kāimíng", "end": "。", "es": "El ambiente de la reunión fue de mentalidad muy abierta." },
+        { "who": "A", "zh": "他们 倡议 什么", "pin": "tāmen chàngyì shénme", "end": "？", "es": "¿Qué proponen?" },
+        { "who": "B", "zh": "他们 倡议 杜绝 腐败", "pin": "tāmen chàngyì dùjué fǔbài", "end": "。", "es": "Proponen erradicar la corrupción." }
+      ]
+    },
+    {
+      "id": "libro6-l37",
+      "title": "Lección 37 · La investigación",
+      "level": 6,
+      "lesson": 37,
+      "lines": [
+        { "who": "A", "zh": "警察 逮捕 那 个 歹徒 了 吗", "pin": "jǐngchá dàibǔ nà ge dǎitú le ma", "end": "？", "es": "¿La policía arrestó a ese malhechor?" },
+        { "who": "B", "zh": "他们 找 到 了 重要 的 线索", "pin": "tāmen zhǎo dào le zhòngyào de xiànsuǒ", "end": "。", "es": "Encontraron una pista importante." },
+        { "who": "A", "zh": "他 有 什么 嫌疑", "pin": "tā yǒu shénme xiányí", "end": "？", "es": "¿De qué es sospechoso?" },
+        { "who": "B", "zh": "他 非法 贩卖 毒品", "pin": "tā fēifǎ fànmài dúpǐn", "end": "。", "es": "Traficaba drogas ilegalmente." }
+      ]
+    },
+    {
+      "id": "libro6-l38",
+      "title": "Lección 38 · En la feria",
+      "level": 6,
+      "lesson": 38,
+      "lines": [
+        { "who": "A", "zh": "这 次 博览会 的 布局 怎么样", "pin": "zhè cì bólǎnhuì de bùjú zěnmeyàng", "end": "？", "es": "¿Qué tal la distribución de esta feria?" },
+        { "who": "B", "zh": "很 多 人 踊跃 参加", "pin": "hěn duō rén yǒngyuè cānjiā", "end": "。", "es": "Mucha gente participa con entusiasmo." },
+        { "who": "A", "zh": "这里 的 东西 物美价廉 吗", "pin": "zhèlǐ de dōngxi wùměijiàlián ma", "end": "？", "es": "¿Las cosas de aquí son buenas y baratas?" },
+        { "who": "B", "zh": "你 可以 品尝 一下 当地 的 风味", "pin": "nǐ kěyǐ pǐncháng yíxià dāngdì de fēngwèi", "end": "。", "es": "Puedes degustar los sabores típicos del lugar." }
+      ]
+    },
+    {
+      "id": "libro6-l39",
+      "title": "Lección 39 · Negocios y estafas",
+      "level": 6,
+      "lesson": 39,
+      "lines": [
+        { "who": "A", "zh": "他们 为什么 被 拘留 了", "pin": "tāmen wèishénme bèi jūliú le", "end": "？", "es": "¿Por qué los detuvieron?" },
+        { "who": "B", "zh": "他们 冒充 股东 诈骗 钱", "pin": "tāmen màochōng gǔdōng zhàpiàn qián", "end": "。", "es": "Se hacían pasar por accionistas para estafar dinero." },
+        { "who": "A", "zh": "这 件 事 被 曝光 了 吗", "pin": "zhè jiàn shì bèi bàoguāng le ma", "end": "？", "es": "¿Este asunto salió a la luz?" },
+        { "who": "B", "zh": "急功近利 的 人 会 败坏 名誉", "pin": "jígōngjìnlì de rén huì bàihuài míngyù", "end": "。", "es": "Quien busca el éxito rápido termina arruinando su reputación." }
+      ]
+    },
+    {
+      "id": "libro6-l40",
+      "title": "Lección 40 · La carrera",
+      "level": 6,
+      "lesson": 40,
+      "lines": [
+        { "who": "A", "zh": "这 次 田径 竞赛 谁 领先", "pin": "zhè cì tiánjìng jìngsài shéi lǐngxiān", "end": "？", "es": "¿Quién va a la cabeza en esta competencia de atletismo?" },
+        { "who": "B", "zh": "我们 的 选手 很 顽强", "pin": "wǒmen de xuǎnshǒu hěn wánqiáng", "end": "。", "es": "Nuestro competidor es muy tenaz." },
+        { "who": "A", "zh": "他 获得 了 冠军 吗", "pin": "tā huòdé le guànjūn ma", "end": "？", "es": "¿Ganó el primer lugar?" },
+        { "who": "B", "zh": "他 获得 了 亚军 没有 屈服", "pin": "tā huòdé le yàjūn méiyǒu qūfú", "end": "。", "es": "Quedó subcampeón y no se rindió." }
+      ]
     }
   ],
   "sentences": [
@@ -1837,6 +2317,46 @@
     { "level": 5, "lesson": 33, "zh": "明天 商店 照常 营业", "pin": "míngtiān shāngdiàn zhàocháng yíngyè", "end": "。", "es": "Mañana la tienda atiende como de costumbre." },
     { "level": 5, "lesson": 34, "zh": "这 是 我 唯一 的 秘密", "pin": "zhè shì wǒ wéiyī de mìmì", "end": "。", "es": "Este es mi único secreto." },
     { "level": 5, "lesson": 35, "zh": "请 大家 注意 秩序", "pin": "qǐng dàjiā zhùyì zhìxù", "end": "。", "es": "Por favor, mantengan todos el orden." },
-    { "level": 5, "lesson": 36, "zh": "我们 一起 庆祝 一下 吧", "pin": "wǒmen yìqǐ qìngzhù yíxià ba", "end": "。", "es": "Celebremos juntos." }
+    { "level": 5, "lesson": 36, "zh": "我们 一起 庆祝 一下 吧", "pin": "wǒmen yìqǐ qìngzhù yíxià ba", "end": "。", "es": "Celebremos juntos." },
+    { "level": 6, "lesson": 1, "zh": "他 说话 很 爽快", "pin": "tā shuōhuà hěn shuǎngkuài", "end": "。", "es": "Habla de forma muy franca." },
+    { "level": 6, "lesson": 2, "zh": "孩子 的 话 让 她 很 欣慰", "pin": "háizi de huà ràng tā hěn xīnwèi", "end": "。", "es": "Las palabras de su hijo la reconfortaron mucho." },
+    { "level": 6, "lesson": 3, "zh": "我 一直 惦记 着 这 件 事", "pin": "wǒ yìzhí diànjì zhe zhè jiàn shì", "end": "。", "es": "He tenido este asunto presente todo el tiempo." },
+    { "level": 6, "lesson": 4, "zh": "他 终于 摆脱 了 困难", "pin": "tā zhōngyú bǎituō le kùnnan", "end": "。", "es": "Por fin se libró de las dificultades." },
+    { "level": 6, "lesson": 5, "zh": "我 是 专程 来 看 你 的", "pin": "wǒ shì zhuānchéng lái kàn nǐ de", "end": "。", "es": "Vine especialmente a verte." },
+    { "level": 6, "lesson": 6, "zh": "他 从不 跟 别人 计较", "pin": "tā cóngbù gēn biérén jìjiào", "end": "。", "es": "Nunca discute con los demás por pequeñeces." },
+    { "level": 6, "lesson": 7, "zh": "她 擅长 画 画", "pin": "tā shàncháng huà huà", "end": "。", "es": "Ella es buena dibujando." },
+    { "level": 6, "lesson": 8, "zh": "他 陷入 了 沉默", "pin": "tā xiànrù le chénmò", "end": "。", "es": "Se sumió en el silencio." },
+    { "level": 6, "lesson": 9, "zh": "这样 做 可以 一举两得", "pin": "zhèyàng zuò kěyǐ yìjǔliǎngdé", "end": "。", "es": "Haciéndolo así se matan dos pájaros de un tiro." },
+    { "level": 6, "lesson": 10, "zh": "大 自然 充满 了 奥秘", "pin": "dà zìrán chōngmǎn le àomì", "end": "。", "es": "La naturaleza está llena de misterios." },
+    { "level": 6, "lesson": 11, "zh": "他 是 一 个 见多识广 的 人", "pin": "tā shì yí ge jiànduōshíguǎng de rén", "end": "。", "es": "Es una persona con mucha experiencia y conocimiento." },
+    { "level": 6, "lesson": 12, "zh": "你 不妨 试 一下", "pin": "nǐ bùfáng shì yíxià", "end": "。", "es": "No estaría mal que lo intentaras." },
+    { "level": 6, "lesson": 13, "zh": "这 个 城市 一度 非常 繁华", "pin": "zhè ge chéngshì yídù fēicháng fánhuá", "end": "。", "es": "Esta ciudad fue en un momento muy próspera." },
+    { "level": 6, "lesson": 14, "zh": "你 带 上 伞 免得 淋 雨", "pin": "nǐ dài shang sǎn miǎnde lín yǔ", "end": "。", "es": "Lleva paraguas para no mojarte con la lluvia." },
+    { "level": 6, "lesson": 15, "zh": "成功 需要 毅力", "pin": "chénggōng xūyào yìlì", "end": "。", "es": "El éxito requiere perseverancia." },
+    { "level": 6, "lesson": 16, "zh": "孩子 渴望 得到 父母 的 表扬", "pin": "háizi kěwàng dédào fùmǔ de biǎoyáng", "end": "。", "es": "Los niños anhelan recibir elogios de sus padres." },
+    { "level": 6, "lesson": 17, "zh": "我 对 这 件 事 无能为力", "pin": "wǒ duì zhè jiàn shì wúnéngwéilì", "end": "。", "es": "No puedo hacer nada frente a este asunto." },
+    { "level": 6, "lesson": 18, "zh": "这 件 事 真 不可思议", "pin": "zhè jiàn shì zhēn bùkěsīyì", "end": "。", "es": "Este asunto es realmente inconcebible." },
+    { "level": 6, "lesson": 19, "zh": "众所周知 地球 是 圆 的", "pin": "zhòngsuǒzhōuzhī dìqiú shì yuán de", "end": "。", "es": "Como todos saben, la Tierra es redonda." },
+    { "level": 6, "lesson": 20, "zh": "这样 做 得不偿失", "pin": "zhèyàng zuò débùchángshī", "end": "。", "es": "Hacerlo así cuesta más de lo que se gana." },
+    { "level": 6, "lesson": 21, "zh": "父母 对 孩子 的 关怀 无微不至", "pin": "fùmǔ duì háizi de guānhuái wúwēibúzhì", "end": "。", "es": "Los padres cuidan a sus hijos hasta en el más mínimo detalle." },
+    { "level": 6, "lesson": 22, "zh": "这 是 一 个 明智 的 选择", "pin": "zhè shì yí ge míngzhì de xuǎnzé", "end": "。", "es": "Esta es una elección sensata." },
+    { "level": 6, "lesson": 23, "zh": "这 个 办法 切实 可行", "pin": "zhè ge bànfǎ qièshí kěxíng", "end": "。", "es": "Esta solución es práctica y viable." },
+    { "level": 6, "lesson": 24, "zh": "上课 的 时候 要 聚精会神", "pin": "shàngkè de shíhou yào jùjīnghuìshén", "end": "。", "es": "En clase hay que poner toda la atención." },
+    { "level": 6, "lesson": 25, "zh": "这 件 事 我 很 为难", "pin": "zhè jiàn shì wǒ hěn wéinán", "end": "。", "es": "Este asunto me pone en un aprieto." },
+    { "level": 6, "lesson": 26, "zh": "他 默默 地 帮助 别人", "pin": "tā mòmò de bāngzhù biérén", "end": "。", "es": "Ayuda a los demás en silencio." },
+    { "level": 6, "lesson": 27, "zh": "他 从来 不 对 朋友 撒谎", "pin": "tā cónglái bú duì péngyou sāhuǎng", "end": "。", "es": "Nunca les miente a sus amigos." },
+    { "level": 6, "lesson": 28, "zh": "黎明 的 时候 天气 很 晴朗", "pin": "límíng de shíhou tiānqì hěn qínglǎng", "end": "。", "es": "Al amanecer el tiempo estaba muy despejado." },
+    { "level": 6, "lesson": 29, "zh": "答案 一目了然", "pin": "dá'àn yímùliǎorán", "end": "。", "es": "La respuesta se ve de un vistazo." },
+    { "level": 6, "lesson": 30, "zh": "这 两 个 队 的 水平 不相上下", "pin": "zhè liǎng ge duì de shuǐpíng bùxiāngshàngxià", "end": "。", "es": "El nivel de estos dos equipos es parejo." },
+    { "level": 6, "lesson": 31, "zh": "请 你 多 保重 身体", "pin": "qǐng nǐ duō bǎozhòng shēntǐ", "end": "。", "es": "Cuídate mucho, por favor." },
+    { "level": 6, "lesson": 32, "zh": "每 个 人 都 有 自己 的 尊严", "pin": "měi ge rén dōu yǒu zìjǐ de zūnyán", "end": "。", "es": "Cada persona tiene su propia dignidad." },
+    { "level": 6, "lesson": 33, "zh": "他 见义勇为 救 了 一 个 孩子", "pin": "tā jiànyìyǒngwéi jiù le yí ge háizi", "end": "。", "es": "Actuó con valentía y salvó a un niño." },
+    { "level": 6, "lesson": 34, "zh": "他 对 工作 精益求精", "pin": "tā duì gōngzuò jīngyìqiújīng", "end": "。", "es": "En su trabajo siempre busca la perfección." },
+    { "level": 6, "lesson": 35, "zh": "我们 要 再接再厉", "pin": "wǒmen yào zàijiēzàilì", "end": "。", "es": "Tenemos que seguir esforzándonos." },
+    { "level": 6, "lesson": 36, "zh": "我 衷心 感谢 你 的 帮助", "pin": "wǒ zhōngxīn gǎnxiè nǐ de bāngzhù", "end": "。", "es": "Agradezco de todo corazón tu ayuda." },
+    { "level": 6, "lesson": 37, "zh": "遇到 危险 的 时候 要 沉着", "pin": "yùdào wēixiǎn de shíhou yào chénzhuó", "end": "。", "es": "Ante el peligro hay que mantener la serenidad." },
+    { "level": 6, "lesson": 38, "zh": "只要 大家 齐心协力 就 能 成功", "pin": "zhǐyào dàjiā qíxīnxiélì jiù néng chénggōng", "end": "。", "es": "Con tal de que todos unamos fuerzas, podremos lograrlo." },
+    { "level": 6, "lesson": 39, "zh": "科学 技术 的 发展 日新月异", "pin": "kēxué jìshù de fāzhǎn rìxīnyuèyì", "end": "。", "es": "La ciencia y la tecnología avanzan día a día." },
+    { "level": 6, "lesson": 40, "zh": "学习 和 休息 相辅相成", "pin": "xuéxí hé xiūxi xiāngfǔxiāngchéng", "end": "。", "es": "El estudio y el descanso se complementan." }
   ]
 }
