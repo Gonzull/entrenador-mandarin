@@ -12,15 +12,20 @@ function createLessonFilter(select, onChange) {
     update(items, level) {
       lesson = 'all';
       const lessons = [...new Set(items.map(x => x.lesson).filter(Boolean))].sort((a, b) => a - b);
-      const show = !Number.isNaN(Number(level)) && lessons.length > 0;
+      // repaso extra: palabras del nivel sin lección en el libro, al final de la lista
+      const extra = items.filter(x => x.extra).length;
+      const show = !Number.isNaN(Number(level)) && (lessons.length > 0 || extra > 0);
       select.style.display = show ? '' : 'none';
       if (!show) return;
       select.innerHTML =
         '<option value="all">Todas las lecciones</option>' +
-        lessons.map(n => `<option value="${n}">Lección ${n} (${items.filter(x => x.lesson === n).length})</option>`).join('');
+        lessons.map(n => `<option value="${n}">Lección ${n} (${items.filter(x => x.lesson === n).length})</option>`).join('') +
+        (extra ? `<option value="extra">Repaso extra (${extra})</option>` : '');
     },
     apply(items) {
-      return lesson === 'all' ? items : items.filter(x => x.lesson === Number(lesson));
+      if (lesson === 'all') return items;
+      if (lesson === 'extra') return items.filter(x => x.extra);
+      return items.filter(x => x.lesson === Number(lesson));
     }
   };
 }

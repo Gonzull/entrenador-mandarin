@@ -126,8 +126,10 @@ function initOraciones(data) {
   const prefs = { pinyin: true, trans: true, ...store.get(PREF_KEY, {}) };
   const dialogues = data.dialogues.map(d => ({
     ...d,
-    lines: d.lines.map(l => parseSentence({ ...l, level: d.level, lesson: d.lesson }))
+    // book: "v3.0" en los diálogos que siguen los libros del programa nuevo (新HSK教程)
+    lines: d.lines.map(l => parseSentence({ ...l, level: d.level, lesson: d.lesson, book: d.book }))
   }));
+  const levelLabel = s => `HSK${s.level}${s.book ? ' ' + s.book : ''}`;
   // para armar sirven las oraciones sueltas y también cada línea de diálogo
   const buildable = [...data.sentences.map(parseSentence), ...dialogues.flatMap(d => d.lines)].filter(
     s => s.words.length >= 2
@@ -155,7 +157,7 @@ function initOraciones(data) {
       return;
     }
     el('oracPrompt').textContent = s.es;
-    el('oracMeta').textContent = `HSK${s.level}${s.lesson ? ` · lección ${s.lesson}` : ''} · ${s.words.length} fichas`;
+    el('oracMeta').textContent = `${levelLabel(s)}${s.lesson ? ` · lección ${s.lesson}` : ''} · ${s.words.length} fichas`;
     el('oracSolution').innerHTML = '';
     el('oracNext').style.display = 'none';
     createBuilder(el('oracBuilder'), s, {
@@ -195,17 +197,18 @@ function initOraciones(data) {
   let role = 'read'; // 'read' | 'A' | 'B'
   let step = 0;
 
-  // un grupo por nivel HSK; dentro de cada uno van primero las lecciones del libro
+  // un grupo por nivel HSK y, a continuación de cada uno, el de los libros v3.0 de ese nivel
   const groups = {};
   dialogues.forEach((d, i) => {
-    if (!groups[d.level]) {
-      groups[d.level] = document.createElement('optgroup');
-      groups[d.level].label = `HSK ${d.level}`;
+    const key = `${d.level}${d.book ? ' ' + d.book : ''}`;
+    if (!groups[key]) {
+      groups[key] = document.createElement('optgroup');
+      groups[key].label = `HSK ${key}`;
     }
     const opt = document.createElement('option');
     opt.value = i;
     opt.textContent = d.title;
-    groups[d.level].appendChild(opt);
+    groups[key].appendChild(opt);
   });
   Object.keys(groups).sort().forEach(lv => el('dlgSelect').appendChild(groups[lv]));
 

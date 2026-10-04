@@ -40,13 +40,16 @@ async function loadKnowledgeBase() {
   const results = await Promise.all(DATA_FILES.map(fetchJSON));
   const [hsk1, hsk2, hsk3, hsk4, hsk5, hsk6, diagnostico, sibilantes, aspiracion, correccion, oraciones, chengyu] = results;
 
+  // palabra: [han, pin, es, lección, marca]. La marca "extra" indica repaso extra del nivel:
+  // palabras sin lección en los libros HSK Standard Course que sí están en el programa nuevo
+  const toWord = level => ([han, pin, es, lesson, mark]) => ({ level, pin, han, es, lesson: lesson || undefined, extra: mark === 'extra' });
   const vocab = [
-    ...hsk1.words.map(([han, pin, es, lesson]) => ({ level: 1, pin, han, es, lesson })),
-    ...hsk2.words.map(([han, pin, es, lesson]) => ({ level: 2, pin, han, es, lesson })),
-    ...hsk3.words.map(([han, pin, es, lesson]) => ({ level: 3, pin, han, es, lesson })),
-    ...hsk4.words.map(([han, pin, es, lesson]) => ({ level: 4, pin, han, es, lesson })),
-    ...hsk5.words.map(([han, pin, es, lesson]) => ({ level: 5, pin, han, es, lesson })),
-    ...hsk6.words.map(([han, pin, es, lesson]) => ({ level: 6, pin, han, es, lesson }))
+    ...hsk1.words.map(toWord(1)),
+    ...hsk2.words.map(toWord(2)),
+    ...hsk3.words.map(toWord(3)),
+    ...hsk4.words.map(toWord(4)),
+    ...hsk5.words.map(toWord(5)),
+    ...hsk6.words.map(toWord(6))
   ].map(w => ({ ...w, tone: computeTone(w.pin) }));
 
   return {

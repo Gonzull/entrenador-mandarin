@@ -142,7 +142,7 @@ function initFlashcards(vocab) {
     if (recent.length > 3) recent.shift();
     flipped = false;
     el('flashMeta').textContent =
-      `HSK${current.level}` + (current.lesson ? ` · lección ${current.lesson}` : '') + ` · ${p.length.toLocaleString('es')} en este mazo`;
+      `HSK${current.level}` + (current.lesson ? ` · lección ${current.lesson}` : current.extra ? ' · repaso extra' : '') + ` · ${p.length.toLocaleString('es')} en este mazo`;
     const e = srs[keyOf(current)];
     el('flashInfo').textContent = e ? `Vista ${e.seen} vez(es) · ${e.ok} sabida(s)` : 'Palabra nueva';
     renderCard();

@@ -1,7 +1,7 @@
 {
-  "version": 10,
+  "version": 11,
   "updated": "2026-10-04",
-  "nota": "zh y pin van separados por espacios, una ficha por palabra, en el mismo orden. end es la puntuación final. who en los diálogos es A o B. lesson es la lección del libro HSK Standard Course de ese nivel (level 1 = libro 1, level 2 = libro 2, level 3 = libro 3, level 4 = libros 4A y 4B, level 5 = libros 5A y 5B, level 6 = libros 6A y 6B) cuyo vocabulario y gramática usa; el texto es propio, no copiado del libro. Todo el contenido lleva lesson: lo que no seguía un libro está guardado en oraciones_archivo.json, que la app no carga.",
+  "nota": "zh y pin van separados por espacios, una ficha por palabra, en el mismo orden. end es la puntuación final. who en los diálogos es A o B. lesson es la lección del libro HSK Standard Course de ese nivel (level 1 = libro 1, level 2 = libro 2, level 3 = libro 3, level 4 = libros 4A y 4B, level 5 = libros 5A y 5B, level 6 = libros 6A y 6B) cuyo vocabulario y gramática usa; el texto es propio, no copiado del libro. Todo el contenido lleva lesson: lo que no seguía un libro está guardado en oraciones_archivo.json, que la app no carga. Los diálogos con book \"v3.0\" siguen en cambio las lecciones de los libros 新HSK教程 (New HSK Course) 1 a 3 del programa nuevo, y su lesson es la de ese libro; también son texto propio.",
   "dialogues": [
     {
       "id": "libro-l1-2",
@@ -2011,6 +2011,358 @@
         { "who": "B", "zh": "我们 的 选手 很 顽强", "pin": "wǒmen de xuǎnshǒu hěn wánqiáng", "end": "。", "es": "Nuestro competidor es muy tenaz." },
         { "who": "A", "zh": "他 获得 了 冠军 吗", "pin": "tā huòdé le guànjūn ma", "end": "？", "es": "¿Ganó el primer lugar?" },
         { "who": "B", "zh": "他 获得 了 亚军 没有 屈服", "pin": "tā huòdé le yàjūn méiyǒu qūfú", "end": "。", "es": "Quedó subcampeón y no se rindió." }
+      ]
+    },
+    {
+      "id": "v3-1-l6",
+      "title": "Lección 6 · El número de celular",
+      "level": 1,
+      "lesson": 6,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "你 的 手机 号 是 多少", "pin": "nǐ de shǒujī hào shì duōshao", "end": "？", "es": "¿Cuál es tu número de celular?" },
+        { "who": "B", "zh": "是 三 八 六 五 二 九", "pin": "shì sān bā liù wǔ èr jiǔ", "end": "。", "es": "Es el 386529." },
+        { "who": "A", "zh": "明天 你 想 去 哪儿", "pin": "míngtiān nǐ xiǎng qù nǎr", "end": "？", "es": "¿Adónde quieres ir mañana?" },
+        { "who": "B", "zh": "我 想 去 超市 买 东西", "pin": "wǒ xiǎng qù chāoshì mǎi dōngxi", "end": "。", "es": "Quiero ir al supermercado a comprar cosas." },
+        { "who": "A", "zh": "你 想 买 什么", "pin": "nǐ xiǎng mǎi shénme", "end": "？", "es": "¿Qué quieres comprar?" },
+        { "who": "B", "zh": "我 想 买 牛奶 和 包子", "pin": "wǒ xiǎng mǎi niúnǎi hé bāozi", "end": "。", "es": "Quiero comprar leche y bollos rellenos." },
+        { "who": "A", "zh": "我们 怎么 去", "pin": "wǒmen zěnme qù", "end": "？", "es": "¿Cómo vamos?" },
+        { "who": "B", "zh": "我们 坐 出租车 去", "pin": "wǒmen zuò chūzūchē qù", "end": "。", "es": "Vamos en taxi." }
+      ]
+    },
+    {
+      "id": "v3-1-l8",
+      "title": "Lección 8 · ¿Dónde trabaja?",
+      "level": 1,
+      "lesson": 8,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "你 爸爸 在 哪儿 工作", "pin": "nǐ bàba zài nǎr gōngzuò", "end": "？", "es": "¿Dónde trabaja tu papá?" },
+        { "who": "B", "zh": "他 在 医院 上班", "pin": "tā zài yīyuàn shàngbān", "end": "。", "es": "Trabaja en un hospital." },
+        { "who": "A", "zh": "你 妈妈 也 是 医生 吗", "pin": "nǐ māma yě shì yīshēng ma", "end": "？", "es": "¿Tu mamá también es médica?" },
+        { "who": "B", "zh": "她 不 是 医生", "pin": "tā bú shì yīshēng", "end": "。", "es": "Ella no es médica." },
+        { "who": "A", "zh": "她 在 哪儿 上班", "pin": "tā zài nǎr shàngbān", "end": "？", "es": "¿Dónde trabaja ella?" },
+        { "who": "B", "zh": "她 在 学校 里 的 书店 工作", "pin": "tā zài xuéxiào li de shūdiàn gōngzuò", "end": "。", "es": "Trabaja en la librería que está dentro de la escuela." },
+        { "who": "A", "zh": "医院 里 人 多 吗", "pin": "yīyuàn li rén duō ma", "end": "？", "es": "¿Hay mucha gente en el hospital?" },
+        { "who": "B", "zh": "医院 里 人 很 多", "pin": "yīyuàn li rén hěn duō", "end": "。", "es": "En el hospital hay mucha gente." }
+      ]
+    },
+    {
+      "id": "v3-1-l11",
+      "title": "Lección 11 · En la universidad",
+      "level": 1,
+      "lesson": 11,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "你 是 不 是 大学生", "pin": "nǐ shì bu shì dàxuéshēng", "end": "？", "es": "¿Eres estudiante universitario o no?" },
+        { "who": "B", "zh": "我 在 中国 读 大学", "pin": "wǒ zài Zhōngguó dú dàxué", "end": "。", "es": "Estudio en una universidad en China." },
+        { "who": "A", "zh": "你 弟弟 也 读 大学 吗", "pin": "nǐ dìdi yě dú dàxué ma", "end": "？", "es": "¿Tu hermano menor también va a la universidad?" },
+        { "who": "B", "zh": "他 正在 找 工作", "pin": "tā zhèngzài zhǎo gōngzuò", "end": "。", "es": "Él está buscando trabajo." },
+        { "who": "A", "zh": "你 现在 在 做 什么", "pin": "nǐ xiànzài zài zuò shénme", "end": "？", "es": "¿Qué estás haciendo ahora?" },
+        { "who": "B", "zh": "我 正在 学习 中文", "pin": "wǒ zhèngzài xuéxí Zhōngwén", "end": "。", "es": "Estoy estudiando chino." },
+        { "who": "A", "zh": "你 明天 要 上课 吗", "pin": "nǐ míngtiān yào shàngkè ma", "end": "？", "es": "¿Mañana tienes que ir a clase?" },
+        { "who": "B", "zh": "我 明天 上午 要 上课", "pin": "wǒ míngtiān shàngwǔ yào shàngkè", "end": "。", "es": "Mañana en la mañana tengo clase." }
+      ]
+    },
+    {
+      "id": "v3-1-l13",
+      "title": "Lección 13 · En la cafetería",
+      "level": 1,
+      "lesson": 13,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "您 想 喝 什么", "pin": "nín xiǎng hē shénme", "end": "？", "es": "¿Qué desea tomar?" },
+        { "who": "B", "zh": "请 给 我 两 杯 茶", "pin": "qǐng gěi wǒ liǎng bēi chá", "end": "。", "es": "Deme dos tazas de té, por favor." },
+        { "who": "A", "zh": "您 要 吃 东西 吗", "pin": "nín yào chī dōngxi ma", "end": "？", "es": "¿Va a comer algo?" },
+        { "who": "B", "zh": "这儿 卖 面包 吗", "pin": "zhèr mài miànbāo ma", "end": "？", "es": "¿Aquí venden pan?" },
+        { "who": "A", "zh": "我们 有 面包 和 鸡蛋", "pin": "wǒmen yǒu miànbāo hé jīdàn", "end": "。", "es": "Tenemos pan y huevos." },
+        { "who": "B", "zh": "我 可以 看 一下 吗", "pin": "wǒ kěyǐ kàn yíxià ma", "end": "？", "es": "¿Puedo mirar un momento?" },
+        { "who": "A", "zh": "没 问题", "pin": "méi wèntí", "end": "。", "es": "Sin problema." },
+        { "who": "B", "zh": "我 再 要 一 个 面包", "pin": "wǒ zài yào yí ge miànbāo", "end": "。", "es": "Quiero además un pan." },
+        { "who": "A", "zh": "茶 和 面包 二十 块 钱", "pin": "chá hé miànbāo èrshí kuài qián", "end": "。", "es": "El té y el pan son veinte yuanes." }
+      ]
+    },
+    {
+      "id": "v3-1-l15",
+      "title": "Lección 15 · Viaje en avión",
+      "level": 1,
+      "lesson": 15,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "你 明天 去 哪儿", "pin": "nǐ míngtiān qù nǎr", "end": "？", "es": "¿Adónde vas mañana?" },
+        { "who": "B", "zh": "我 坐 飞机 去 西安", "pin": "wǒ zuò fēijī qù Xī'ān", "end": "。", "es": "Voy a Xi'an en avión." },
+        { "who": "A", "zh": "你 的 家人 住 在 西安 吗", "pin": "nǐ de jiārén zhù zài Xī'ān ma", "end": "？", "es": "¿Tu familia vive en Xi'an?" },
+        { "who": "B", "zh": "我 爸爸 妈妈 都 住 在 那儿", "pin": "wǒ bàba māma dōu zhù zài nàr", "end": "。", "es": "Mi papá y mi mamá viven allá." },
+        { "who": "A", "zh": "坐 飞机 要 几 个 小时", "pin": "zuò fēijī yào jǐ ge xiǎoshí", "end": "？", "es": "¿Cuántas horas son en avión?" },
+        { "who": "B", "zh": "要 两 个 小时", "pin": "yào liǎng ge xiǎoshí", "end": "。", "es": "Son dos horas." },
+        { "who": "A", "zh": "你 几 点 去 机场", "pin": "nǐ jǐ diǎn qù jīchǎng", "end": "？", "es": "¿A qué hora vas al aeropuerto?" },
+        { "who": "B", "zh": "我 早上 七 点 去 机场", "pin": "wǒ zǎoshang qī diǎn qù jīchǎng", "end": "。", "es": "Voy al aeropuerto a las siete de la mañana." },
+        { "who": "A", "zh": "西安 好玩儿 吗", "pin": "Xī'ān hǎowánr ma", "end": "？", "es": "¿Xi'an es entretenida?" },
+        { "who": "B", "zh": "西安 非常 好玩儿", "pin": "Xī'ān fēicháng hǎowánr", "end": "。", "es": "Xi'an es muy entretenida." }
+      ]
+    },
+    {
+      "id": "v3-2-l1",
+      "title": "Lección 1 · Recién llegado",
+      "level": 2,
+      "lesson": 1,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "你 是 什么 时候 来 中国 的", "pin": "nǐ shì shénme shíhou lái Zhōngguó de", "end": "？", "es": "¿Cuándo llegaste a China?" },
+        { "who": "B", "zh": "我 是 昨天 来 的", "pin": "wǒ shì zuótiān lái de", "end": "。", "es": "Llegué ayer." },
+        { "who": "A", "zh": "你 是 来 旅游 的 吧", "pin": "nǐ shì lái lǚyóu de ba", "end": "？", "es": "Viniste de turismo, ¿cierto?" },
+        { "who": "B", "zh": "我 是 来 学习 中文 的", "pin": "wǒ shì lái xuéxí Zhōngwén de", "end": "。", "es": "Vine a estudiar chino." },
+        { "who": "A", "zh": "谁 去 机场 接 你 的", "pin": "shéi qù jīchǎng jiē nǐ de", "end": "？", "es": "¿Quién fue a buscarte al aeropuerto?" },
+        { "who": "B", "zh": "我 朋友 去 接 我 的", "pin": "wǒ péngyou qù jiē wǒ de", "end": "。", "es": "Fue a buscarme un amigo." },
+        { "who": "A", "zh": "我 给 你 介绍 一下 我 的 同学", "pin": "wǒ gěi nǐ jièshào yíxià wǒ de tóngxué", "end": "。", "es": "Te presento a mis compañeros." },
+        { "who": "B", "zh": "认识 你们 很 高兴", "pin": "rènshi nǐmen hěn gāoxìng", "end": "。", "es": "Mucho gusto en conocerlos." },
+        { "who": "A", "zh": "今天 我 请 你 吃 饭 吧", "pin": "jīntiān wǒ qǐng nǐ chī fàn ba", "end": "。", "es": "Hoy te invito a comer." },
+        { "who": "B", "zh": "那 太 好 了", "pin": "nà tài hǎo le", "end": "！", "es": "¡Qué bueno!" }
+      ]
+    },
+    {
+      "id": "v3-2-l2",
+      "title": "Lección 2 · ¿Bus o taxi?",
+      "level": 2,
+      "lesson": 2,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "我们 怎么 去 书店", "pin": "wǒmen zěnme qù shūdiàn", "end": "？", "es": "¿Cómo vamos a la librería?" },
+        { "who": "B", "zh": "坐 公交车 去 吧", "pin": "zuò gōngjiāochē qù ba", "end": "。", "es": "Vamos en bus." },
+        { "who": "A", "zh": "车站 远 吗", "pin": "chēzhàn yuǎn ma", "end": "？", "es": "¿El paradero queda lejos?" },
+        { "who": "B", "zh": "车站 就 在 学校 前边", "pin": "chēzhàn jiù zài xuéxiào qiánbian", "end": "。", "es": "El paradero está justo delante de la escuela." },
+        { "who": "A", "zh": "坐 公交车 要 几 分钟", "pin": "zuò gōngjiāochē yào jǐ fēnzhōng", "end": "？", "es": "¿Cuántos minutos son en bus?" },
+        { "who": "B", "zh": "要 四十 多 分钟", "pin": "yào sìshí duō fēnzhōng", "end": "。", "es": "Son más de cuarenta minutos." },
+        { "who": "A", "zh": "那 我们 还是 打车 吧", "pin": "nà wǒmen háishi dǎchē ba", "end": "。", "es": "Entonces mejor tomemos un taxi." },
+        { "who": "B", "zh": "打车 有点儿 贵", "pin": "dǎchē yǒudiǎnr guì", "end": "。", "es": "El taxi es un poco caro." },
+        { "who": "A", "zh": "今天 我 请 你", "pin": "jīntiān wǒ qǐng nǐ", "end": "。", "es": "Hoy invito yo." }
+      ]
+    },
+    {
+      "id": "v3-2-l5",
+      "title": "Lección 5 · De visita",
+      "level": 2,
+      "lesson": 5,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "快 进来 吧", "pin": "kuài jìnlái ba", "end": "！", "es": "¡Pasa, pasa!" },
+        { "who": "B", "zh": "这 是 给 爷爷 奶奶 的 礼物", "pin": "zhè shì gěi yéye nǎinai de lǐwù", "end": "。", "es": "Este es un regalo para el abuelo y la abuela." },
+        { "who": "A", "zh": "谢谢 你 的 礼物", "pin": "xièxie nǐ de lǐwù", "end": "。", "es": "Gracias por el regalo." },
+        { "who": "B", "zh": "爷爷 奶奶 在 家 吗", "pin": "yéye nǎinai zài jiā ma", "end": "？", "es": "¿Están en casa los abuelos?" },
+        { "who": "A", "zh": "他们 一会儿 就 下来", "pin": "tāmen yíhuìr jiù xiàlái", "end": "。", "es": "Bajan en un momento." },
+        { "who": "B", "zh": "你们 家 真 漂亮", "pin": "nǐmen jiā zhēn piàoliang", "end": "。", "es": "Su casa es muy bonita." },
+        { "who": "A", "zh": "都 十二 点 了", "pin": "dōu shí'èr diǎn le", "end": "。", "es": "Ya son las doce." },
+        { "who": "B", "zh": "我 去 洗 一下 手", "pin": "wǒ qù xǐ yíxià shǒu", "end": "。", "es": "Voy a lavarme las manos." },
+        { "who": "A", "zh": "饭 已经 准备 好 了", "pin": "fàn yǐjīng zhǔnbèi hǎo le", "end": "。", "es": "La comida ya está lista." },
+        { "who": "B", "zh": "那 我们 一起 吃 吧", "pin": "nà wǒmen yìqǐ chī ba", "end": "。", "es": "Entonces comamos juntos." }
+      ]
+    },
+    {
+      "id": "v3-2-l13",
+      "title": "Lección 13 · La clase de chino",
+      "level": 2,
+      "lesson": 13,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "谁 教 你们 中文", "pin": "shéi jiāo nǐmen Zhōngwén", "end": "？", "es": "¿Quién les enseña chino?" },
+        { "who": "B", "zh": "王 老师 教 我们 中文", "pin": "Wáng lǎoshī jiāo wǒmen Zhōngwén", "end": "。", "es": "La profesora Wang nos enseña chino." },
+        { "who": "A", "zh": "你们 班 有 多少 个 学生", "pin": "nǐmen bān yǒu duōshao ge xuésheng", "end": "？", "es": "¿Cuántos estudiantes hay en su curso?" },
+        { "who": "B", "zh": "我们 班 有 十五 个 学生", "pin": "wǒmen bān yǒu shíwǔ ge xuésheng", "end": "。", "es": "En nuestro curso hay quince estudiantes." },
+        { "who": "A", "zh": "中文 课 有意思 吗", "pin": "Zhōngwén kè yǒuyìsi ma", "end": "？", "es": "¿La clase de chino es interesante?" },
+        { "who": "B", "zh": "中文 课 最 有意思", "pin": "Zhōngwén kè zuì yǒuyìsi", "end": "。", "es": "La clase de chino es la más interesante." },
+        { "who": "A", "zh": "老师 告诉 你们 什么 时候 考试 了 吗", "pin": "lǎoshī gàosu nǐmen shénme shíhou kǎoshì le ma", "end": "？", "es": "¿La profesora les dijo cuándo es el examen?" },
+        { "who": "B", "zh": "她 告诉 我们 下 个 星期 考试", "pin": "tā gàosu wǒmen xià ge xīngqī kǎoshì", "end": "。", "es": "Nos dijo que el examen es la próxima semana." },
+        { "who": "A", "zh": "希望 你 考 得 很 好", "pin": "xīwàng nǐ kǎo de hěn hǎo", "end": "。", "es": "Espero que te vaya muy bien." }
+      ]
+    },
+    {
+      "id": "v3-2-l15",
+      "title": "Lección 15 · Volver a China",
+      "level": 2,
+      "lesson": 15,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "你 去 过 中国 吗", "pin": "nǐ qù guo Zhōngguó ma", "end": "？", "es": "¿Has ido a China?" },
+        { "who": "B", "zh": "我 去 过 三 次", "pin": "wǒ qù guo sān cì", "end": "。", "es": "He ido tres veces." },
+        { "who": "A", "zh": "你 还 想 再 去 一 次 吗", "pin": "nǐ hái xiǎng zài qù yí cì ma", "end": "？", "es": "¿Quieres ir una vez más?" },
+        { "who": "B", "zh": "我 已经 买 好 机票 了", "pin": "wǒ yǐjīng mǎi hǎo jīpiào le", "end": "。", "es": "Ya compré el pasaje de avión." },
+        { "who": "A", "zh": "你 哪 天 出国", "pin": "nǐ nǎ tiān chūguó", "end": "？", "es": "¿Qué día sales del país?" },
+        { "who": "B", "zh": "下 个 月 一 号", "pin": "xià ge yuè yī hào", "end": "。", "es": "El primero del próximo mes." },
+        { "who": "A", "zh": "这 次 你 想 去 哪儿 玩", "pin": "zhè cì nǐ xiǎng qù nǎr wán", "end": "？", "es": "¿Adónde quieres ir a pasear esta vez?" },
+        { "who": "B", "zh": "我 想 去 颐和园 看看", "pin": "wǒ xiǎng qù Yíhéyuán kànkan", "end": "。", "es": "Quiero ir a ver el Palacio de Verano." },
+        { "who": "A", "zh": "颐和园 的 门票 贵 不 贵", "pin": "Yíhéyuán de ménpiào guì bu guì", "end": "？", "es": "¿La entrada al Palacio de Verano es cara?" },
+        { "who": "B", "zh": "在 网上 买 很 便宜", "pin": "zài wǎngshang mǎi hěn piányi", "end": "。", "es": "Comprándola por internet es muy barata." }
+      ]
+    },
+    {
+      "id": "v3-3-l3",
+      "title": "Lección 3 · El barrio nuevo",
+      "level": 3,
+      "lesson": 3,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "听说 你 搬家 了", "pin": "tīngshuō nǐ bānjiā le", "end": "。", "es": "Supe que te cambiaste de casa." },
+        { "who": "B", "zh": "我 上 个 星期 才 搬 完", "pin": "wǒ shàng ge xīngqī cái bān wán", "end": "。", "es": "Recién terminé de mudarme la semana pasada." },
+        { "who": "A", "zh": "新 小区 的 环境 怎么样", "pin": "xīn xiǎoqū de huánjìng zěnmeyàng", "end": "？", "es": "¿Qué tal el entorno del condominio nuevo?" },
+        { "who": "B", "zh": "环境 挺 好 的", "pin": "huánjìng tǐng hǎo de", "end": "。", "es": "El entorno es bastante bueno." },
+        { "who": "A", "zh": "你 住 几 层", "pin": "nǐ zhù jǐ céng", "end": "？", "es": "¿En qué piso vives?" },
+        { "who": "B", "zh": "我 住 六 层", "pin": "wǒ zhù liù céng", "end": "。", "es": "Vivo en el sexto piso." },
+        { "who": "A", "zh": "房子 里 有 空调 和 洗衣机 吗", "pin": "fángzi li yǒu kōngtiáo hé xǐyījī ma", "end": "？", "es": "¿La casa tiene aire acondicionado y lavadora?" },
+        { "who": "B", "zh": "空调 洗衣机 和 冰箱 都 有", "pin": "kōngtiáo xǐyījī hé bīngxiāng dōu yǒu", "end": "。", "es": "Tiene aire acondicionado, lavadora y refrigerador." },
+        { "who": "A", "zh": "买 东西 方便 吗", "pin": "mǎi dōngxi fāngbiàn ma", "end": "？", "es": "¿Es cómodo para hacer compras?" },
+        { "who": "B", "zh": "小区 旁边 就 有 超市 和 银行", "pin": "xiǎoqū pángbiān jiù yǒu chāoshì hé yínháng", "end": "。", "es": "Justo al lado del condominio hay un supermercado y un banco." }
+      ]
+    },
+    {
+      "id": "v3-3-l4",
+      "title": "Lección 4 · En el hotel",
+      "level": 3,
+      "lesson": 4,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "欢迎 您 来 我们 宾馆", "pin": "huānyíng nín lái wǒmen bīnguǎn", "end": "。", "es": "Bienvenido a nuestro hotel." },
+        { "who": "B", "zh": "你们 这儿 还 有 房间 吗", "pin": "nǐmen zhèr hái yǒu fángjiān ma", "end": "？", "es": "¿Todavía les quedan habitaciones?" },
+        { "who": "A", "zh": "您 要 住 几 天", "pin": "nín yào zhù jǐ tiān", "end": "？", "es": "¿Cuántos días se va a quedar?" },
+        { "who": "B", "zh": "我 要 住 三 天", "pin": "wǒ yào zhù sān tiān", "end": "。", "es": "Me voy a quedar tres días." },
+        { "who": "A", "zh": "这 个 房间 能 看见 海", "pin": "zhè ge fángjiān néng kànjiàn hǎi", "end": "。", "es": "Desde esta habitación se ve el mar." },
+        { "who": "B", "zh": "房间 干净 吗", "pin": "fángjiān gānjìng ma", "end": "？", "es": "¿La habitación está limpia?" },
+        { "who": "A", "zh": "您 一定 会 满意 的", "pin": "nín yídìng huì mǎnyì de", "end": "。", "es": "Seguro que va a quedar conforme." },
+        { "who": "B", "zh": "除了 早饭 以外 还 有 别的 服务 吗", "pin": "chúle zǎofàn yǐwài hái yǒu biéde fúwù ma", "end": "？", "es": "Además del desayuno, ¿hay otros servicios?" },
+        { "who": "A", "zh": "我们 还 可以 帮 您 叫 出租车", "pin": "wǒmen hái kěyǐ bāng nín jiào chūzūchē", "end": "。", "es": "También podemos pedirle un taxi." },
+        { "who": "B", "zh": "那 我 就 住 这 间", "pin": "nà wǒ jiù zhù zhè jiān", "end": "。", "es": "Entonces me quedo con esta." }
+      ]
+    },
+    {
+      "id": "v3-3-l5",
+      "title": "Lección 5 · Fotos en el cerro",
+      "level": 3,
+      "lesson": 5,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "我们 终于 爬 到 山 上 了", "pin": "wǒmen zhōngyú pá dào shān shang le", "end": "。", "es": "Por fin llegamos arriba del cerro." },
+        { "who": "B", "zh": "山 上 的 树 真 多", "pin": "shān shang de shù zhēn duō", "end": "。", "es": "Cuántos árboles hay arriba." },
+        { "who": "A", "zh": "你 帮 我 照 一 张 吧", "pin": "nǐ bāng wǒ zhào yì zhāng ba", "end": "。", "es": "Sácame una foto, por favor." },
+        { "who": "B", "zh": "你 站 在 树 的 前边 吧", "pin": "nǐ zhàn zài shù de qiánbian ba", "end": "。", "es": "Párate delante del árbol." },
+        { "who": "A", "zh": "照片 会 不 会 很 难看", "pin": "zhàopiàn huì bu huì hěn nánkàn", "end": "？", "es": "¿No irá a salir fea la foto?" },
+        { "who": "B", "zh": "你 的 照片 张张 都 好看", "pin": "nǐ de zhàopiàn zhāngzhāng dōu hǎokàn", "end": "。", "es": "Todas tus fotos salen bonitas." },
+        { "who": "A", "zh": "你 对 拍照 很 感兴趣 吧", "pin": "nǐ duì pāizhào hěn gǎnxìngqù ba", "end": "？", "es": "Te interesa mucho la fotografía, ¿no?" },
+        { "who": "B", "zh": "我 下 了 班 就 去 拍照", "pin": "wǒ xià le bān jiù qù pāizhào", "end": "。", "es": "Apenas salgo del trabajo voy a sacar fotos." },
+        { "who": "A", "zh": "你 的 水平 一定 很 高", "pin": "nǐ de shuǐpíng yídìng hěn gāo", "end": "。", "es": "Seguro tienes muy buen nivel." },
+        { "who": "B", "zh": "还 可以 吧", "pin": "hái kěyǐ ba", "end": "。", "es": "Más o menos." }
+      ]
+    },
+    {
+      "id": "v3-3-l6",
+      "title": "Lección 6 · En el tren rápido",
+      "level": 3,
+      "lesson": 6,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "高铁 几 点 开", "pin": "gāotiě jǐ diǎn kāi", "end": "？", "es": "¿A qué hora sale el tren rápido?" },
+        { "who": "B", "zh": "十 点 半 开", "pin": "shí diǎn bàn kāi", "end": "。", "es": "Sale a las diez y media." },
+        { "who": "A", "zh": "那 我们 该 去 检票 了", "pin": "nà wǒmen gāi qù jiǎnpiào le", "end": "。", "es": "Entonces ya deberíamos ir al control de pasajes." },
+        { "who": "B", "zh": "还 有 二十 分钟 呢", "pin": "hái yǒu èrshí fēnzhōng ne", "end": "。", "es": "Todavía quedan veinte minutos." },
+        { "who": "A", "zh": "高铁 上 可以 买 吃 的 吗", "pin": "gāotiě shang kěyǐ mǎi chī de ma", "end": "？", "es": "¿Se puede comprar comida en el tren?" },
+        { "who": "B", "zh": "如果 你 饿 了 就 用 手机 点 外卖", "pin": "rúguǒ nǐ è le jiù yòng shǒujī diǎn wàimài", "end": "。", "es": "Si te da hambre, pides comida a domicilio con el celular." },
+        { "who": "A", "zh": "现在 坐 高铁 越来越 方便 了", "pin": "xiànzài zuò gāotiě yuèláiyuè fāngbiàn le", "end": "。", "es": "Ahora viajar en tren rápido es cada vez más cómodo." },
+        { "who": "B", "zh": "车 上 也 很 安静", "pin": "chē shang yě hěn ānjìng", "end": "。", "es": "Y además dentro del tren hay silencio." },
+        { "who": "A", "zh": "我 的 手机 快 没 电 了", "pin": "wǒ de shǒujī kuài méi diàn le", "end": "。", "es": "A mi celular casi no le queda batería." },
+        { "who": "B", "zh": "你 用 我 的 充电宝 吧", "pin": "nǐ yòng wǒ de chōngdiànbǎo ba", "end": "。", "es": "Usa mi batería portátil." }
+      ]
+    },
+    {
+      "id": "v3-3-l9",
+      "title": "Lección 9 · El partido",
+      "level": 3,
+      "lesson": 9,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "你 参加 明天 的 网球 比赛 吗", "pin": "nǐ cānjiā míngtiān de wǎngqiú bǐsài ma", "end": "？", "es": "¿Participas en el partido de tenis de mañana?" },
+        { "who": "B", "zh": "为了 这 次 比赛 我 练 了 一 个 月", "pin": "wèile zhè cì bǐsài wǒ liàn le yí ge yuè", "end": "。", "es": "Para este partido entrené un mes." },
+        { "who": "A", "zh": "你 现在 紧张 吗", "pin": "nǐ xiànzài jǐnzhāng ma", "end": "？", "es": "¿Estás nervioso ahora?" },
+        { "who": "B", "zh": "我 越 想 越 紧张", "pin": "wǒ yuè xiǎng yuè jǐnzhāng", "end": "。", "es": "Mientras más lo pienso, más nervioso me pongo." },
+        { "who": "A", "zh": "你 一定 打 得 好", "pin": "nǐ yídìng dǎ de hǎo", "end": "。", "es": "Seguro que puedes jugar bien." },
+        { "who": "B", "zh": "如果 我 打 不 好 呢", "pin": "rúguǒ wǒ dǎ bu hǎo ne", "end": "？", "es": "¿Y si no logro jugar bien?" },
+        { "who": "A", "zh": "成绩 不 是 最 重要 的", "pin": "chéngjì bú shì zuì zhòngyào de", "end": "。", "es": "El resultado no es lo más importante." },
+        { "who": "B", "zh": "你 说 得 对", "pin": "nǐ shuō de duì", "end": "。", "es": "Tienes razón." },
+        { "who": "A", "zh": "明天 我 去 球场 看 你 比赛", "pin": "míngtiān wǒ qù qiúchǎng kàn nǐ bǐsài", "end": "。", "es": "Mañana voy a la cancha a verte jugar." },
+        { "who": "B", "zh": "谢谢 你 来 看 我", "pin": "xièxie nǐ lái kàn wǒ", "end": "！", "es": "¡Gracias por venir a verme!" }
+      ]
+    },
+    {
+      "id": "v3-3-l13",
+      "title": "Lección 13 · Los vecinos nuevos",
+      "level": 3,
+      "lesson": 13,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "你 认识 新 来 的 邻居 吗", "pin": "nǐ rènshi xīn lái de línjū ma", "end": "？", "es": "¿Conoces a los vecinos que llegaron?" },
+        { "who": "B", "zh": "他们 夫妻 都 来自 英国", "pin": "tāmen fūqī dōu láizì Yīngguó", "end": "。", "es": "Los dos, marido y mujer, vienen del Reino Unido." },
+        { "who": "A", "zh": "他们 是 做 什么 工作 的", "pin": "tāmen shì zuò shénme gōngzuò de", "end": "？", "es": "¿En qué trabajan?" },
+        { "who": "B", "zh": "丈夫 是 一 位 画家", "pin": "zhàngfu shì yí wèi huàjiā", "end": "。", "es": "El marido es pintor." },
+        { "who": "A", "zh": "他们 会 说 中文 吗", "pin": "tāmen huì shuō Zhōngwén ma", "end": "？", "es": "¿Saben hablar chino?" },
+        { "who": "B", "zh": "他们 对 中国 文化 很 感兴趣", "pin": "tāmen duì Zhōngguó wénhuà hěn gǎnxìngqù", "end": "。", "es": "Les interesa mucho la cultura china." },
+        { "who": "A", "zh": "有 时间 的话 请 他们 来 做客 吧", "pin": "yǒu shíjiān dehuà qǐng tāmen lái zuòkè ba", "end": "。", "es": "Si hay tiempo, invítalos a la casa." },
+        { "who": "B", "zh": "我 打算 明天 晚上 请客", "pin": "wǒ dǎsuàn míngtiān wǎnshang qǐngkè", "end": "。", "es": "Pienso invitarlos mañana en la noche." },
+        { "who": "A", "zh": "我们 可以 一边 吃 饭 一边 聊天儿", "pin": "wǒmen kěyǐ yìbiān chī fàn yìbiān liáotiānr", "end": "。", "es": "Podemos comer y conversar al mismo tiempo." },
+        { "who": "B", "zh": "那 我 把 酒 和 盘子 都 准备 好", "pin": "nà wǒ bǎ jiǔ hé pánzi dōu zhǔnbèi hǎo", "end": "。", "es": "Entonces dejo listos el vino y los platos." }
+      ]
+    },
+    {
+      "id": "v3-3-l15",
+      "title": "Lección 15 · Mi ciudad",
+      "level": 3,
+      "lesson": 15,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "你 是 南京 人 吗", "pin": "nǐ shì Nánjīng rén ma", "end": "？", "es": "¿Eres de Nanjing?" },
+        { "who": "B", "zh": "我 是 外地 人", "pin": "wǒ shì wàidì rén", "end": "。", "es": "Soy de otra parte." },
+        { "who": "A", "zh": "你 在 这儿 住 了 多 久", "pin": "nǐ zài zhèr zhù le duō jiǔ", "end": "？", "es": "¿Cuánto tiempo llevas viviendo aquí?" },
+        { "who": "B", "zh": "我 已经 住 了 十 年 了", "pin": "wǒ yǐjīng zhù le shí nián le", "end": "。", "es": "Ya llevo diez años." },
+        { "who": "A", "zh": "那 你 一定 很 了解 这 个 城市", "pin": "nà nǐ yídìng hěn liǎojiě zhè ge chéngshì", "end": "。", "es": "Entonces seguro conoces muy bien esta ciudad." },
+        { "who": "B", "zh": "有名 的 景点 我 都 去 过", "pin": "yǒumíng de jǐngdiǎn wǒ dōu qù guo", "end": "。", "es": "He ido a todos los lugares turísticos famosos." },
+        { "who": "A", "zh": "附近 有 什么 好玩儿 的 地方", "pin": "fùjìn yǒu shénme hǎowánr de dìfang", "end": "？", "es": "¿Qué lugar entretenido hay cerca?" },
+        { "who": "B", "zh": "河 边 的 公园 很 漂亮", "pin": "hé biān de gōngyuán hěn piàoliang", "end": "。", "es": "El parque a la orilla del río es muy bonito." },
+        { "who": "A", "zh": "平时 游客 多 吗", "pin": "píngshí yóukè duō ma", "end": "？", "es": "¿Normalmente hay muchos turistas?" },
+        { "who": "B", "zh": "平时 去 那儿 的 老人 比较 多", "pin": "píngshí qù nàr de lǎorén bǐjiào duō", "end": "。", "es": "Normalmente van más bien personas mayores." }
+      ]
+    },
+    {
+      "id": "v3-3-l16",
+      "title": "Lección 16 · Los pandas",
+      "level": 3,
+      "lesson": 16,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "周末 我们 去 动物园 吧", "pin": "zhōumò wǒmen qù dòngwùyuán ba", "end": "。", "es": "Vamos al zoológico el fin de semana." },
+        { "who": "B", "zh": "我 最 想 看 大熊猫", "pin": "wǒ zuì xiǎng kàn dàxióngmāo", "end": "。", "es": "Lo que más quiero ver son los pandas." },
+        { "who": "A", "zh": "你 为什么 这么 喜欢 大熊猫", "pin": "nǐ wèishénme zhème xǐhuan dàxióngmāo", "end": "？", "es": "¿Por qué te gustan tanto los pandas?" },
+        { "who": "B", "zh": "因为 它们 特别 可爱", "pin": "yīnwèi tāmen tèbié kě'ài", "end": "。", "es": "Porque son especialmente tiernos." },
+        { "who": "A", "zh": "大熊猫 平时 吃 什么", "pin": "dàxióngmāo píngshí chī shénme", "end": "？", "es": "¿Qué comen normalmente los pandas?" },
+        { "who": "B", "zh": "它们 主要 吃 竹子", "pin": "tāmen zhǔyào chī zhúzi", "end": "。", "es": "Comen principalmente bambú." },
+        { "who": "A", "zh": "听说 它们 一会儿 吃 一会儿 睡", "pin": "tīngshuō tāmen yíhuìr chī yíhuìr shuì", "end": "。", "es": "Dicen que comen un rato y duermen otro rato." },
+        { "who": "B", "zh": "它们 吃 饱 了 就 睡觉", "pin": "tāmen chī bǎo le jiù shuìjiào", "end": "。", "es": "Apenas quedan satisfechos, se duermen." },
+        { "who": "A", "zh": "谁 照顾 动物园 里 的 大熊猫", "pin": "shéi zhàogù dòngwùyuán li de dàxióngmāo", "end": "？", "es": "¿Quién cuida a los pandas del zoológico?" },
+        { "who": "B", "zh": "有 很 多 人 照顾 它们", "pin": "yǒu hěn duō rén zhàogù tāmen", "end": "。", "es": "Hay mucha gente que los cuida." }
+      ]
+    },
+    {
+      "id": "v3-3-l18",
+      "title": "Lección 18 · La Fiesta de la Primavera",
+      "level": 3,
+      "lesson": 18,
+      "book": "v3.0",
+      "lines": [
+        { "who": "A", "zh": "春节 你 打算 怎么 过", "pin": "Chūnjié nǐ dǎsuàn zěnme guò", "end": "？", "es": "¿Cómo piensas pasar la Fiesta de la Primavera?" },
+        { "who": "B", "zh": "我 要 回 家 跟 家人 一起 过节", "pin": "wǒ yào huí jiā gēn jiārén yìqǐ guòjié", "end": "。", "es": "Voy a volver a casa a celebrar con mi familia." },
+        { "who": "A", "zh": "你们 家 过节 吃 什么", "pin": "nǐmen jiā guòjié chī shénme", "end": "？", "es": "¿Qué comen en tu casa en las fiestas?" },
+        { "who": "B", "zh": "我们 一般 吃 饺子", "pin": "wǒmen yìbān chī jiǎozi", "end": "。", "es": "Generalmente comemos empanaditas chinas." },
+        { "who": "A", "zh": "你 会 包 饺子 吗", "pin": "nǐ huì bāo jiǎozi ma", "end": "？", "es": "¿Sabes hacer empanaditas?" },
+        { "who": "B", "zh": "我 刚刚 跟 阿姨 学 的", "pin": "wǒ gānggāng gēn āyí xué de", "end": "。", "es": "Acabo de aprender con mi tía." },
+        { "who": "A", "zh": "难 不 难", "pin": "nán bu nán", "end": "？", "es": "¿Es difícil?" },
+        { "who": "B", "zh": "只要 多 练习 就 不 难", "pin": "zhǐyào duō liànxí jiù bù nán", "end": "。", "es": "Con practicar harto, no es difícil." },
+        { "who": "A", "zh": "你们 什么 时候 出发", "pin": "nǐmen shénme shíhou chūfā", "end": "？", "es": "¿Cuándo salen?" },
+        { "who": "B", "zh": "我们 后天 早上 出发", "pin": "wǒmen hòutiān zǎoshang chūfā", "end": "。", "es": "Salimos pasado mañana en la mañana." }
       ]
     }
   ],

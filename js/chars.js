@@ -111,15 +111,17 @@ function buildCharIndex(vocab) {
   // (学 se aprende con 学生 en HSK 1, aunque como palabra suelta figure más tarde)
   const firstSeen = new Map();
   vocab.forEach(w => {
-    const rank = w.level * 100 + (w.lesson || 99);
+    // dentro de un nivel: lecciones del libro, luego repaso extra, luego el resto
+    const rank = w.level * 100 + (w.lesson || (w.extra ? 98 : 99));
     [...w.han].forEach(c => {
-      if (CJK.test(c) && (!firstSeen.has(c) || rank < firstSeen.get(c).rank)) firstSeen.set(c, { rank, level: w.level, lesson: w.lesson });
+      if (CJK.test(c) && (!firstSeen.has(c) || rank < firstSeen.get(c).rank)) firstSeen.set(c, { rank, level: w.level, lesson: w.lesson, extra: w.extra });
     });
   });
   return [...index.values()].map(e => ({
     ...e,
     level: firstSeen.get(e.han).level,
     lesson: firstSeen.get(e.han).lesson,
+    extra: !!firstSeen.get(e.han).extra,
     poly: size(asWord, e.han) > 1 || (size(asWord, e.han) === 0 && size(inWords, e.han) > 1)
   }));
 }

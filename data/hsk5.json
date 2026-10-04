@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 10,
   "updated": "2026-10-04",
   "level": 5,
   "words": [
@@ -421,7 +421,7 @@
     ["海外","hǎiwài","ultramar / extranjero"],
     ["海鲜","hǎixiān","marisco",3],
     ["含","hán","contener"],
-    ["行","háng","fila / línea / sector"],
+    ["行","háng","fila / línea / sector",null,"extra"],
     ["行业","hángyè","sector / industria",28],
     ["含量","hánliàng","contenido"],
     ["汗水","hànshuǐ","sudor"],
@@ -1453,7 +1453,7 @@
     ["组织","zǔzhī","organizar / organización",23],
     ["反过来","fǎnguòlái","al revés / por el contrario"],
     ["至于","zhìyú","en cuanto a / en lo que respecta",26],
-    ["怎样","zěnyàng","cómo"],
+    ["怎样","zěnyàng","cómo",null,"extra"],
     ["鞭炮","biānpào","petardos",6],
     ["辩论","biànlùn","debatir",10],
     ["脖子","bózi","cuello",10],
