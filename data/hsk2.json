@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "updated": "2026-10-03",
   "level": 2,
   "words": [
@@ -172,8 +172,6 @@
     ["以下","yǐxià","menos de / por debajo de"],
     ["根据","gēnù","según / de acuerdo con"],
     ["不同","bùtóng","diferente"],
-    ["的确","díquè","ciertamente"],
-    ["忽然","hūrán","de repente"],
     ["刚刚","gānggāng","justo / hace un momento"],
     ["一直","yìzhí","siempre / todo el tiempo",13],
     ["吧","ba","(partícula de sugerencia)",5],
