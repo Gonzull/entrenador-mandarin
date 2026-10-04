@@ -42,6 +42,7 @@ function initGrabadora(vocab, sibGroups) {
       3: document.createElement('optgroup'),
       4: document.createElement('optgroup'),
       5: document.createElement('optgroup'),
+      6: document.createElement('optgroup'),
       sib: document.createElement('optgroup')
     };
     groups[1].label = 'HSK 1';
@@ -49,6 +50,7 @@ function initGrabadora(vocab, sibGroups) {
     groups[3].label = 'HSK 3';
     groups[4].label = 'HSK 4';
     groups[5].label = 'HSK 5';
+    groups[6].label = 'HSK 6';
     groups.sib.label = 'Sibilantes (práctica extra)';
     filteredWords.forEach((w, i) => {
       const opt = document.createElement('option');
@@ -58,7 +60,7 @@ function initGrabadora(vocab, sibGroups) {
       grp.appendChild(opt);
     });
     // solo añadir grupos con opciones
-    [1, 2, 3, 4, 5, 'sib'].forEach(lv => { if (groups[lv].children.length) select.appendChild(groups[lv]); });
+    [1, 2, 3, 4, 5, 6, 'sib'].forEach(lv => { if (groups[lv].children.length) select.appendChild(groups[lv]); });
     if (filteredWords.length) {
       select.value = 0;
       updateHan();

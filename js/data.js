@@ -4,6 +4,7 @@ const DATA_FILES = [
   'hsk3',
   'hsk4',
   'hsk5',
+  'hsk6',
   'diagnostico',
   'sibilantes',
   'aspiracion',
@@ -36,14 +37,15 @@ async function fetchJSON(name) {
 
 async function loadKnowledgeBase() {
   const results = await Promise.all(DATA_FILES.map(fetchJSON));
-  const [hsk1, hsk2, hsk3, hsk4, hsk5, diagnostico, sibilantes, aspiracion, correccion, oraciones] = results;
+  const [hsk1, hsk2, hsk3, hsk4, hsk5, hsk6, diagnostico, sibilantes, aspiracion, correccion, oraciones] = results;
 
   const vocab = [
     ...hsk1.words.map(([han, pin, es, lesson]) => ({ level: 1, pin, han, es, lesson })),
     ...hsk2.words.map(([han, pin, es, lesson]) => ({ level: 2, pin, han, es, lesson })),
     ...hsk3.words.map(([han, pin, es, lesson]) => ({ level: 3, pin, han, es, lesson })),
     ...hsk4.words.map(([han, pin, es, lesson]) => ({ level: 4, pin, han, es, lesson })),
-    ...hsk5.words.map(([han, pin, es, lesson]) => ({ level: 5, pin, han, es, lesson }))
+    ...hsk5.words.map(([han, pin, es, lesson]) => ({ level: 5, pin, han, es, lesson })),
+    ...hsk6.words.map(([han, pin, es, lesson]) => ({ level: 6, pin, han, es, lesson }))
   ].map(w => ({ ...w, tone: computeTone(w.pin) }));
 
   return {
