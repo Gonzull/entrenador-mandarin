@@ -10,6 +10,7 @@ const APP_SHELL = [
   './js/tts.js',
   './js/data.js',
   './js/chars.js',
+  './js/lessonFilter.js',
   './js/diagnostico.js',
   './js/tonos.js',
   './js/sibilantes.js',

@@ -1,6 +1,7 @@
 import { speak } from './tts.js';
 import { store } from './storage.js';
 import { parseSyllable } from './chars.js';
+import { createLessonFilter } from './lessonFilter.js';
 
 const VOICE_KEY = 'tone_voice_v1';
 const VOICE_DEFAULT = { rate: 0.55, pitch: 0.8 };
@@ -62,8 +63,12 @@ function initTonos(chars) {
     });
   });
 
+  const byLevel = () => toned.filter(w => levelFilter === 'all' || w.level === Number(levelFilter));
+  const lessons = createLessonFilter(el('toneLesson'), () => newRound());
+  lessons.update(byLevel(), levelFilter);
+
   function wordPool() {
-    return toned.filter(w => levelFilter === 'all' || w.level === Number(levelFilter));
+    return lessons.apply(byLevel());
   }
 
   // silent: prepara la ronda sin reproducir audio (carga inicial de la página)
@@ -114,6 +119,7 @@ function initTonos(chars) {
     document.querySelectorAll('#toneLevelFilter .lvlbtn').forEach(x => x.classList.remove('active'));
     b.classList.add('active');
     levelFilter = b.dataset.level;
+    lessons.update(byLevel(), levelFilter);
     newRound();
   });
 

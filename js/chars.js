@@ -107,8 +107,19 @@ function buildCharIndex(vocab) {
     if (syls) chars.forEach((c, i) => note(inWords, c, syls[i]));
   });
   const size = (map, c) => (map.get(c) || new Set()).size;
+  // nivel y lección del carácter: los de la primera palabra en que aparece
+  // (学 se aprende con 学生 en HSK 1, aunque como palabra suelta figure más tarde)
+  const firstSeen = new Map();
+  vocab.forEach(w => {
+    const rank = w.level * 100 + (w.lesson || 99);
+    [...w.han].forEach(c => {
+      if (CJK.test(c) && (!firstSeen.has(c) || rank < firstSeen.get(c).rank)) firstSeen.set(c, { rank, level: w.level, lesson: w.lesson });
+    });
+  });
   return [...index.values()].map(e => ({
     ...e,
+    level: firstSeen.get(e.han).level,
+    lesson: firstSeen.get(e.han).lesson,
     poly: size(asWord, e.han) > 1 || (size(asWord, e.han) === 0 && size(inWords, e.han) > 1)
   }));
 }

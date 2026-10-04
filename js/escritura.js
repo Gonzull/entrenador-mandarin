@@ -1,5 +1,6 @@
 import { store } from './storage.js';
 import { CJK, plainPinyin, buildCharIndex } from './chars.js';
+import { createLessonFilter } from './lessonFilter.js';
 
 const SRS_KEY = 'hanzi_srs_v1';
 const BOX_INTERVAL_DAYS = [0, 1, 3, 7, 14, 30];
@@ -78,8 +79,13 @@ function initEscritura(vocab) {
 
   const el = id => document.getElementById(id);
 
+  // todos los caracteres del vocabulario, también los que solo aparecen dentro de palabras
+  const chars = buildCharIndex(vocab);
+  const lessons = createLessonFilter(el('hanziLesson'), () => pickNext());
+  const byLevel = () => (Number.isNaN(Number(levelFilter)) ? chars : chars.filter(w => w.level === Number(levelFilter)));
+
   function singleCharWords() {
-    return vocab.filter(w => w.han.length === 1);
+    return chars;
   }
 
   function wordPool() {
@@ -99,7 +105,7 @@ function initEscritura(vocab) {
         .filter(w => srs[srsKey(w)] && srs[srsKey(w)].seen > 0)
         .sort((a, b) => srs[srsKey(a)].box - srs[srsKey(b)].box);
     }
-    return singles.filter(w => w.level === Number(levelFilter));
+    return lessons.apply(byLevel());
   }
 
   function refreshStats() {
@@ -222,6 +228,7 @@ function initEscritura(vocab) {
     document.querySelectorAll('#hanziLevelFilter .lvlbtn').forEach(x => x.classList.remove('active'));
     b.classList.add('active');
     levelFilter = b.dataset.level;
+    lessons.update(byLevel(), levelFilter);
     pickNext();
   });
 
@@ -279,6 +286,7 @@ function initEscritura(vocab) {
     document.querySelectorAll('#hanziLevelFilter .lvlbtn').forEach(x =>
       x.classList.toggle('active', x.dataset.level === 'all')
     );
+    lessons.update(chars, levelFilter);
     renderWord(w);
   }
 
@@ -287,7 +295,7 @@ function initEscritura(vocab) {
     renderWord(fake);
   }
 
-  initHanziSearch(buildCharIndex(vocab), loadSpecificWord, loadFreeHanzi);
+  initHanziSearch(chars, loadSpecificWord, loadFreeHanzi);
 
   refreshStats();
   pickNext();
