@@ -17,6 +17,7 @@ Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo
 | **Corrección** | Dices una palabra en voz alta y el reconocimiento de voz indica si sonó como otro sonido del grupo zh/ch/sh/z/c/s/j/q/x/r. |
 | **Escritura** | Orden de trazos animado y práctica de escritura con corrección trazo a trazo, cuadrícula guía (米字格 / 田字格), filtro por nivel y lección, buscador de caracteres y repaso espaciado. |
 | **Oraciones** | Armar oraciones ordenando fichas de palabras, y diálogos por lección donde completas las líneas de tu personaje. |
+| **Chengyu** | Fichas de expresiones de cuatro caracteres (成语): sentido literal, significado real, uso, origen cuando se conoce y un ejemplo. Incluye un quiz de significados y filtro por lección. |
 | **Progreso** | Racha de días, sesiones y caracteres practicados y dominados. |
 
 ## Contenido
@@ -24,6 +25,7 @@ Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo
 - **Vocabulario:** 5.712 palabras de HSK 1 a 6, con pinyin y traducción al español.
 - **Caracteres para escritura:** el buscador cubre todos los caracteres que aparecen en ese vocabulario, también los que solo existen dentro de palabras compuestas.
 - **Oraciones y diálogos:** 343 oraciones y 145 diálogos de HSK 1 a 6, todos asociados a una lección.
+- **Chengyu:** 40 fichas, de las unas 120 expresiones de cuatro caracteres que hay en el vocabulario de HSK 6.
 - **Orden por lecciones:** el vocabulario y los diálogos siguen el orden de lecciones de los libros *HSK Standard Course* 1 a 6 (los niveles 4, 5 y 6 tienen tomos A y B). Los libros no forman parte de este repositorio; las oraciones y diálogos son texto propio escrito con el vocabulario y la gramática de cada lección.
 
 ## Limitaciones conocidas
@@ -88,12 +90,14 @@ entrenador-mandarin/
 │   ├── correccion.js       Pestaña Corrección
 │   ├── escritura.js        Pestaña Escritura
 │   ├── oraciones.js        Pestaña Oraciones
+│   ├── chengyu.js          Pestaña Chengyu
 │   ├── progreso.js         Pestaña Progreso
 │   └── diagnostico.js      Diagnóstico inicial (pestaña oculta)
 ├── icons/                  Íconos de la app (192, 512, maskable y Apple)
 └── data/
     ├── hsk1.json … hsk6.json   Vocabulario: 242 / 249 / 477 / 999 / 1.820 / 1.925 palabras
     ├── oraciones.json          Oraciones y diálogos (todos con su lección)
+    ├── chengyu.json            Fichas de chengyu
     ├── oraciones_archivo.json  Oraciones antiguas sin lección; la app no lo carga
     ├── sibilantes.json         14 grupos de sonidos
     ├── aspiracion.json         5 pares

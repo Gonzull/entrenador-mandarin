@@ -50,7 +50,8 @@
   <button data-tab="corr">⑤ Corrección</button>
   <button data-tab="hanzi">⑥ Escritura</button>
   <button data-tab="orac">⑦ Oraciones</button>
-  <button data-tab="prog">⑧ Progreso</button>
+  <button data-tab="cy">⑧ Chengyu</button>
+  <button data-tab="prog">⑨ Progreso</button>
 </nav>
 
 <main class="wrap">
@@ -257,6 +258,42 @@
         <div id="dlgLines"></div>
         <div id="dlgTurn"></div>
       </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-cy">
+    <h2>Chengyu 成语</h2>
+    <p class="panel-desc">Expresiones fijas de cuatro caracteres. Su significado no es la suma de sus caracteres: muchas vienen de una historia o de un texto clásico. Cada ficha explica el sentido literal, el significado real, cuándo se usa y, si se conoce, su origen.</p>
+    <div class="levelfilter" id="cyMode">
+      <button class="lvlbtn active" data-mode="cards">Fichas</button>
+      <button class="lvlbtn" data-mode="quiz">Quiz</button>
+    </div>
+    <select class="rec-select" id="cyLesson" style="display:none;" aria-label="Lección"></select>
+
+    <div class="card" id="cyCards">
+      <div class="quiz-hint" id="cyCount" style="text-align:center;"></div>
+      <div class="cy-head">
+        <div class="quiz-han" id="cyHan">…</div>
+        <div class="cy-pin" id="cyPin"></div>
+        <button class="playbtn" id="cyPlay" title="Escuchar">&#9654;</button>
+      </div>
+      <div class="cy-body" id="cyBody"></div>
+      <div class="ob-actions">
+        <button class="rec-btn" id="cyPrev">&#8592; Anterior</button>
+        <button class="rec-btn" id="cyPlayEx">&#9654; Ejemplo</button>
+        <button class="rec-btn" id="cyNext">Siguiente &#8594;</button>
+      </div>
+    </div>
+
+    <div class="card" id="cyQuiz" style="display:none;">
+      <div class="scoreline"><span>¿Qué significa?</span><span>Aciertos: <b id="cyScore">0</b>/<b id="cyTotal">0</b></span></div>
+      <div class="cy-head">
+        <div class="quiz-han" id="cyQHan">…</div>
+        <div class="cy-pin" id="cyQPin"></div>
+      </div>
+      <div class="choices cy-choices" id="cyChoices"></div>
+      <div class="feedback" id="cyFeedback" style="text-align:center;"></div>
+      <div class="ob-actions"><button class="rec-btn" id="cyQNext" style="display:none;">Siguiente &#8594;</button></div>
     </div>
   </section>
 
