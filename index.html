@@ -153,7 +153,16 @@
 
   <section class="panel" id="panel-corr">
     <h2>Modo de corrección</h2>
-    <p class="panel-desc">Enfocado en zh / ch / sh / x / j / q — los sonidos que más se mezclan al venir del español. Di la palabra en voz alta; el reconocimiento de voz transcribe lo que detectó y te dice si sonó como otro sonido del grupo.</p>
+    <p class="panel-desc">Enfocado en zh / ch / sh / r / z / c / s / j / q / x — los sonidos que más se mezclan al venir del español. Di la palabra en voz alta; el reconocimiento de voz transcribe lo que detectó, se compara por pinyin (inicial, final y tono) y te dice qué sonido se oyó distinto.</p>
+    <div class="levelfilter" id="corrLevelFilter">
+      <button class="lvlbtn active" data-level="sel">Selección</button>
+      <button class="lvlbtn" data-level="1">HSK 1</button>
+      <button class="lvlbtn" data-level="2">HSK 2</button>
+      <button class="lvlbtn" data-level="3">HSK 3</button>
+      <button class="lvlbtn" data-level="4">HSK 4</button>
+      <button class="lvlbtn" data-level="5">HSK 5</button>
+      <button class="lvlbtn" data-level="6">HSK 6</button>
+    </div>
     <div id="corrAI" class="tissue-tip" style="display:none;background:var(--gold-soft);border-color:var(--gold);">
       &#129302; <div><b>Modo Corrección - IA (móvil):</b> se descargará ~40MB de datos de IA para reconocimiento de voz en tu celular (una sola vez, luego queda offline). Funciona sin servidor.</div>
     </div>

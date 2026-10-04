@@ -17,6 +17,7 @@ const APP_SHELL = [
   './js/aspiracion.js',
   './js/grabadora.js',
   './js/correccion.js',
+  './js/pinyinMatch.js',
   './js/tongueDiagrams.js',
   './js/escritura.js',
   './js/oraciones.js',

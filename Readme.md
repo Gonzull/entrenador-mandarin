@@ -14,7 +14,7 @@ Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo
 | **Sibilantes** | Distinguir de oído los tres grupos que más se confunden: zh/ch/sh, z/c/s y j/q/x. Los tríos se arman con caracteres del vocabulario que solo se diferencian en la inicial. |
 | **Aspiración** | Pares de caracteres del vocabulario que solo se diferencian en el soplo de aire (b/p, d/t, g/k, j/q, zh/ch, z/c), para escuchar y comparar. |
 | **Grabadora** | Escuchas la palabra, te grabas y comparas ambos audios. Muestra un diagrama de la posición de la lengua para los sonidos sibilantes. |
-| **Corrección** | Dices una palabra en voz alta y el reconocimiento de voz indica si sonó como otro sonido del grupo zh/ch/sh/z/c/s/j/q/x/r. |
+| **Corrección** | Dices una palabra en voz alta; lo reconocido se compara por pinyin (inicial, final y tono) y se indica qué sonido se oyó distinto. Selección de 89 palabras o el vocabulario HSK 1-6 con los sonidos zh/ch/sh/r/z/c/s/j/q/x. |
 | **Escritura** | Orden de trazos animado y práctica de escritura con corrección trazo a trazo, cuadrícula guía (米字格 / 田字格), filtro por nivel y lección, buscador de caracteres y repaso espaciado. |
 | **Oraciones** | Armar oraciones ordenando fichas de palabras, y diálogos por lección donde completas las líneas de tu personaje. |
 | **Chengyu** | Fichas de expresiones de cuatro caracteres (成语): sentido literal, significado real, uso, origen cuando se conoce y un ejemplo. Incluye un quiz de significados y filtro por lección. |
@@ -33,7 +33,7 @@ Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo
 - **Las oraciones, los diálogos y las traducciones fueron redactados con ayuda de IA** y no han sido revisados por un hablante nativo. Pueden contener errores.
 - **HSK 5 y 6:** los diálogos son más breves que los de otros niveles (4 líneas por lección).
 - **La voz es la síntesis del dispositivo**, no una grabación de un hablante nativo. La calidad depende de las voces chinas instaladas en el sistema.
-- **Corrección por voz:** en computador usa el reconocimiento del navegador y funciona mejor en Chrome o Edge, con conexión a internet. En celular descarga una vez un modelo de unos 40 MB; su precisión es variable.
+- **Corrección por voz:** en computador usa el reconocimiento del navegador y funciona mejor en Chrome o Edge, con conexión a internet. En celular descarga una vez un modelo de unos 40 MB; su precisión es variable. El reconocedor tiende a escribir la palabra más probable, así que puede dar por buena una pronunciación floja.
 - **Diagramas de lengua:** solo para los diez sonidos sibilantes. Son esquemas orientativos.
 
 ## Uso en el celular
@@ -49,7 +49,7 @@ Tras la primera visita con internet, la app queda guardada en el navegador y abr
 Algunas cosas siguen necesitando internet la primera vez que se usan:
 
 - **Trazos de cada carácter** (Escritura): se descargan al ver el carácter por primera vez y luego quedan guardados.
-- **Reconocimiento de voz** (Corrección): en computador siempre requiere conexión; en celular solo para la descarga inicial del modelo.
+- **Reconocimiento de voz** (Corrección): en computador siempre requiere conexión; en celular solo para la descarga inicial del modelo. El conversor a pinyin se descarga la primera vez y queda guardado.
 
 ## Uso en computador (para desarrollo)
 
@@ -87,6 +87,7 @@ entrenador-mandarin/
 │   ├── aspiracion.js       Pestaña Aspiración
 │   ├── grabadora.js        Pestaña Grabadora
 │   ├── correccion.js       Pestaña Corrección
+│   ├── pinyinMatch.js      Comparación por pinyin y diagnóstico de Corrección
 │   ├── escritura.js        Pestaña Escritura
 │   ├── oraciones.js        Pestaña Oraciones
 │   ├── chengyu.js          Pestaña Chengyu
@@ -100,7 +101,7 @@ entrenador-mandarin/
     ├── oraciones_archivo.json  Oraciones antiguas sin lección; la app no lo carga
     ├── sibilantes.json         14 grupos de sonidos
     ├── aspiracion.json         5 pares
-    ├── correccion.json         89 palabras con sus confusiones típicas
+    ├── correccion.json         89 palabras seleccionadas para Corrección
     └── diagnostico.json        5 frases de diagnóstico
 ```
 

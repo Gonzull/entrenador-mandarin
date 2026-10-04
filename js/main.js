@@ -51,7 +51,7 @@ async function boot() {
     initSibilantes(kb.sibilantes, chars);
     initAspiracion(kb.aspiracion, chars);
     initGrabadora(kb.vocab, kb.sibilantes);
-    initCorreccion(kb.correccion);
+    initCorreccion(kb.correccion, kb.vocab, chars);
     initEscritura(kb.vocab);
     initOraciones(kb.oraciones);
     initChengyu(kb.chengyu, kb.vocab);
