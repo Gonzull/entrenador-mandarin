@@ -145,7 +145,15 @@ function initOraciones(data) {
       queue = shuffled(buildable.filter(s => levelFilter === 'all' || s.level === Number(levelFilter)));
     }
     const s = queue.pop();
-    if (!s) return;
+    if (!s) {
+      // sin oraciones para ese nivel (p. ej. datos antiguos en caché): avisar en vez de dejar la anterior
+      el('oracPrompt').textContent = 'Todavía no hay oraciones de este nivel.';
+      el('oracMeta').textContent = 'Si acabas de actualizar la app, recarga la página.';
+      el('oracBuilder').innerHTML = '';
+      el('oracSolution').innerHTML = '';
+      el('oracNext').style.display = 'none';
+      return;
+    }
     el('oracPrompt').textContent = s.es;
     el('oracMeta').textContent = `HSK${s.level}${s.lesson ? ` · lección ${s.lesson}` : ''} · ${s.words.length} fichas`;
     el('oracSolution').innerHTML = '';
