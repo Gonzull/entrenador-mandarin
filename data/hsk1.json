@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "updated": "2026-10-03",
   "level": 1,
   "words": [
@@ -200,7 +200,6 @@
     ["你好","nǐhǎo","hola"],
     ["您","nín","usted (formal)",1],
     ["女朋友","nǚpéngyou","novia"],
-    ["女士","nǚshì","señora"],
     ["前","qián","delante / antes",11],
     ["请问","qǐngwèn","permiso / disculpe"],
     ["上课","shàngkè","asistir a clase"],

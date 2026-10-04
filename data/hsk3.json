@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "updated": "2026-10-03",
   "level": 3,
   "words": [
@@ -53,7 +53,6 @@
     ["春天","chūntiān","primavera"],
     ["春","chūn","primavera",5],
     ["出院","chūyuàn","salir del hospital"],
-    ["初中","chūzhōng","escuela secundaria (primer ciclo)"],
     ["词典","cídiǎn","diccionario",11],
     ["聪明","cōngming","inteligente",4],
     ["带","dài","traer / llevar",1],
