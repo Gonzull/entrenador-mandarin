@@ -1,7 +1,7 @@
 {
   "name": "Entrenador Mandarín",
   "short_name": "Mandarín",
-  "description": "Entrenador de pronunciación y escritura de mandarín para hispanohablantes. Funciona offline.",
+  "description": "Entrenador de mandarín para hispanohablantes, HSK 1-6: pronunciación, escritura, vocabulario, oraciones y flashcards. Funciona offline.",
   "lang": "es",
   "start_url": "./",
   "scope": "./",
