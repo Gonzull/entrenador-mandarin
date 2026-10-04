@@ -169,7 +169,10 @@ function initOraciones(data) {
         el('oracScore').textContent = score;
         el('oracTotal').textContent = total;
         el('oracStreak').textContent = streak;
-        el('oracSolution').innerHTML = `<div class="ob-solution">${solutionHTML(s)}<button class="playbtn" title="Escuchar">&#9654;</button></div>`;
+        el('oracSolution').innerHTML =
+          `<div class="ob-solution">${solutionHTML(s)}<button class="playbtn" title="Escuchar">&#9654;</button></div>` +
+          // punto de gramática del libro que ejercita la oración, si lo tiene
+          (s.gram ? `<div class="ob-gram">Gramática: <b>${s.gram}</b></div>` : '');
         el('oracSolution').querySelector('.playbtn').addEventListener('click', () => speak(s.text, { calm: true }));
         el('oracNext').style.display = '';
       }

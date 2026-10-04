@@ -419,6 +419,8 @@ h2 {
 .ob-solution { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 12px; text-align: left; }
 .ob-solution .han, .dlg-line .han { font-family: 'Noto Serif SC', serif; font-size: 20px; display: block; }
 .ob-solution .pin, .dlg-line .pin { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--gold); display: block; }
+.ob-gram { text-align: center; font-size: 13px; color: var(--text-dim); margin-top: 8px; }
+.ob-gram b { font-family: 'Noto Serif SC', serif; color: var(--gold); font-weight: 500; }
 .dlg-line { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .dlg-line.b { flex-direction: row-reverse; }
 .dlg-line .who { flex: none; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); min-width: 18px; text-align: center; }

@@ -24,7 +24,7 @@ Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo
 
 - **Vocabulario:** 5.712 palabras de HSK 1 a 6, con pinyin y traducción al español.
 - **Caracteres para escritura:** el buscador cubre todos los caracteres que aparecen en ese vocabulario, también los que solo existen dentro de palabras compuestas.
-- **Oraciones y diálogos:** 343 oraciones y 145 diálogos de HSK 1 a 6, todos asociados a una lección.
+- **Oraciones y diálogos:** 425 oraciones y 145 diálogos de HSK 1 a 6, todos asociados a una lección. En HSK 6, 82 oraciones ejercitan los puntos de gramática del libro y lo indican al resolverlas.
 - **Chengyu:** 113 fichas, una por cada expresión de cuatro caracteres del vocabulario de HSK 6.
 - **Orden por lecciones:** el vocabulario y los diálogos siguen el orden de lecciones de los libros *HSK Standard Course* 1 a 6 (los niveles 4, 5 y 6 tienen tomos A y B). Los libros no forman parte de este repositorio; las oraciones y diálogos son texto propio escrito con el vocabulario y la gramática de cada lección.
 

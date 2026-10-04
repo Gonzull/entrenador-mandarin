@@ -1,6 +1,6 @@
 {
-  "name": "Entrenador 耳舌 Mandarín",
-  "short_name": "耳舌 Mandarín",
+  "name": "Entrenador Mandarín",
+  "short_name": "Mandarín",
   "description": "Entrenador de pronunciación y escritura de mandarín para hispanohablantes. Funciona offline.",
   "lang": "es",
   "start_url": "./",
