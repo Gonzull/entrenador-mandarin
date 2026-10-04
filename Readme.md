@@ -34,13 +34,12 @@ Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo
 - **La voz es la síntesis del dispositivo**, no una grabación de un hablante nativo. La calidad depende de las voces chinas instaladas en el sistema.
 - **Corrección por voz:** en computador usa el reconocimiento del navegador y funciona mejor en Chrome o Edge, con conexión a internet. En celular descarga una vez un modelo de unos 40 MB; su precisión es variable.
 - **Diagramas de lengua:** solo para los diez sonidos sibilantes. Son esquemas orientativos.
-- **Íconos de la app:** todavía no están incluidos, por lo que la instalación como app en Android puede no ofrecerse o mostrar un ícono genérico.
 
 ## Uso en el celular
 
 1. Abre https://gonzull.github.io/entrenador-mandarin/ en Chrome.
 2. La primera vez que uses la Grabadora o Corrección, el navegador pedirá permiso para el micrófono.
-3. Opcional: menú ⋮ → "Añadir a pantalla principal" para tener un acceso directo.
+3. Opcional: menú ⋮ → "Instalar app" (o "Añadir a pantalla principal") para tenerla como aplicación.
 
 ### Sin conexión
 
@@ -90,6 +89,7 @@ entrenador-mandarin/
 │   ├── oraciones.js        Pestaña Oraciones
 │   ├── progreso.js         Pestaña Progreso
 │   └── diagnostico.js      Diagnóstico inicial (pestaña oculta)
+├── icons/                  Íconos de la app (192, 512, maskable y Apple)
 └── data/
     ├── hsk1.json … hsk6.json   Vocabulario: 242 / 249 / 477 / 999 / 1.820 / 1.925 palabras
     ├── oraciones.json          Oraciones y diálogos (todos con su lección)
