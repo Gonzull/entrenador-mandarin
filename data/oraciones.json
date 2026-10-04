@@ -57,7 +57,7 @@
     },
     {
       "id": "libro-l4",
-      "title": "Lección 4 · Mis amigos",
+      "title": "Lección 4 · Mi compañero y mi profesora",
       "level": 1,
       "lesson": 4,
       "lines": [
@@ -67,8 +67,8 @@
         { "who": "B", "zh": "他 是 美国 人", "pin": "tā shì Měiguó rén", "end": "。", "es": "Él es estadounidense." },
         { "who": "A", "zh": "她 呢", "pin": "tā ne", "end": "？", "es": "¿Y ella?" },
         { "who": "B", "zh": "她 是 我 的 汉语 老师", "pin": "tā shì wǒ de Hànyǔ lǎoshī", "end": "。", "es": "Ella es mi profesora de chino." },
-        { "who": "A", "zh": "你 的 朋友 叫 什么 名字", "pin": "nǐ de péngyou jiào shénme míngzi", "end": "？", "es": "¿Cómo se llama tu amigo?" },
-        { "who": "B", "zh": "我 的 朋友 叫 马丁", "pin": "wǒ de péngyou jiào Mǎdīng", "end": "。", "es": "Mi amigo se llama Martín." }
+        { "who": "A", "zh": "你 的 同学 叫 什么 名字", "pin": "nǐ de tóngxué jiào shénme míngzi", "end": "？", "es": "¿Cómo se llama tu compañero de clase?" },
+        { "who": "B", "zh": "我 的 同学 叫 马丁", "pin": "wǒ de tóngxué jiào Mǎdīng", "end": "。", "es": "Mi compañero de clase se llama Martín." }
       ]
     },
     {
@@ -77,16 +77,24 @@
       "level": 1,
       "lesson": 5,
       "lines": [
-        { "who": "A", "zh": "你 朋友 家 有 几 口 人", "pin": "nǐ péngyou jiā yǒu jǐ kǒu rén", "end": "？", "es": "¿Cuántas personas hay en la familia de tu amigo?" },
-        { "who": "B", "zh": "他 家 有 五 口 人", "pin": "tā jiā yǒu wǔ kǒu rén", "end": "。", "es": "En su familia hay cinco personas." },
-        { "who": "A", "zh": "他 有 女儿 吗", "pin": "tā yǒu nǚ'ér ma", "end": "？", "es": "¿Él tiene hija?" },
-        { "who": "B", "zh": "他 有 女儿", "pin": "tā yǒu nǚ'ér", "end": "。", "es": "Él tiene una hija." },
-        { "who": "A", "zh": "他 女儿 几 岁 了", "pin": "tā nǚ'ér jǐ suì le", "end": "？", "es": "¿Cuántos años tiene su hija?" },
-        { "who": "B", "zh": "他 女儿 今年 六 岁 了", "pin": "tā nǚ'ér jīnnián liù suì le", "end": "。", "es": "Su hija tiene seis años este año." },
-        { "who": "A", "zh": "你 的 老师 多 大 了", "pin": "nǐ de lǎoshī duō dà le", "end": "？", "es": "¿Qué edad tiene tu profesor?" },
-        { "who": "B", "zh": "我 的 老师 今年 四十 岁", "pin": "wǒ de lǎoshī jīnnián sìshí suì", "end": "。", "es": "Mi profesor tiene cuarenta años este año." },
-        { "who": "A", "zh": "你 今年 多 大", "pin": "nǐ jīnnián duō dà", "end": "？", "es": "¿Qué edad tienes este año?" },
-        { "who": "B", "zh": "我 今年 二十八 岁", "pin": "wǒ jīnnián èrshíbā suì", "end": "。", "es": "Este año tengo veintiocho años." }
+        { "who": "A", "zh": "你 家 有 几 口 人", "pin": "nǐ jiā yǒu jǐ kǒu rén", "end": "？", "es": "¿Cuántas personas hay en tu familia?" },
+        { "who": "B", "zh": "我 家 有 三 口 人", "pin": "wǒ jiā yǒu sān kǒu rén", "end": "。", "es": "En mi familia somos tres." },
+        { "who": "A", "zh": "你 有 女儿 吗", "pin": "nǐ yǒu nǚ'ér ma", "end": "？", "es": "¿Tienes una hija?" },
+        { "who": "B", "zh": "有", "pin": "yǒu", "end": "。", "es": "Sí." },
+        { "who": "B", "zh": "我 有 一 个 女儿", "pin": "wǒ yǒu yí ge nǚ'ér", "end": "。", "es": "Tengo una hija." },
+        { "who": "A", "zh": "她 叫 什么 名字", "pin": "tā jiào shénme míngzi", "end": "？", "es": "¿Cómo se llama?" },
+        { "who": "B", "zh": "她 叫 小月", "pin": "tā jiào XiǎoYuè", "end": "。", "es": "Se llama Xiaoyue." },
+        { "who": "A", "zh": "她 几 岁 了", "pin": "tā jǐ suì le", "end": "？", "es": "¿Cuántos años tiene?" },
+        { "who": "B", "zh": "她 今年 六 岁 了", "pin": "tā jīnnián liù suì le", "end": "。", "es": "Este año ya tiene seis años." },
+        { "who": "A", "zh": "你 今年 多 大", "pin": "nǐ jīnnián duō dà", "end": "？", "es": "¿Y tú qué edad tienes este año?" },
+        { "who": "B", "zh": "我 今年 三十四 岁", "pin": "wǒ jīnnián sānshísì suì", "end": "。", "es": "Este año tengo treinta y cuatro años." },
+        { "who": "B", "zh": "你 呢", "pin": "nǐ ne", "end": "？", "es": "¿Y tú?" },
+        { "who": "A", "zh": "我 今年 三十 岁", "pin": "wǒ jīnnián sānshí suì", "end": "。", "es": "Yo tengo treinta años." },
+        { "who": "B", "zh": "你 家 有 几 口 人", "pin": "nǐ jiā yǒu jǐ kǒu rén", "end": "？", "es": "¿Cuántas personas hay en tu familia?" },
+        { "who": "A", "zh": "我 家 有 五 口 人", "pin": "wǒ jiā yǒu wǔ kǒu rén", "end": "。", "es": "En mi familia somos cinco." },
+        { "who": "B", "zh": "你 有 女儿 吗", "pin": "nǐ yǒu nǚ'ér ma", "end": "？", "es": "¿Tienes una hija?" },
+        { "who": "A", "zh": "有", "pin": "yǒu", "end": "。", "es": "Sí." },
+        { "who": "A", "zh": "我 女儿 今年 三 岁 了", "pin": "wǒ nǚ'ér jīnnián sān suì le", "end": "。", "es": "Mi hija ya tiene tres años." }
       ]
     },
     {
@@ -95,14 +103,22 @@
       "level": 1,
       "lesson": 6,
       "lines": [
-        { "who": "A", "zh": "你 朋友 会 说 汉语 吗", "pin": "nǐ péngyou huì shuō Hànyǔ ma", "end": "？", "es": "¿Tu amigo sabe hablar chino?" },
-        { "who": "B", "zh": "他 会 说 汉语", "pin": "tā huì shuō Hànyǔ", "end": "。", "es": "Él sabe hablar chino." },
+        { "who": "A", "zh": "你 会 说 汉语 吗", "pin": "nǐ huì shuō Hànyǔ ma", "end": "？", "es": "¿Sabes hablar chino?" },
+        { "who": "B", "zh": "会", "pin": "huì", "end": "。", "es": "Sí." },
+        { "who": "B", "zh": "我 会 说 汉语", "pin": "wǒ huì shuō Hànyǔ", "end": "。", "es": "Sé hablar chino." },
+        { "who": "A", "zh": "你 会 写 汉字 吗", "pin": "nǐ huì xiě Hànzì ma", "end": "？", "es": "¿Sabes escribir caracteres chinos?" },
+        { "who": "B", "zh": "我 也 会 写 汉字", "pin": "wǒ yě huì xiě Hànzì", "end": "。", "es": "También sé escribir caracteres." },
+        { "who": "A", "zh": "你 的 汉语 很 好", "pin": "nǐ de Hànyǔ hěn hǎo", "end": "。", "es": "Tu chino es muy bueno." },
+        { "who": "B", "zh": "谢谢", "pin": "xièxie", "end": "。", "es": "Gracias." },
+        { "who": "A", "zh": "你 朋友 呢", "pin": "nǐ péngyou ne", "end": "？", "es": "¿Y tu amigo?" },
+        { "who": "A", "zh": "他 会 说 汉语 吗", "pin": "tā huì shuō Hànyǔ ma", "end": "？", "es": "¿Sabe hablar chino?" },
+        { "who": "B", "zh": "他 会 听 也 会 读", "pin": "tā huì tīng yě huì dú", "end": "。", "es": "Sabe escuchar y también leer." },
+        { "who": "B", "zh": "但是 他 不 太 会 说", "pin": "dànshì tā bú tài huì shuō", "end": "。", "es": "Pero no sabe hablar muy bien." },
         { "who": "A", "zh": "他 会 写 汉字 吗", "pin": "tā huì xiě Hànzì ma", "end": "？", "es": "¿Sabe escribir caracteres chinos?" },
-        { "who": "B", "zh": "他 不 会 写 汉字", "pin": "tā bú huì xiě Hànzì", "end": "。", "es": "No sabe escribir caracteres chinos." },
-        { "who": "A", "zh": "你 妈妈 会 做 中国 菜 吗", "pin": "nǐ māma huì zuò Zhōngguó cài ma", "end": "？", "es": "¿Tu mamá sabe cocinar comida china?" },
-        { "who": "B", "zh": "我 妈妈 会 做 中国 菜", "pin": "wǒ māma huì zuò Zhōngguó cài", "end": "。", "es": "Mi mamá sabe cocinar comida china." },
-        { "who": "A", "zh": "中国 菜 好吃 吗", "pin": "Zhōngguó cài hǎochī ma", "end": "？", "es": "¿La comida china es rica?" },
-        { "who": "B", "zh": "中国 菜 很 好吃", "pin": "Zhōngguó cài hěn hǎochī", "end": "。", "es": "La comida china es muy rica." }
+        { "who": "B", "zh": "他 也 不 太 会 写", "pin": "tā yě bú tài huì xiě", "end": "。", "es": "Tampoco sabe escribir muy bien." },
+        { "who": "A", "zh": "我 也 不 太 会 写 汉字", "pin": "wǒ yě bú tài huì xiě Hànzì", "end": "。", "es": "Yo tampoco sé escribir caracteres muy bien." },
+        { "who": "B", "zh": "没关系", "pin": "méiguānxi", "end": "。", "es": "No importa." },
+        { "who": "B", "zh": "我们 一起 学 吧", "pin": "wǒmen yìqǐ xué ba", "end": "。", "es": "Estudiemos juntos." }
       ]
     },
     {
@@ -134,13 +150,24 @@
       "level": 1,
       "lesson": 8,
       "lines": [
-        { "who": "A", "zh": "你 下午 想 做 什么", "pin": "nǐ xiàwǔ xiǎng zuò shénme", "end": "？", "es": "¿Qué quieres hacer en la tarde?" },
-        { "who": "B", "zh": "我 想 去 商店 买 杯子", "pin": "wǒ xiǎng qù shāngdiàn mǎi bēizi", "end": "。", "es": "Quiero ir a la tienda a comprar un vaso." },
+        { "who": "A", "zh": "你 好", "pin": "nǐ hǎo", "end": "！", "es": "¡Hola!" },
+        { "who": "B", "zh": "您 好", "pin": "nín hǎo", "end": "！", "es": "¡Hola!" },
+        { "who": "B", "zh": "您 想 买 什么", "pin": "nín xiǎng mǎi shénme", "end": "？", "es": "¿Qué desea comprar?" },
+        { "who": "A", "zh": "我 想 买 杯子", "pin": "wǒ xiǎng mǎi bēizi", "end": "。", "es": "Quiero comprar vasos." },
         { "who": "A", "zh": "这 个 杯子 多少 钱", "pin": "zhè ge bēizi duōshao qián", "end": "？", "es": "¿Cuánto cuesta este vaso?" },
         { "who": "B", "zh": "这 个 杯子 二十 块", "pin": "zhè ge bēizi èrshí kuài", "end": "。", "es": "Este vaso cuesta veinte yuanes." },
+        { "who": "A", "zh": "太 贵 了", "pin": "tài guì le", "end": "。", "es": "Es demasiado caro." },
         { "who": "A", "zh": "那 个 呢", "pin": "nà ge ne", "end": "？", "es": "¿Y aquel?" },
         { "who": "B", "zh": "那 个 八 块 钱", "pin": "nà ge bā kuài qián", "end": "。", "es": "Aquel cuesta ocho yuanes." },
-        { "who": "A", "zh": "我 想 买 三 个", "pin": "wǒ xiǎng mǎi sān ge", "end": "。", "es": "Quiero comprar tres." }
+        { "who": "A", "zh": "我 想 买 三 个", "pin": "wǒ xiǎng mǎi sān ge", "end": "。", "es": "Quiero comprar tres." },
+        { "who": "B", "zh": "三 个 二十四 块", "pin": "sān ge èrshísì kuài", "end": "。", "es": "Tres son veinticuatro yuanes." },
+        { "who": "B", "zh": "您 想 买 茶 吗", "pin": "nín xiǎng mǎi chá ma", "end": "？", "es": "¿Quiere comprar té?" },
+        { "who": "A", "zh": "我 不 想 买 茶", "pin": "wǒ bù xiǎng mǎi chá", "end": "。", "es": "No quiero comprar té." },
+        { "who": "A", "zh": "谢谢", "pin": "xièxie", "end": "。", "es": "Gracias." },
+        { "who": "A", "zh": "这 是 二十四 块", "pin": "zhè shì èrshísì kuài", "end": "。", "es": "Aquí tiene veinticuatro yuanes." },
+        { "who": "B", "zh": "谢谢 您", "pin": "xièxie nín", "end": "。", "es": "Gracias." },
+        { "who": "B", "zh": "再见", "pin": "zàijiàn", "end": "！", "es": "¡Adiós!" },
+        { "who": "A", "zh": "再见", "pin": "zàijiàn", "end": "！", "es": "¡Adiós!" }
       ]
     },
     {
@@ -151,12 +178,21 @@
       "lines": [
         { "who": "A", "zh": "你 爸爸 在 家 吗", "pin": "nǐ bàba zài jiā ma", "end": "？", "es": "¿Tu papá está en casa?" },
         { "who": "B", "zh": "他 不 在 家", "pin": "tā bú zài jiā", "end": "。", "es": "No está en casa." },
-        { "who": "A", "zh": "他 在 哪儿 工作", "pin": "tā zài nǎr gōngzuò", "end": "？", "es": "¿Dónde trabaja él?" },
+        { "who": "A", "zh": "他 在 哪儿", "pin": "tā zài nǎr", "end": "？", "es": "¿Dónde está?" },
+        { "who": "B", "zh": "他 在 医院", "pin": "tā zài yīyuàn", "end": "。", "es": "Está en el hospital." },
+        { "who": "A", "zh": "他 是 医生 吗", "pin": "tā shì yīshēng ma", "end": "？", "es": "¿Es médico?" },
+        { "who": "B", "zh": "是", "pin": "shì", "end": "。", "es": "Sí." },
         { "who": "B", "zh": "他 在 医院 工作", "pin": "tā zài yīyuàn gōngzuò", "end": "。", "es": "Trabaja en el hospital." },
+        { "who": "A", "zh": "你 妈妈 呢", "pin": "nǐ māma ne", "end": "？", "es": "¿Y tu mamá?" },
+        { "who": "B", "zh": "她 也 不 在 家", "pin": "tā yě bú zài jiā", "end": "。", "es": "Tampoco está en casa." },
+        { "who": "A", "zh": "谁 在 家", "pin": "shéi zài jiā", "end": "？", "es": "¿Quién está en casa?" },
+        { "who": "B", "zh": "我 的 小 猫 和 小 狗 在 家", "pin": "wǒ de xiǎo māo hé xiǎo gǒu zài jiā", "end": "。", "es": "Mi gatito y mi perrito están en casa." },
         { "who": "A", "zh": "你 的 小 猫 在 哪儿", "pin": "nǐ de xiǎo māo zài nǎr", "end": "？", "es": "¿Dónde está tu gatito?" },
         { "who": "B", "zh": "小 猫 在 椅子 下面", "pin": "xiǎo māo zài yǐzi xiàmiàn", "end": "。", "es": "El gatito está debajo de la silla." },
         { "who": "A", "zh": "小 狗 呢", "pin": "xiǎo gǒu ne", "end": "？", "es": "¿Y el perrito?" },
-        { "who": "B", "zh": "小 狗 在 那儿", "pin": "xiǎo gǒu zài nàr", "end": "。", "es": "El perrito está allí." }
+        { "who": "B", "zh": "小 狗 在 那儿", "pin": "xiǎo gǒu zài nàr", "end": "。", "es": "El perrito está allí." },
+        { "who": "A", "zh": "小 狗 几 岁 了", "pin": "xiǎo gǒu jǐ suì le", "end": "？", "es": "¿Cuántos años tiene el perrito?" },
+        { "who": "B", "zh": "小 狗 一 岁 了", "pin": "xiǎo gǒu yí suì le", "end": "。", "es": "El perrito ya tiene un año." }
       ]
     },
     {
