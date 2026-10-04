@@ -8,6 +8,7 @@ import { initCorreccion } from './correccion.js';
 import { initEscritura } from './escritura.js';
 import { initOraciones } from './oraciones.js';
 import { initChengyu } from './chengyu.js';
+import { initFlashcards } from './flashcards.js';
 import { initProgreso } from './progreso.js';
 import { buildCharIndex } from './chars.js';
 
@@ -55,6 +56,7 @@ async function boot() {
     initEscritura(kb.vocab);
     initOraciones(kb.oraciones);
     initChengyu(kb.chengyu, kb.vocab);
+    initFlashcards(kb.vocab);
   } catch (err) {
     console.error(err);
     document.getElementById('loadError').style.display = 'flex';

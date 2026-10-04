@@ -22,6 +22,7 @@ const APP_SHELL = [
   './js/escritura.js',
   './js/oraciones.js',
   './js/chengyu.js',
+  './js/flashcards.js',
   './js/progreso.js',
   './data/hsk1.json',
   './data/hsk2.json',

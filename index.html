@@ -51,7 +51,8 @@
   <button data-tab="hanzi">⑥ Escritura</button>
   <button data-tab="orac">⑦ Oraciones</button>
   <button data-tab="cy">⑧ Chengyu</button>
-  <button data-tab="prog">⑨ Progreso</button>
+  <button data-tab="flash">⑨ Flashcards</button>
+  <button data-tab="prog">⑩ Progreso</button>
 </nav>
 
 <main class="wrap">
@@ -303,6 +304,89 @@
       <div class="choices cy-choices" id="cyChoices"></div>
       <div class="feedback" id="cyFeedback" style="text-align:center;"></div>
       <div class="ob-actions"><button class="rec-btn" id="cyQNext" style="display:none;">Siguiente &#8594;</button></div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-flash">
+    <h2>Flashcards</h2>
+    <p class="panel-desc">Aprende vocabulario HSK 1 a 6 con tarjetas que se voltean, o ponte a prueba en un juego de cuatro opciones. Las palabras que no sabes vuelven pronto y las que sabes se espacian (repetición espaciada).</p>
+    <div class="levelfilter" id="flashMode">
+      <button class="lvlbtn active" data-mode="cards">Tarjetas</button>
+      <button class="lvlbtn" data-mode="game">Juego</button>
+    </div>
+    <div class="levelfilter" id="flashLevel">
+      <button class="lvlbtn active" data-level="all">Todos</button>
+      <button class="lvlbtn" data-level="1">HSK 1</button>
+      <button class="lvlbtn" data-level="2">HSK 2</button>
+      <button class="lvlbtn" data-level="3">HSK 3</button>
+      <button class="lvlbtn" data-level="4">HSK 4</button>
+      <button class="lvlbtn" data-level="5">HSK 5</button>
+      <button class="lvlbtn" data-level="6">HSK 6</button>
+      <button class="lvlbtn due-btn" data-level="due">Repaso</button>
+    </div>
+    <select class="rec-select" id="flashLesson" style="display:none;" aria-label="Lección"></select>
+
+    <div id="flashCards">
+      <div class="srs-stats">
+        <div class="srs-stat due"><b id="flashDue">0</b><span>por repasar hoy</span></div>
+        <div class="srs-stat"><b id="flashLearning">0</b><span>en estudio</span></div>
+        <div class="srs-stat mastered"><b id="flashMastered">0</b><span>dominadas</span></div>
+      </div>
+      <div class="levelfilter" id="flashFront">
+        <button class="lvlbtn active" data-front="han">Frente: 中文</button>
+        <button class="lvlbtn" data-front="hanpin">Frente: 中文 + pinyin</button>
+        <button class="lvlbtn" data-front="es">Frente: español</button>
+      </div>
+      <div class="card">
+        <p class="rec-note" id="flashEmpty" style="display:none;"></p>
+        <div id="flashCardWrap">
+          <div class="quiz-hint" id="flashMeta" style="text-align:center;"></div>
+          <button class="fc-card" id="flashCard" aria-label="Voltear la tarjeta">
+            <span class="fc-han" id="flashHan">…</span>
+            <span class="fc-pin" id="flashPin"></span>
+            <span class="fc-es" id="flashEs"></span>
+            <span class="fc-tip" id="flashTip">Toca la tarjeta para voltearla</span>
+          </button>
+          <div class="ob-actions">
+            <button class="rec-btn" id="flashPlay">&#9654; Escuchar</button>
+            <button class="rec-btn" id="flashFlip">Voltear</button>
+          </div>
+          <div class="ob-actions" id="flashRate" style="display:none;">
+            <button class="rec-btn fc-no" id="flashNo">No la sabía</button>
+            <button class="rec-btn fc-yes" id="flashYes">La sabía</button>
+          </div>
+          <div class="hanzi-srs-info" id="flashInfo"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="flashGame" style="display:none;">
+      <div class="levelfilter" id="flashDir">
+        <button class="lvlbtn active" data-dir="zh-es">中文 &#8594; español</button>
+        <button class="lvlbtn" data-dir="es-zh">Español &#8594; 中文</button>
+      </div>
+      <p class="rec-note" id="fgEmpty" style="display:none;"></p>
+      <div class="card" id="fgCard">
+        <div class="scoreline"><span>Pregunta <b id="fgNum">1</b>/<b id="fgLen">10</b> · Racha: <b id="fgStreak">0</b></span><span>Puntos: <b id="fgScore">0</b> · Récord: <b id="fgRecord">0</b></span></div>
+        <div id="fgPlay">
+          <div class="cy-head">
+            <div class="quiz-han" id="fgPrompt">…</div>
+            <div class="cy-pin" id="fgPin"></div>
+            <button class="playbtn" id="fgListen" title="Escuchar">&#9654;</button>
+          </div>
+          <div class="choices" id="fgChoices"></div>
+          <div class="feedback" id="fgFeedback" style="text-align:center;"></div>
+          <div class="ob-actions"><button class="rec-btn" id="fgNext" style="display:none;">Siguiente &#8594;</button></div>
+        </div>
+        <div id="fgEnd" class="fc-end" style="display:none;">
+          <div class="quiz-hint">Partida terminada</div>
+          <div class="fc-end-score"><b id="fgEndScore">0</b> puntos</div>
+          <div class="quiz-hint" id="fgEndLine"></div>
+          <div id="fgMissed"></div>
+          <div class="ob-actions"><button class="rec-btn" id="fgAgain">Jugar otra vez</button></div>
+        </div>
+        <p class="rec-note">Acierto +10 (+5 extra desde el tercero seguido) · error &minus;5 · 10 preguntas por partida</p>
+      </div>
     </div>
   </section>
 

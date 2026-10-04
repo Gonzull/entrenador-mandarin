@@ -18,6 +18,7 @@ Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo
 | **Escritura** | Orden de trazos animado y práctica de escritura con corrección trazo a trazo, cuadrícula guía (米字格 / 田字格), filtro por nivel y lección, buscador de caracteres y repaso espaciado. |
 | **Oraciones** | Armar oraciones ordenando fichas de palabras, y diálogos por lección donde completas las líneas de tu personaje. |
 | **Chengyu** | Fichas de expresiones de cuatro caracteres (成语): sentido literal, significado real, uso, origen cuando se conoce y un ejemplo. Incluye un quiz de significados y filtro por lección. |
+| **Flashcards** | Tarjetas de vocabulario que se voltean (chino, chino con pinyin o español al frente) con repaso espaciado, y un juego de cuatro opciones con puntos, racha y récord. Filtro por nivel y lección. |
 | **Progreso** | Racha de días, sesiones y caracteres practicados y dominados. |
 
 ## Contenido
@@ -91,6 +92,7 @@ entrenador-mandarin/
 │   ├── escritura.js        Pestaña Escritura
 │   ├── oraciones.js        Pestaña Oraciones
 │   ├── chengyu.js          Pestaña Chengyu
+│   ├── flashcards.js       Pestaña Flashcards
 │   ├── progreso.js         Pestaña Progreso
 │   └── diagnostico.js      Diagnóstico inicial (pestaña oculta)
 ├── icons/                  Íconos de la app (192, 512, maskable y Apple)

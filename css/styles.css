@@ -444,6 +444,47 @@ h2 {
 .cy-choices { flex-direction: column; align-items: stretch; max-width: 520px; margin: 0 auto; }
 .cy-choice { font-family: 'Inter', sans-serif; text-align: left; }
 
+/* Flashcards */
+.fc-card {
+  width: 100%;
+  max-width: 420px;
+  min-height: 220px;
+  margin: 6px auto 4px;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-family: inherit;
+  cursor: pointer;
+}
+.fc-card:hover, .fc-card.flipped { border-color: var(--gold); }
+.fc-card.flip { animation: fcflip .28s ease; }
+@keyframes fcflip { from { transform: rotateY(90deg); opacity: .3; } to { transform: none; opacity: 1; } }
+.fc-han { font-family: 'Noto Serif SC', serif; font-size: 52px; font-weight: 700; line-height: 1.2; }
+.fc-pin { font-family: 'JetBrains Mono', monospace; font-size: 17px; color: var(--gold); }
+.fc-es { font-size: 17px; line-height: 1.4; }
+.fc-tip { font-size: 12px; color: var(--text-dim); margin-top: 6px; }
+.rec-btn.fc-no { border-color: var(--seal); color: var(--seal); }
+.rec-btn.fc-yes { border-color: var(--jade); color: var(--jade); }
+.quiz-han.fc-prompt-es { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 600; line-height: 1.35; }
+.fc-choices-han { display: grid; grid-template-columns: 1fr 1fr; max-width: 420px; margin: 0 auto; }
+.fc-choice-han { font-family: 'Noto Serif SC', serif; font-size: 24px; padding: 14px 10px; }
+.fc-end { text-align: center; padding: 14px 0 4px; }
+.fc-end-score { font-size: 15px; color: var(--text-dim); margin-bottom: 6px; }
+.fc-end-score b { font-family: 'Fraunces', serif; font-size: 44px; color: var(--gold); margin-right: 6px; }
+.fc-missed { display: flex; align-items: center; gap: 12px; max-width: 420px; margin: 8px auto 0; padding: 8px 12px; border-radius: 10px; background: var(--surface-2); border: 1px solid var(--border); text-align: left; }
+.fc-missed .han { font-family: 'Noto Serif SC', serif; font-size: 20px; flex: none; }
+.fc-missed .meta { font-size: 12.5px; color: var(--text-dim); }
+.fc-missed .meta b { color: var(--gold); font-family: 'JetBrains Mono', monospace; font-weight: 400; }
+@media (prefers-reduced-motion: reduce) { .fc-card.flip { animation: none; } }
+@media (max-width: 480px) { .fc-han { font-size: 42px; } }
+
 .voice-tune { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; margin-top: 18px; font-size: 12px; color: var(--text-dim); }
 .voice-tune label { display: flex; align-items: center; gap: 8px; }
 .voice-tune input[type=range] { width: 120px; accent-color: var(--gold); }
