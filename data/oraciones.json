@@ -347,7 +347,15 @@
         { "who": "B", "zh": "明天 我 要 去 旅游", "pin": "míngtiān wǒ yào qù lǚyóu", "end": "。", "es": "Mañana me voy de viaje." },
         { "who": "A", "zh": "你 要 去 哪儿 旅游", "pin": "nǐ yào qù nǎr lǚyóu", "end": "？", "es": "¿Adónde vas a viajar?" },
         { "who": "B", "zh": "我 要 去 北京 看 朋友", "pin": "wǒ yào qù Běijīng kàn péngyou", "end": "。", "es": "Voy a Pekín a ver a un amigo." },
-        { "who": "A", "zh": "我 也 想 去 北京 旅游", "pin": "wǒ yě xiǎng qù Běijīng lǚyóu", "end": "。", "es": "Yo también quiero viajar a Pekín." }
+        { "who": "A", "zh": "你 怎么 去 北京", "pin": "nǐ zěnme qù Běijīng", "end": "？", "es": "¿Cómo vas a Pekín?" },
+        { "who": "B", "zh": "我 坐 飞机 去", "pin": "wǒ zuò fēijī qù", "end": "。", "es": "Voy en avión." },
+        { "who": "A", "zh": "明天 北京 的 天气 怎么样", "pin": "míngtiān Běijīng de tiānqì zěnmeyàng", "end": "？", "es": "¿Cómo estará el tiempo mañana en Pekín?" },
+        { "who": "B", "zh": "明天 北京 会 很 冷", "pin": "míngtiān Běijīng huì hěn lěng", "end": "。", "es": "Mañana hará mucho frío en Pekín." },
+        { "who": "A", "zh": "你 什么 时候 回来", "pin": "nǐ shénme shíhou huílai", "end": "？", "es": "¿Cuándo vuelves?" },
+        { "who": "B", "zh": "我 下 个 星期 回来", "pin": "wǒ xià ge xīngqī huílai", "end": "。", "es": "Vuelvo la próxima semana." },
+        { "who": "A", "zh": "下 个 星期 我们 一起 去 踢足球 吧", "pin": "xià ge xīngqī wǒmen yìqǐ qù tīzúqiú ba", "end": "。", "es": "La próxima semana vamos a jugar fútbol juntos." },
+        { "who": "B", "zh": "好", "pin": "hǎo", "end": "。", "es": "Bueno." },
+        { "who": "B", "zh": "下 个 星期 见", "pin": "xià ge xīngqī jiàn", "end": "！", "es": "¡Nos vemos la próxima semana!" }
       ]
     },
     {
@@ -2213,13 +2221,21 @@
       "book": "v3.0",
       "lines": [
         { "who": "A", "zh": "你 爸爸 在 哪儿 工作", "pin": "nǐ bàba zài nǎr gōngzuò", "end": "？", "es": "¿Dónde trabaja tu papá?" },
-        { "who": "B", "zh": "他 在 医院 上班", "pin": "tā zài yīyuàn shàngbān", "end": "。", "es": "Trabaja en un hospital." },
-        { "who": "A", "zh": "你 妈妈 也 是 医生 吗", "pin": "nǐ māma yě shì yīshēng ma", "end": "？", "es": "¿Tu mamá también es médica?" },
-        { "who": "B", "zh": "她 不 是 医生", "pin": "tā bú shì yīshēng", "end": "。", "es": "Ella no es médica." },
+        { "who": "B", "zh": "他 在 公司 上班", "pin": "tā zài gōngsī shàngbān", "end": "。", "es": "Trabaja en una empresa." },
+        { "who": "A", "zh": "公司 里 人 多 吗", "pin": "gōngsī li rén duō ma", "end": "？", "es": "¿Hay mucha gente en la empresa?" },
+        { "who": "B", "zh": "公司 里 人 很 多", "pin": "gōngsī li rén hěn duō", "end": "。", "es": "En la empresa hay mucha gente." },
+        { "who": "A", "zh": "你 妈妈 也 在 公司 上班 吗", "pin": "nǐ māma yě zài gōngsī shàngbān ma", "end": "？", "es": "¿Tu mamá también trabaja en una empresa?" },
+        { "who": "B", "zh": "她 不 在 公司 上班", "pin": "tā bú zài gōngsī shàngbān", "end": "。", "es": "Ella no trabaja en una empresa." },
         { "who": "A", "zh": "她 在 哪儿 上班", "pin": "tā zài nǎr shàngbān", "end": "？", "es": "¿Dónde trabaja ella?" },
         { "who": "B", "zh": "她 在 学校 里 的 书店 工作", "pin": "tā zài xuéxiào li de shūdiàn gōngzuò", "end": "。", "es": "Trabaja en la librería que está dentro de la escuela." },
-        { "who": "A", "zh": "医院 里 人 多 吗", "pin": "yīyuàn li rén duō ma", "end": "？", "es": "¿Hay mucha gente en el hospital?" },
-        { "who": "B", "zh": "医院 里 人 很 多", "pin": "yīyuàn li rén hěn duō", "end": "。", "es": "En el hospital hay mucha gente." }
+        { "who": "A", "zh": "她 喜欢 她 的 工作 吗", "pin": "tā xǐhuan tā de gōngzuò ma", "end": "？", "es": "¿Le gusta su trabajo?" },
+        { "who": "B", "zh": "她 很 喜欢", "pin": "tā hěn xǐhuan", "end": "。", "es": "Le gusta mucho." },
+        { "who": "B", "zh": "你 爸爸 呢", "pin": "nǐ bàba ne", "end": "？", "es": "¿Y tu papá?" },
+        { "who": "A", "zh": "我 爸爸 在 饭店 工作", "pin": "wǒ bàba zài fàndiàn gōngzuò", "end": "。", "es": "Mi papá trabaja en un restaurante." },
+        { "who": "B", "zh": "你 妈妈 呢", "pin": "nǐ māma ne", "end": "？", "es": "¿Y tu mamá?" },
+        { "who": "A", "zh": "她 在 商店 工作", "pin": "tā zài shāngdiàn gōngzuò", "end": "。", "es": "Trabaja en una tienda." },
+        { "who": "B", "zh": "他们 的 工作 忙 吗", "pin": "tāmen de gōngzuò máng ma", "end": "？", "es": "¿Tienen mucho trabajo?" },
+        { "who": "A", "zh": "他们 都 很 忙", "pin": "tāmen dōu hěn máng", "end": "。", "es": "Los dos están muy ocupados." }
       ]
     },
     {
@@ -2247,14 +2263,22 @@
       "book": "v3.0",
       "lines": [
         { "who": "A", "zh": "您 想 喝 什么", "pin": "nín xiǎng hē shénme", "end": "？", "es": "¿Qué desea tomar?" },
-        { "who": "B", "zh": "请 给 我 两 杯 茶", "pin": "qǐng gěi wǒ liǎng bēi chá", "end": "。", "es": "Deme dos tazas de té, por favor." },
+        { "who": "B", "zh": "请 给 我 一 杯 茶", "pin": "qǐng gěi wǒ yì bēi chá", "end": "。", "es": "Deme una taza de té, por favor." },
+        { "who": "B", "zh": "不 要 糖", "pin": "bú yào táng", "end": "。", "es": "Sin azúcar." },
+        { "who": "A", "zh": "好", "pin": "hǎo", "end": "。", "es": "Bien." },
         { "who": "A", "zh": "您 要 吃 东西 吗", "pin": "nín yào chī dōngxi ma", "end": "？", "es": "¿Va a comer algo?" },
         { "who": "B", "zh": "这儿 卖 面包 吗", "pin": "zhèr mài miànbāo ma", "end": "？", "es": "¿Aquí venden pan?" },
+        { "who": "A", "zh": "卖", "pin": "mài", "end": "。", "es": "Sí." },
         { "who": "A", "zh": "我们 有 面包 和 鸡蛋", "pin": "wǒmen yǒu miànbāo hé jīdàn", "end": "。", "es": "Tenemos pan y huevos." },
         { "who": "B", "zh": "我 可以 看 一下 吗", "pin": "wǒ kěyǐ kàn yíxià ma", "end": "？", "es": "¿Puedo mirar un momento?" },
         { "who": "A", "zh": "没 问题", "pin": "méi wèntí", "end": "。", "es": "Sin problema." },
         { "who": "B", "zh": "我 再 要 一 个 面包", "pin": "wǒ zài yào yí ge miànbāo", "end": "。", "es": "Quiero además un pan." },
-        { "who": "A", "zh": "茶 和 面包 二十 块 钱", "pin": "chá hé miànbāo èrshí kuài qián", "end": "。", "es": "El té y el pan son veinte yuanes." }
+        { "who": "B", "zh": "多少 钱", "pin": "duōshao qián", "end": "？", "es": "¿Cuánto es?" },
+        { "who": "A", "zh": "茶 和 面包 二十 块 钱", "pin": "chá hé miànbāo èrshí kuài qián", "end": "。", "es": "El té y el pan son veinte yuanes." },
+        { "who": "B", "zh": "给 您", "pin": "gěi nín", "end": "。", "es": "Aquí tiene." },
+        { "who": "A", "zh": "谢谢", "pin": "xièxie", "end": "。", "es": "Gracias." },
+        { "who": "A", "zh": "请 等 一下", "pin": "qǐng děng yíxià", "end": "。", "es": "Espere un momento, por favor." },
+        { "who": "B", "zh": "好 谢谢", "pin": "hǎo xièxie", "end": "。", "es": "Bueno, gracias." }
       ]
     },
     {
