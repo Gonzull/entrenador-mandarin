@@ -318,9 +318,8 @@
       "lines": [
         { "who": "A", "zh": "你 是 怎么 来 饭店 的", "pin": "nǐ shì zěnme lái fàndiàn de", "end": "？", "es": "¿Cómo viniste al restaurante?" },
         { "who": "B", "zh": "我 是 坐 出租车 来 的", "pin": "wǒ shì zuò chūzūchē lái de", "end": "。", "es": "Vine en taxi." },
-        { "who": "B", "zh": "路 上 有点 堵", "pin": "lù shang yǒudiǎn dǔ", "end": "。", "es": "Había un poco de taco en el camino." },
+        { "who": "B", "zh": "路 上 车 很 多", "pin": "lù shang chē hěn duō", "end": "。", "es": "Había muchos autos en el camino." },
         { "who": "A", "zh": "是 啊", "pin": "shì a", "end": "。", "es": "Sí." },
-        { "who": "A", "zh": "这 个 时间 车 很 多", "pin": "zhè ge shíjiān chē hěn duō", "end": "。", "es": "A esta hora hay muchos autos." },
         { "who": "A", "zh": "对了 你 和 她 是 在 哪儿 认识 的", "pin": "duìle nǐ hé tā shì zài nǎr rènshi de", "end": "？", "es": "Por cierto, ¿dónde se conocieron tú y ella?" },
         { "who": "B", "zh": "我们 是 在 大学 认识 的", "pin": "wǒmen shì zài dàxué rènshi de", "end": "。", "es": "Nos conocimos en la universidad." },
         { "who": "B", "zh": "那 时候 她 学 英语 我 学 汉语", "pin": "nà shíhou tā xué Yīngyǔ wǒ xué Hànyǔ", "end": "。", "es": "En esa época ella estudiaba inglés y yo chino." },
@@ -329,7 +328,7 @@
         { "who": "B", "zh": "我们 是 三 年 前 认识 的", "pin": "wǒmen shì sān nián qián rènshi de", "end": "。", "es": "Nos conocimos hace tres años." },
         { "who": "B", "zh": "时间 过 得 真 快", "pin": "shíjiān guò de zhēn kuài", "end": "。", "es": "El tiempo vuela." },
         { "who": "A", "zh": "我 很 高兴 认识 你们", "pin": "wǒ hěn gāoxìng rènshi nǐmen", "end": "。", "es": "Me alegra mucho conocerlos." },
-        { "who": "A", "zh": "既然 这么 有缘 我们 一起 吃饭 吧", "pin": "jìrán zhème yǒuyuán wǒmen yìqǐ chīfàn ba", "end": "。", "es": "Ya que tenemos tanta afinidad, comamos juntos." },
+        { "who": "A", "zh": "我们 一起 吃饭 吧", "pin": "wǒmen yìqǐ chīfàn ba", "end": "。", "es": "Comamos juntos." },
         { "who": "B", "zh": "好 啊", "pin": "hǎo a", "end": "。", "es": "Buena idea." },
         { "who": "B", "zh": "我 也 饿 了", "pin": "wǒ yě è le", "end": "。", "es": "Yo también tengo hambre." }
       ]
@@ -2186,14 +2185,24 @@
       "lesson": 6,
       "book": "v3.0",
       "lines": [
+        { "who": "A", "zh": "我 买 了 一 个 新 手机", "pin": "wǒ mǎi le yí ge xīn shǒujī", "end": "。", "es": "Compré un celular nuevo." },
+        { "who": "B", "zh": "你 的 新 手机 很 好看", "pin": "nǐ de xīn shǒujī hěn hǎokàn", "end": "。", "es": "Tu celular nuevo es muy bonito." },
+        { "who": "A", "zh": "谢谢", "pin": "xièxie", "end": "。", "es": "Gracias." },
         { "who": "A", "zh": "你 的 手机 号 是 多少", "pin": "nǐ de shǒujī hào shì duōshao", "end": "？", "es": "¿Cuál es tu número de celular?" },
         { "who": "B", "zh": "是 三 八 六 五 二 九", "pin": "shì sān bā liù wǔ èr jiǔ", "end": "。", "es": "Es el 386529." },
+        { "who": "B", "zh": "你 的 呢", "pin": "nǐ de ne", "end": "？", "es": "¿Y el tuyo?" },
+        { "who": "A", "zh": "我 的 是 五 二 七 九 四 八", "pin": "wǒ de shì wǔ èr qī jiǔ sì bā", "end": "。", "es": "El mío es el 527948." },
+        { "who": "B", "zh": "好", "pin": "hǎo", "end": "。", "es": "Bien." },
+        { "who": "B", "zh": "明天 我 给 你 打电话", "pin": "míngtiān wǒ gěi nǐ dǎdiànhuà", "end": "。", "es": "Mañana te llamo." },
+        { "who": "A", "zh": "好", "pin": "hǎo", "end": "。", "es": "Bueno." },
         { "who": "A", "zh": "明天 你 想 去 哪儿", "pin": "míngtiān nǐ xiǎng qù nǎr", "end": "？", "es": "¿Adónde quieres ir mañana?" },
         { "who": "B", "zh": "我 想 去 超市 买 东西", "pin": "wǒ xiǎng qù chāoshì mǎi dōngxi", "end": "。", "es": "Quiero ir al supermercado a comprar cosas." },
         { "who": "A", "zh": "你 想 买 什么", "pin": "nǐ xiǎng mǎi shénme", "end": "？", "es": "¿Qué quieres comprar?" },
         { "who": "B", "zh": "我 想 买 牛奶 和 包子", "pin": "wǒ xiǎng mǎi niúnǎi hé bāozi", "end": "。", "es": "Quiero comprar leche y bollos rellenos." },
+        { "who": "A", "zh": "我 也 想 去", "pin": "wǒ yě xiǎng qù", "end": "。", "es": "Yo también quiero ir." },
         { "who": "A", "zh": "我们 怎么 去", "pin": "wǒmen zěnme qù", "end": "？", "es": "¿Cómo vamos?" },
-        { "who": "B", "zh": "我们 坐 出租车 去", "pin": "wǒmen zuò chūzūchē qù", "end": "。", "es": "Vamos en taxi." }
+        { "who": "B", "zh": "我们 坐 出租车 去", "pin": "wǒmen zuò chūzūchē qù", "end": "。", "es": "Vamos en taxi." },
+        { "who": "A", "zh": "好 明天 见", "pin": "hǎo míngtiān jiàn", "end": "！", "es": "Bueno, ¡hasta mañana!" }
       ]
     },
     {
