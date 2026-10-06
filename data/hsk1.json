@@ -1,6 +1,6 @@
 {
-  "version": 9,
-  "updated": "2026-10-04",
+  "version": 10,
+  "updated": "2026-10-06",
   "level": 1,
   "words": [
     ["我","wǒ","yo",3],
@@ -246,6 +246,7 @@
     ["不少","bùshǎo","bastantes / no pocos",14],
     ["吃饭","chīfàn","comer (una comida)",11],
     ["杯","bēi","vaso / taza (clasificador)",null,"extra"],
-    ["前边","qiánbian","delante / parte de adelante",null,"extra"]
+    ["前边","qiánbian","delante / parte de adelante",null,"extra"],
+    ["茶杯","chábēi","taza de té",null,"extra"]
   ]
 }

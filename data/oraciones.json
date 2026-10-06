@@ -1,6 +1,6 @@
 {
-  "version": 12,
-  "updated": "2026-10-04",
+  "version": 14,
+  "updated": "2026-10-06",
   "nota": "zh y pin van separados por espacios, una ficha por palabra, en el mismo orden. end es la puntuación final. who en los diálogos es A o B. lesson es la lección del libro HSK Standard Course de ese nivel (level 1 = libro 1, level 2 = libro 2, level 3 = libro 3, level 4 = libros 4A y 4B, level 5 = libros 5A y 5B, level 6 = libros 6A y 6B) cuyo vocabulario y gramática usa; el texto es propio, no copiado del libro. Todo el contenido lleva lesson: lo que no seguía un libro está guardado en oraciones_archivo.json, que la app no carga. Los diálogos con book \"v3.0\" siguen en cambio las lecciones de los libros 新HSK教程 (New HSK Course) 1 a 3 del programa nuevo, y su lesson es la de ese libro; también son texto propio.",
   "dialogues": [
     {
@@ -171,6 +171,34 @@
       ]
     },
     {
+      "id": "libro-l8b",
+      "title": "Lección 8 · En el restaurante",
+      "level": 1,
+      "lesson": 8,
+      "lines": [
+        { "who": "A", "zh": "这儿 的 中国 菜 很 好吃", "pin": "zhèr de Zhōngguó cài hěn hǎochī", "end": "。", "es": "La comida china de aquí es muy rica." },
+        { "who": "A", "zh": "你 想 吃 什么", "pin": "nǐ xiǎng chī shénme", "end": "？", "es": "¿Qué quieres comer?" },
+        { "who": "B", "zh": "我 不 会 读 汉字", "pin": "wǒ bú huì dú Hànzì", "end": "。", "es": "No sé leer caracteres chinos." },
+        { "who": "B", "zh": "这 是 什么 菜", "pin": "zhè shì shénme cài", "end": "？", "es": "¿Qué plato es este?" },
+        { "who": "A", "zh": "这 是 鱼", "pin": "zhè shì yú", "end": "。", "es": "Es pescado." },
+        { "who": "A", "zh": "很 好吃", "pin": "hěn hǎochī", "end": "。", "es": "Es muy rico." },
+        { "who": "B", "zh": "我 想 吃 这 个 菜", "pin": "wǒ xiǎng chī zhè ge cài", "end": "。", "es": "Quiero comer este plato." },
+        { "who": "A", "zh": "你 想 吃 米饭 吗", "pin": "nǐ xiǎng chī mǐfàn ma", "end": "？", "es": "¿Quieres arroz?" },
+        { "who": "B", "zh": "想", "pin": "xiǎng", "end": "。", "es": "Sí, quiero." },
+        { "who": "B", "zh": "我 爱 吃 米饭", "pin": "wǒ ài chī mǐfàn", "end": "。", "es": "Me encanta el arroz." },
+        { "who": "A", "zh": "你 想 喝 什么", "pin": "nǐ xiǎng hē shénme", "end": "？", "es": "¿Qué quieres tomar?" },
+        { "who": "B", "zh": "我 想 喝 茶", "pin": "wǒ xiǎng hē chá", "end": "。", "es": "Quiero tomar té." },
+        { "who": "B", "zh": "你 呢", "pin": "nǐ ne", "end": "？", "es": "¿Y tú?" },
+        { "who": "A", "zh": "我 不 想 喝 茶", "pin": "wǒ bù xiǎng hē chá", "end": "。", "es": "No quiero tomar té." },
+        { "who": "A", "zh": "我 想 喝 水", "pin": "wǒ xiǎng hē shuǐ", "end": "。", "es": "Quiero tomar agua." },
+        { "who": "B", "zh": "这 个 菜 多少 钱", "pin": "zhè ge cài duōshao qián", "end": "？", "es": "¿Cuánto cuesta este plato?" },
+        { "who": "A", "zh": "三十 块", "pin": "sānshí kuài", "end": "。", "es": "Treinta yuanes." },
+        { "who": "B", "zh": "不 贵", "pin": "bú guì", "end": "。", "es": "No es caro." },
+        { "who": "A", "zh": "今天 我 请 你", "pin": "jīntiān wǒ qǐng nǐ", "end": "。", "es": "Hoy invito yo." },
+        { "who": "B", "zh": "谢谢 你", "pin": "xièxie nǐ", "end": "！", "es": "¡Gracias!" }
+      ]
+    },
+    {
       "id": "libro-l9",
       "title": "Lección 9 · ¿Dónde está?",
       "level": 1,
@@ -294,20 +322,57 @@
       ]
     },
     {
+      "id": "libro-l13b",
+      "title": "Lección 13 · De noche en casa",
+      "level": 1,
+      "lesson": 13,
+      "lines": [
+        { "who": "A", "zh": "儿子 在 做 什么 呢", "pin": "érzi zài zuò shénme ne", "end": "？", "es": "¿Qué está haciendo nuestro hijo?" },
+        { "who": "B", "zh": "他 在 睡觉 呢", "pin": "tā zài shuìjiào ne", "end": "。", "es": "Está durmiendo." },
+        { "who": "A", "zh": "那 我 不 看 电视 了", "pin": "nà wǒ bú kàn diànshì le", "end": "。", "es": "Entonces ya no veo televisión." },
+        { "who": "A", "zh": "你 在 做 什么 呢", "pin": "nǐ zài zuò shénme ne", "end": "？", "es": "¿Y tú qué estás haciendo?" },
+        { "who": "B", "zh": "我 在 吃 水果 呢", "pin": "wǒ zài chī shuǐguǒ ne", "end": "。", "es": "Estoy comiendo fruta." },
+        { "who": "B", "zh": "你 也 吃 一点儿 吧", "pin": "nǐ yě chī yìdiǎnr ba", "end": "。", "es": "Come un poco tú también." },
+        { "who": "A", "zh": "好", "pin": "hǎo", "end": "。", "es": "Bueno." },
+        { "who": "A", "zh": "我 也 爱 吃 水果", "pin": "wǒ yě ài chī shuǐguǒ", "end": "。", "es": "A mí también me encanta la fruta." },
+        { "who": "B", "zh": "明天 上午 你 做 什么", "pin": "míngtiān shàngwǔ nǐ zuò shénme", "end": "？", "es": "¿Qué haces mañana en la mañana?" },
+        { "who": "A", "zh": "我 想 在 家 睡觉", "pin": "wǒ xiǎng zài jiā shuìjiào", "end": "。", "es": "Quiero dormir en casa." },
+        { "who": "B", "zh": "你 太 爱 睡觉 了", "pin": "nǐ tài ài shuìjiào le", "end": "！", "es": "¡Te gusta demasiado dormir!" },
+        { "who": "B", "zh": "明天 天气 很 好", "pin": "míngtiān tiānqì hěn hǎo", "end": "。", "es": "Mañana hará buen tiempo." },
+        { "who": "B", "zh": "我们 和 儿子 一起 去 买 水果 吧", "pin": "wǒmen hé érzi yìqǐ qù mǎi shuǐguǒ ba", "end": "。", "es": "Vamos con nuestro hijo a comprar fruta." },
+        { "who": "A", "zh": "好 吧", "pin": "hǎo ba", "end": "。", "es": "Está bien." },
+        { "who": "A", "zh": "几 点 去", "pin": "jǐ diǎn qù", "end": "？", "es": "¿A qué hora vamos?" },
+        { "who": "B", "zh": "十 点", "pin": "shí diǎn", "end": "。", "es": "A las diez." },
+        { "who": "A", "zh": "那 我 现在 去 睡觉 了", "pin": "nà wǒ xiànzài qù shuìjiào le", "end": "。", "es": "Entonces me voy a dormir ahora." },
+        { "who": "B", "zh": "去 睡觉 吧", "pin": "qù shuìjiào ba", "end": "。", "es": "Anda a dormir." }
+      ]
+    },
+    {
       "id": "libro-l14",
-      "title": "Lección 14 · Lo que compré ayer",
+      "title": "Lección 14 · Las compras de hoy",
       "level": 1,
       "lesson": 14,
       "lines": [
-        { "who": "A", "zh": "你 昨天 去 哪儿 了", "pin": "nǐ zuótiān qù nǎr le", "end": "？", "es": "¿Adónde fuiste ayer?" },
-        { "who": "B", "zh": "我 去 商店 买 东西 了", "pin": "wǒ qù shāngdiàn mǎi dōngxi le", "end": "。", "es": "Fui a la tienda a comprar cosas." },
-        { "who": "A", "zh": "你 买 什么 了", "pin": "nǐ mǎi shénme le", "end": "？", "es": "¿Qué compraste?" },
-        { "who": "B", "zh": "我 买 了 一点儿 苹果", "pin": "wǒ mǎi le yìdiǎnr píngguǒ", "end": "。", "es": "Compré unas pocas manzanas." },
-        { "who": "A", "zh": "你 买 衣服 了 吗", "pin": "nǐ mǎi yīfu le ma", "end": "？", "es": "¿Compraste ropa?" },
+        { "who": "A", "zh": "我 回来 了", "pin": "wǒ huílai le", "end": "。", "es": "Ya volví." },
+        { "who": "A", "zh": "桌子 上 有 不少 东西 啊", "pin": "zhuōzi shang yǒu bùshǎo dōngxi a", "end": "！", "es": "¡Hay bastantes cosas sobre la mesa!" },
+        { "who": "A", "zh": "这些 都 是 你 的 吗", "pin": "zhèxiē dōu shì nǐ de ma", "end": "？", "es": "¿Todo esto es tuyo?" },
+        { "who": "B", "zh": "不 是", "pin": "bú shì", "end": "。", "es": "No." },
+        { "who": "B", "zh": "这些 衣服 都 是 王 小姐 的", "pin": "zhèxiē yīfu dōu shì Wáng xiǎojiě de", "end": "。", "es": "Toda esta ropa es de la señorita Wang." },
+        { "who": "B", "zh": "她 上午 买 了 不少 衣服", "pin": "tā shàngwǔ mǎi le bùshǎo yīfu", "end": "。", "es": "En la mañana compró bastante ropa." },
+        { "who": "A", "zh": "这些 衣服 太 漂亮 了", "pin": "zhèxiē yīfu tài piàoliang le", "end": "！", "es": "¡Esta ropa es muy bonita!" },
+        { "who": "A", "zh": "你 也 去 商店 了 吗", "pin": "nǐ yě qù shāngdiàn le ma", "end": "？", "es": "¿Tú también fuiste a la tienda?" },
+        { "who": "B", "zh": "去 了", "pin": "qù le", "end": "。", "es": "Sí, fui." },
         { "who": "B", "zh": "我 没 买 衣服", "pin": "wǒ méi mǎi yīfu", "end": "。", "es": "No compré ropa." },
-        { "who": "A", "zh": "这些 都 是 你 的 东西 吗", "pin": "zhèxiē dōu shì nǐ de dōngxi ma", "end": "？", "es": "¿Todo esto es tuyo?" },
-        { "who": "B", "zh": "这些 都 是 我 朋友 的", "pin": "zhèxiē dōu shì wǒ péngyou de", "end": "。", "es": "Todo esto es de mi amigo." },
-        { "who": "A", "zh": "你 朋友 买 了 不少 东西 啊", "pin": "nǐ péngyou mǎi le bùshǎo dōngxi a", "end": "！", "es": "¡Tu amigo compró bastantes cosas!" }
+        { "who": "B", "zh": "我 买 了 一点儿 苹果", "pin": "wǒ mǎi le yìdiǎnr píngguǒ", "end": "。", "es": "Compré unas pocas manzanas." },
+        { "who": "A", "zh": "我 没 看见 王 小姐", "pin": "wǒ méi kànjiàn Wáng xiǎojiě", "end": "。", "es": "No he visto a la señorita Wang." },
+        { "who": "A", "zh": "她 去 哪儿 了", "pin": "tā qù nǎr le", "end": "？", "es": "¿Adónde fue?" },
+        { "who": "B", "zh": "张 先生 开车 来 了", "pin": "Zhāng xiānsheng kāichē lái le", "end": "。", "es": "El señor Zhang vino en auto." },
+        { "who": "B", "zh": "他们 去 喝 茶 了", "pin": "tāmen qù hē chá le", "end": "。", "es": "Fueron a tomar té." },
+        { "who": "A", "zh": "她 什么 时候 回来", "pin": "tā shénme shíhou huílai", "end": "？", "es": "¿Cuándo vuelve?" },
+        { "who": "B", "zh": "三十 分钟 后 回来", "pin": "sānshí fēnzhōng hòu huílai", "end": "。", "es": "Vuelve en treinta minutos." },
+        { "who": "B", "zh": "你 想 吃 苹果 吗", "pin": "nǐ xiǎng chī píngguǒ ma", "end": "？", "es": "¿Quieres comer manzana?" },
+        { "who": "A", "zh": "想", "pin": "xiǎng", "end": "。", "es": "Sí, quiero." },
+        { "who": "A", "zh": "谢谢 你", "pin": "xièxie nǐ", "end": "！", "es": "¡Gracias!" }
       ]
     },
     {
@@ -2614,6 +2679,7 @@
     { "level": 1, "lesson": 12, "zh": "昨天 太 冷 了", "pin": "zuótiān tài lěng le", "end": "。", "es": "Ayer hizo demasiado frío." },
     { "level": 1, "lesson": 12, "zh": "我 朋友 明天 来 我 家", "pin": "wǒ péngyou míngtiān lái wǒ jiā", "end": "。", "es": "Mi amigo viene a mi casa mañana." },
     { "level": 1, "lesson": 12, "zh": "这 些 水果 很 好吃", "pin": "zhè xiē shuǐguǒ hěn hǎochī", "end": "。", "es": "Estas frutas son muy ricas." },
+    { "level": 1, "lesson": 12, "zh": "王 小姐 今天 没 来", "pin": "Wáng xiǎojiě jīntiān méi lái", "end": "。", "es": "La señorita Wang no vino hoy." },
     { "level": 1, "lesson": 13, "zh": "我 上午 在 学校 学习", "pin": "wǒ shàngwǔ zài xuéxiào xuéxí", "end": "。", "es": "En la mañana estudio en la escuela." },
     { "level": 1, "lesson": 13, "zh": "她 在 睡觉 呢", "pin": "tā zài shuìjiào ne", "end": "。", "es": "Ella está durmiendo." },
     { "level": 1, "lesson": 13, "zh": "我 也 喜欢 喝 茶", "pin": "wǒ yě xǐhuan hē chá", "end": "。", "es": "A mí también me gusta tomar té." },
@@ -2623,6 +2689,8 @@
     { "level": 1, "lesson": 14, "zh": "我们 都 是 学生", "pin": "wǒmen dōu shì xuésheng", "end": "。", "es": "Todos somos estudiantes." },
     { "level": 1, "lesson": 14, "zh": "她 的 衣服 很 漂亮", "pin": "tā de yīfu hěn piàoliang", "end": "。", "es": "Su ropa es muy bonita." },
     { "level": 1, "lesson": 14, "zh": "今天 商店 里 人 很 少", "pin": "jīntiān shāngdiàn li rén hěn shǎo", "end": "。", "es": "Hoy hay poca gente en la tienda." },
+    { "level": 1, "lesson": 14, "zh": "你 看见 我 的 杯子 了 吗", "pin": "nǐ kànjiàn wǒ de bēizi le ma", "end": "？", "es": "¿Has visto mi vaso?" },
+    { "level": 1, "lesson": 14, "zh": "张 先生 是 我 的 汉语 老师", "pin": "Zhāng xiānsheng shì wǒ de Hànyǔ lǎoshī", "end": "。", "es": "El señor Zhang es mi profesor de chino." },
     { "level": 1, "lesson": 15, "zh": "我 想 坐 飞机 去 北京", "pin": "wǒ xiǎng zuò fēijī qù Běijīng", "end": "。", "es": "Quiero ir a Pekín en avión." },
     { "level": 1, "lesson": 15, "zh": "学生 都 在 听 老师 说 汉语", "pin": "xuésheng dōu zài tīng lǎoshī shuō Hànyǔ", "end": "。", "es": "Todos los estudiantes están escuchando al profesor hablar chino." },
     { "level": 1, "lesson": 15, "zh": "我 是 在 北京 学 的 汉语", "pin": "wǒ shì zài Běijīng xué de Hànyǔ", "end": "。", "es": "Aprendí chino en Pekín." },

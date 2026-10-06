@@ -41,18 +41,19 @@
 </header>
 
 <nav class="tabs" id="tabs">
-  <!-- Diagnóstico oculto por ahora. Para reactivarlo: quitar el style, devolverle class="active" (y quitárselo a Tonos, aquí y en su <section>) y renumerar ①-⑧ -->
+  <!-- Diagnóstico oculto por ahora. Para reactivarlo: quitar el style, devolverle class="active" (y quitárselo a Tonos, aquí y en su <section>) y renumerar las demás -->
   <button data-tab="diag" style="display:none">Diagnóstico</button>
   <button data-tab="tonos" class="active">① Tonos</button>
   <button data-tab="sib">② Sibilantes</button>
   <button data-tab="asp">③ Aspiración</button>
   <button data-tab="grab">④ Grabadora</button>
-  <button data-tab="corr">⑤ Corrección</button>
-  <button data-tab="hanzi">⑥ Escritura</button>
-  <button data-tab="orac">⑦ Oraciones</button>
-  <button data-tab="cy">⑧ Chengyu</button>
-  <button data-tab="flash">⑨ Flashcards</button>
-  <button data-tab="prog">⑩ Progreso</button>
+  <!-- Corrección oculta por ahora. Para reactivarla: quitar el style, renumerar ⑤-⑩ y devolver "+ Corrección" al horario del sábado en Progreso -->
+  <button data-tab="corr" style="display:none">Corrección</button>
+  <button data-tab="hanzi">⑤ Escritura</button>
+  <button data-tab="orac">⑥ Oraciones</button>
+  <button data-tab="cy">⑦ Chengyu</button>
+  <button data-tab="flash">⑧ Flashcards</button>
+  <button data-tab="prog">⑨ Progreso</button>
 </nav>
 
 <main class="wrap">
@@ -413,7 +414,7 @@
       <h2 style="font-size:16px;margin-bottom:14px;">Horario semanal sugerido</h2>
       <div class="schedule-row"><b>Lun / Mié / Vie</b><span>30 min — Tonos + Sibilantes + Escritura (repaso)</span></div>
       <div class="schedule-row"><b>Mar / Jue</b><span>25 min — Flashcards (repaso) + Oraciones; shadowing con audio propio</span></div>
-      <div class="schedule-row"><b>Sábado</b><span>30-40 min — Diálogos en voz alta / role-play + Corrección</span></div>
+      <div class="schedule-row"><b>Sábado</b><span>30-40 min — Diálogos en voz alta / role-play</span></div>
       <div class="schedule-row"><b>Domingo</b><span>20 min — Grabadora + Chengyu + repaso general</span></div>
     </div>
   </section>
