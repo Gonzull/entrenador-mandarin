@@ -14,7 +14,6 @@ Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo
 | **Sibilantes** | Distinguir de oído los tres grupos que más se confunden: zh/ch/sh, z/c/s y j/q/x. Los tríos se arman con caracteres del vocabulario que solo se diferencian en la inicial. |
 | **Aspiración** | Pares de caracteres del vocabulario que solo se diferencian en el soplo de aire (b/p, d/t, g/k, j/q, zh/ch, z/c), para escuchar y comparar. |
 | **Grabadora** | Escuchas la palabra, te grabas y comparas ambos audios. Tiene un buscador por hanzi, pinyin o significado para encontrar una palabra y oír cómo se lee. Muestra un diagrama de la posición de la lengua para los sonidos sibilantes. |
-| **Corrección** | Dices una palabra en voz alta; lo reconocido se compara por pinyin (inicial, final y tono) y se indica qué sonido se oyó distinto. Selección de 89 palabras o el vocabulario HSK 1-6 con los sonidos zh/ch/sh/r/z/c/s/j/q/x. |
 | **Escritura** | Orden de trazos animado y práctica de escritura con corrección trazo a trazo, cuadrícula guía (米字格 / 田字格), filtro por nivel y lección, buscador de caracteres y repaso espaciado. |
 | **Oraciones** | Armar oraciones ordenando fichas de palabras, y diálogos por lección donde completas las líneas de tu personaje. |
 | **Chengyu** | Fichas de expresiones de cuatro caracteres (成语): sentido literal, significado real, uso, origen cuando se conoce y un ejemplo. Incluye un quiz de significados y filtro por lección. |
@@ -23,9 +22,9 @@ Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo
 
 ## Contenido
 
-- **Vocabulario:** 5.721 palabras de HSK 1 a 6, con pinyin y traducción al español. Las palabras de HSK 1 a 3 que pertenecen al programa nuevo de HSK y no a los libros usados aquí aparecen como "Repaso extra" de su nivel.
+- **Vocabulario:** 5.722 palabras de HSK 1 a 6, con pinyin y traducción al español. Las palabras de HSK 1 a 3 que pertenecen al programa nuevo de HSK y no a los libros usados aquí aparecen como "Repaso extra" de su nivel.
 - **Caracteres para escritura:** el buscador cubre todos los caracteres que aparecen en ese vocabulario, también los que solo existen dentro de palabras compuestas.
-- **Oraciones y diálogos:** 425 oraciones y 164 diálogos de HSK 1 a 6, todos asociados a una lección. Los grupos "HSK 1 v3.0" a "HSK 3 v3.0" traen 19 diálogos sobre temas de los libros *New HSK Course* (programa nuevo) que los demás no cubren. En HSK 6, 82 oraciones ejercitan los puntos de gramática del libro y lo indican al resolverlas.
+- **Oraciones y diálogos:** 428 oraciones y 166 diálogos de HSK 1 a 6, todos asociados a una lección. Los grupos "HSK 1 v3.0" a "HSK 3 v3.0" traen 19 diálogos sobre temas de los libros *New HSK Course* (programa nuevo) que los demás no cubren. En HSK 6, 82 oraciones ejercitan los puntos de gramática del libro y lo indican al resolverlas.
 - **Chengyu:** 113 fichas, una por cada expresión de cuatro caracteres del vocabulario de HSK 6.
 - **Orden por lecciones:** el vocabulario y los diálogos siguen el orden de lecciones de los libros *HSK Standard Course* 1 a 6 (los niveles 4, 5 y 6 tienen tomos A y B). Los libros no forman parte de este repositorio; las oraciones y diálogos son texto propio escrito con el vocabulario y la gramática de cada lección.
 
@@ -34,23 +33,21 @@ Funciona en el navegador, sin instalación ni cuenta. El progreso se guarda solo
 - **Las oraciones, los diálogos y las traducciones fueron redactados con ayuda de IA** y no han sido revisados por un hablante nativo. Pueden contener errores.
 - **HSK 5 y 6:** los diálogos son más breves que los de otros niveles (4 líneas por lección).
 - **La voz es la síntesis del dispositivo**, no una grabación de un hablante nativo. La calidad depende de las voces chinas instaladas en el sistema.
-- **Corrección por voz:** en computador usa el reconocimiento del navegador y funciona mejor en Chrome o Edge, con conexión a internet. En celular descarga una vez un modelo de unos 77 MB (conviene hacerlo con wifi); su precisión es variable. El reconocedor tiende a escribir la palabra más probable, así que puede dar por buena una pronunciación floja.
 - **Diagramas de lengua:** solo para los diez sonidos sibilantes. Son esquemas orientativos.
 
 ## Uso en el celular
 
 1. Abre https://gonzull.github.io/entrenador-mandarin/ en Chrome.
-2. La primera vez que uses la Grabadora o Corrección, el navegador pedirá permiso para el micrófono.
+2. La primera vez que uses la Grabadora, el navegador pedirá permiso para el micrófono.
 3. Opcional: menú ⋮ → "Instalar app" (o "Añadir a pantalla principal") para tenerla como aplicación.
 
 ### Sin conexión
 
 Tras la primera visita con internet, la app queda guardada en el navegador y abre sin conexión. Cuando hay internet, siempre carga la versión más reciente.
 
-Algunas cosas siguen necesitando internet la primera vez que se usan:
+Una cosa sigue necesitando internet la primera vez que se usa:
 
 - **Trazos de cada carácter** (Escritura): se descargan al ver el carácter por primera vez y luego quedan guardados.
-- **Reconocimiento de voz** (Corrección): en computador siempre requiere conexión; en celular solo para la descarga inicial del modelo. El conversor a pinyin se descarga la primera vez y queda guardado.
 
 ## Uso en computador (para desarrollo)
 
@@ -87,7 +84,7 @@ entrenador-mandarin/
 │   ├── sibilantes.js       Pestaña Sibilantes
 │   ├── aspiracion.js       Pestaña Aspiración
 │   ├── grabadora.js        Pestaña Grabadora
-│   ├── correccion.js       Pestaña Corrección
+│   ├── correccion.js       Pestaña Corrección (oculta por ahora)
 │   ├── pinyinMatch.js      Comparación por pinyin y diagnóstico de Corrección
 │   ├── escritura.js        Pestaña Escritura
 │   ├── oraciones.js        Pestaña Oraciones
