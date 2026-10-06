@@ -1,6 +1,6 @@
 {
-  "version": 10,
-  "updated": "2026-10-04",
+  "version": 11,
+  "updated": "2026-10-06",
   "level": 2,
   "words": [
     ["啊","a","(partícula exclamativa)",14],
@@ -170,7 +170,7 @@
     ["以后","yǐhòu","después",5],
     ["以上","yǐshàng","más de / por encima de",null,"extra"],
     ["以下","yǐxià","menos de / por debajo de"],
-    ["根据","gēnù","según / de acuerdo con",null,"extra"],
+    ["根据","gēnjù","según / de acuerdo con",null,"extra"],
     ["不同","bùtóng","diferente",null,"extra"],
     ["刚刚","gānggāng","justo / hace un momento",null,"extra"],
     ["一直","yìzhí","siempre / todo el tiempo",13],
