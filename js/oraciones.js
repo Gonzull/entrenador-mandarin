@@ -210,7 +210,23 @@ function initOraciones(data) {
     opt.textContent = d.title;
     groups[key].appendChild(opt);
   });
-  Object.keys(groups).sort().forEach(lv => el('dlgSelect').appendChild(groups[lv]));
+  // número correlativo por nivel: sigue de largo en el grupo v3.0 (HSK 1: 1-14, HSK 1 v3.0: 15-19).
+  // La lección del libro pasa al final: "Lección 6 · El número de celular" → "15. El número de celular · lecc. 6"
+  let seqLevel = null,
+    seq = 0;
+  Object.keys(groups)
+    .sort()
+    .forEach(lv => {
+      if (parseInt(lv) !== seqLevel) {
+        seqLevel = parseInt(lv);
+        seq = 0;
+      }
+      [...groups[lv].children].forEach(opt => {
+        const m = opt.textContent.match(/^Lecci(?:ón|ones) ([\d-]+) · (.+)$/);
+        opt.textContent = `${++seq}. ` + (m ? `${m[2]} · lecc. ${m[1]}` : opt.textContent);
+      });
+      el('dlgSelect').appendChild(groups[lv]);
+    });
 
   function lineEl(line, mine) {
     const div = document.createElement('div');
