@@ -1,5 +1,5 @@
 {
-  "version": 10,
+  "version": 11,
   "updated": "2026-10-06",
   "level": 1,
   "words": [
@@ -47,7 +47,7 @@
     ["吗","ma","(partícula de pregunta)",3],
     ["呢","ne","(partícula de pregunta)",4],
     ["喂","wèi","hola (al teléfono)",13],
-    ["家","jiā","casa",5],
+    ["家","jiā","casa / (clasificador de tiendas y locales)",5],
     ["学校","xuéxiào","escuela",7],
     ["饭店","fàndiàn","restaurante",15],
     ["商店","shāngdiàn","tienda",8],
@@ -247,6 +247,9 @@
     ["吃饭","chīfàn","comer (una comida)",11],
     ["杯","bēi","vaso / taza (clasificador)",null,"extra"],
     ["前边","qiánbian","delante / parte de adelante",null,"extra"],
-    ["茶杯","chábēi","taza de té",null,"extra"]
+    ["茶杯","chábēi","taza de té",null,"extra"],
+    ["斤","jīn","jin, medio kilo (clasificador de peso)",null,"extra"],
+    ["医","yī","medicina (la carrera)",null,"extra"],
+    ["首","shǒu","(clasificador de canciones y poemas)",null,"extra"]
   ]
 }

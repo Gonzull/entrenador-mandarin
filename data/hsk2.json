@@ -1,5 +1,5 @@
 {
-  "version": 11,
+  "version": 13,
   "updated": "2026-10-06",
   "level": 2,
   "words": [
@@ -87,7 +87,7 @@
     ["门口","ménkǒu","entrada / puerta",null,"extra"],
     ["门票","ménpiào","entrada (boleto)",null,"extra"],
     ["面","miàn","cara / superficie / fideos",null,"extra"],
-    ["名","míng","nombre / fama",null,"extra"],
+    ["名","míng","nombre / fama / (clasificador de personas y puestos)",null,"extra"],
     ["那么","nàme","tan / así",null,"extra"],
     ["男孩儿","nánháir","niño",null,"extra"],
     ["那样","nàyàng","así / de esa manera",null,"extra"],
@@ -252,6 +252,10 @@
     ["粉色","fěnsè","color rosado",3],
     ["粉","fěn","rosado",3],
     ["有意思","yǒuyìsi","interesante / divertido",14],
-    ["右","yòu","derecha",null,"extra"]
+    ["右","yòu","derecha",null,"extra"],
+    ["爱情片","àiqíngpiàn","película romántica",null,"extra"],
+    ["画笔","huàbǐ","pincel",null,"extra"],
+    ["有时","yǒushí","a veces",null,"extra"],
+    ["部","bù","(clasificador de películas y obras)",null,"extra"]
   ]
 }

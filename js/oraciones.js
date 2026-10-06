@@ -210,9 +210,9 @@ function initOraciones(data) {
     opt.textContent = d.title;
     groups[key].appendChild(opt);
   });
-  // número correlativo por nivel: sigue de largo en el grupo v3.0 (HSK 1: 1-16, HSK 1 v3.0: 17-32).
+  // número correlativo por nivel: sigue de largo en el grupo v3.0 (HSK 1: 1-17, HSK 1 v3.0: 18-33).
   // La lección del libro no se muestra (sigue en d.lesson y en el title del JSON):
-  // "Lección 6 · El número de celular" → "20. El número de celular"
+  // "Lección 6 · El número de celular" → "21. El número de celular"
   let seqLevel = null,
     seq = 0;
   Object.keys(groups)
